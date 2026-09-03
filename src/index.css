@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  /* Warm, bold family-business palette */
+  --color-ivory: #F5F1EA;        /* warm ivory — primary background */
+  --color-charcoal: #1E1E1C;     /* deep charcoal — primary text */
+  --color-walnut: #6B4A2D;       /* walnut brown — headings, accents */
+  --color-terracotta: #B5502E;   /* bold terracotta — PRIMARY CTA ONLY */
+  --color-terra-dark: #8F3E21;   /* terracotta hover */
+  --color-sand: #D8C4A8;         /* sand beige — secondary surfaces */
+  --color-gold: #C89B5A;         /* warm gold — highlights, stars */
+  --color-dark: #111110;         /* near-black for dark sections */
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Manrope', system-ui, sans-serif;
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F5F1EA;
+  color: #1E1E1C;
+  -webkit-font-smoothing: antialiased;
+}
+
+html { scroll-behavior: smooth; }
+
+:focus-visible { outline: 2px solid #B5502E; outline-offset: 3px; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #F5F1EA; }
+::-webkit-scrollbar-thumb { background: #D8C4A8; border-radius: 2px; }

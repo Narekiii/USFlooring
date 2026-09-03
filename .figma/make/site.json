@@ -1,0 +1,10 @@
+{
+  "description": "Offers a streamlined platform to build and launch professional websites quickly, empowering users to establish their online presence with ease.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
