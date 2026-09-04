@@ -90,9 +90,18 @@ export default function Home() {
     <div className="pb-[72px] lg:pb-0">
 
       {/* ── 1. Hero ── */}
-      <section className="pt-16 min-h-[92vh] grid grid-cols-1 lg:grid-cols-2">
+      <section className="pt-16 grid grid-cols-1 lg:grid-cols-2 min-h-[92vh]">
+        {/* Hero photo — mobile: full-width top, desktop: right panel */}
+        <div className="relative overflow-hidden h-[56vw] lg:h-auto lg:min-h-[600px] lg:order-2">
+          <img
+            src={heroBg}
+            alt="US Flooring & Molding showroom and installation"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-transparent to-transparent" />
+        </div>
         {/* Text panel */}
-        <div className="flex flex-col justify-center bg-ivory px-6 lg:pl-[max(24px,calc((100vw-1180px)/2+24px))] pr-6 lg:pr-16 py-20">
+        <div className="flex flex-col justify-center bg-ivory px-6 lg:pl-[max(24px,calc((100vw-1180px)/2+24px))] pr-6 lg:pr-16 py-12 lg:py-20 lg:order-1">
           <h1 className="font-serif text-[36px] lg:text-[58px] font-bold text-charcoal leading-[1.06] mb-6 max-w-[520px]">
             Flooring Company That You Can Trust.
           </h1>
@@ -111,15 +120,6 @@ export default function Home() {
           <p className="font-sans text-[12px] font-semibold text-charcoal/40 tracking-wide">
             ★ 5.0 Google Rating · 15 Reviews · 20+ Years in Burbank · 1-Year Labor Guarantee
           </p>
-        </div>
-        {/* Hero photo */}
-        <div className="hidden lg:block relative overflow-hidden min-h-[600px]">
-          <img
-            src={heroBg}
-            alt="US Flooring & Molding showroom and installation"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-ivory/30 to-transparent" />
         </div>
       </section>
 
