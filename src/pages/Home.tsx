@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import heroBg from '@/imports/ChatGPT_Image_Sep_3__2026__04_50_48_PM.png';
+import SEO from '@/components/SEO';
+import { BUSINESS } from '@/lib/business';
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
 function StarIcon({ size = 14 }: { size?: number }) {
@@ -46,12 +48,12 @@ const howCards = [
 ];
 
 const serviceCards = [
-  { name: 'Hardwood Flooring', desc: 'Timeless, durable, and built to outlast trends.', img: 'https://images.unsplash.com/photo-1608752503578-52f35965e3d9?w=600&h=440&fit=crop&auto=format' },
-  { name: 'Laminate Flooring', desc: 'Real style at a real-world price point.', img: 'https://images.unsplash.com/photo-1787625349019-2ad6b4cadc87?w=600&h=440&fit=crop&auto=format' },
-  { name: 'Vinyl Flooring', desc: 'Waterproof toughness for kitchens, baths, and busy households.', img: 'https://images.unsplash.com/photo-1695191388218-f6259600223f?w=600&h=440&fit=crop&auto=format' },
-  { name: 'Moldings', desc: 'The finishing detail that makes a floor look finished, not just installed.', img: 'https://images.unsplash.com/photo-1655457397686-4dd23e78a918?w=600&h=440&fit=crop&auto=format' },
-  { name: 'Professional Installation', desc: 'Precision crews who respect your home and your timeline.', img: 'https://images.unsplash.com/photo-1622936063167-e32e9f955438?w=600&h=440&fit=crop&auto=format' },
-  { name: 'Showroom Consultation', desc: 'Touch it, see it in real light, ask us anything — no pressure.', img: 'https://images.unsplash.com/photo-1643903032976-8c0d0556a8ea?w=600&h=440&fit=crop&auto=format' },
+  { name: 'Hardwood Flooring', desc: 'Timeless, durable, and built to outlast trends.', img: 'https://images.unsplash.com/photo-1608752503578-52f35965e3d9?w=600&h=440&fit=crop&auto=format', href: '/hardwood-flooring-burbank' },
+  { name: 'Laminate Flooring', desc: 'Real style at a real-world price point.', img: 'https://images.unsplash.com/photo-1787625349019-2ad6b4cadc87?w=600&h=440&fit=crop&auto=format', href: '/laminate-flooring-burbank' },
+  { name: 'Luxury Vinyl Flooring', desc: 'Waterproof toughness for kitchens, baths, and busy households.', img: 'https://images.unsplash.com/photo-1695191388218-f6259600223f?w=600&h=440&fit=crop&auto=format', href: '/luxury-vinyl-flooring-burbank' },
+  { name: 'Moldings & Trim', desc: 'The finishing detail that makes a floor look finished, not just installed.', img: 'https://images.unsplash.com/photo-1655457397686-4dd23e78a918?w=600&h=440&fit=crop&auto=format', href: '/molding-baseboard-installation-burbank' },
+  { name: 'Professional Installation', desc: 'Precision crews who respect your home and your timeline.', img: 'https://images.unsplash.com/photo-1622936063167-e32e9f955438?w=600&h=440&fit=crop&auto=format', href: '/flooring-installation-burbank' },
+  { name: 'Showroom Consultation', desc: 'Touch it, see it in real light, ask us anything — no pressure.', img: 'https://images.unsplash.com/photo-1643903032976-8c0d0556a8ea?w=600&h=440&fit=crop&auto=format', href: '/products' },
 ];
 
 const comparison = [
@@ -85,9 +87,68 @@ const pullQuotes = [
 ];
 
 // ── Component ─────────────────────────────────────────────────────────────────
+const homeJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
+    '@id': 'https://www.usflooring.la/#business',
+    name: BUSINESS.name,
+    url: BUSINESS.website,
+    telephone: BUSINESS.phone,
+    email: BUSINESS.email,
+    image: BUSINESS.ogImage,
+    description: 'Family-owned flooring store and installation company serving Burbank and greater Los Angeles with hardwood, laminate, luxury vinyl, molding, and professional installation services.',
+    priceRange: '$$',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: BUSINESS.address.street,
+      addressLocality: BUSINESS.address.city,
+      addressRegion: BUSINESS.address.state,
+      postalCode: BUSINESS.address.zip,
+      addressCountry: 'US',
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Burbank' },
+      { '@type': 'City', name: 'Glendale' },
+      { '@type': 'City', name: 'North Hollywood' },
+      { '@type': 'City', name: 'Toluca Lake' },
+      { '@type': 'City', name: 'Studio City' },
+      { '@type': 'City', name: 'Sun Valley' },
+      { '@type': 'AdministrativeArea', name: 'San Fernando Valley' },
+      { '@type': 'AdministrativeArea', name: 'Greater Los Angeles' },
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Flooring Products and Services',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hardwood Flooring' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Laminate Flooring' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Luxury Vinyl Flooring' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Flooring Installation' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Molding and Baseboard Installation' } },
+      ],
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    url: BUSINESS.website,
+    name: BUSINESS.name,
+  },
+];
+
 export default function Home() {
   return (
     <div className="pb-[72px] lg:pb-0">
+      <SEO
+        title="Flooring Store & Installation in Burbank, CA | US Flooring"
+        description="Visit US Flooring & Molding Inc. for hardwood, laminate, luxury vinyl, molding, and professional flooring installation in Burbank and greater Los Angeles. Request a free estimate."
+        canonical="https://www.usflooring.la/"
+        ogTitle="US Flooring & Molding Inc. | Burbank Flooring Experts"
+        ogDescription="Hardwood, laminate, luxury vinyl, molding, and professional flooring installation from a family-owned Burbank flooring company."
+        ogUrl="https://www.usflooring.la/"
+        jsonLd={homeJsonLd}
+      />
 
       {/* ── 1. Hero ── */}
       <section className="pt-16 grid grid-cols-1 lg:grid-cols-2 min-h-[92vh]">
@@ -102,9 +163,12 @@ export default function Home() {
         </div>
         {/* Text panel */}
         <div className="flex flex-col justify-center bg-ivory px-6 lg:pl-[max(24px,calc((100vw-1180px)/2+24px))] pr-6 lg:pr-16 py-12 lg:py-20 lg:order-1">
-          <h1 className="font-serif text-[36px] lg:text-[58px] font-bold text-charcoal leading-[1.06] mb-6 max-w-[520px]">
-            Flooring Company That You Can Trust.
+          <h1 className="font-serif text-[36px] lg:text-[58px] font-semibold text-charcoal leading-[1.06] mb-3 max-w-[520px]">
+            Trusted Flooring Store and Installation Company in Burbank
           </h1>
+          <p className="font-sans text-base lg:text-[18px] text-walnut font-semibold mb-5">
+            Flooring Company That You Can Trust.
+          </p>
           <p className="font-sans text-base lg:text-[17px] text-charcoal/65 leading-relaxed mb-8 max-w-[480px]">
             We're the local flooring team Burbank homeowners call when they want it done right — real guidance, real craftsmanship, and a family name behind every install.
           </p>
@@ -118,7 +182,7 @@ export default function Home() {
           </div>
           {/* Trust micro-line */}
           <p className="font-sans text-[12px] font-semibold text-charcoal/40 tracking-wide">
-            ★ 5.0 Google Rating · 15 Reviews · 20+ Years in Burbank · 1-Year Labor Guarantee
+            ★ Verified Google Reviews · 20+ Years in Burbank · 1-Year Labor Guarantee
           </p>
         </div>
       </section>
@@ -139,8 +203,8 @@ export default function Home() {
       <section className="bg-ivory">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px] grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Why we exist</p>
-            <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-charcoal mb-6 leading-[1.1]">
+            <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Why we exist</p>
+            <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-charcoal mb-6 leading-[1.1]">
               Flooring Shouldn't Feel Like a Gamble
             </h2>
             <p className="font-sans text-base lg:text-[17px] text-charcoal/65 leading-relaxed mb-4">
@@ -156,7 +220,7 @@ export default function Home() {
           </div>
           <div className="bg-sand/30 border border-sand p-10 rounded-[3px]">
             <div className="w-8 h-[3px] bg-gold mb-6" />
-            <blockquote className="font-serif text-[22px] lg:text-[26px] font-bold text-charcoal leading-snug">
+            <blockquote className="font-serif text-[22px] lg:text-[26px] font-medium italic text-charcoal leading-snug">
               "Your floor isn't just a surface. It's the first thing your family feels underfoot every single day. We help you get it right."
             </blockquote>
           </div>
@@ -166,9 +230,9 @@ export default function Home() {
       {/* ── 4. HOW ── */}
       <section className="bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px]">
-          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">How we do it</p>
+          <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">How we do it</p>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
-            <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-charcoal leading-[1.1] max-w-[520px]">
+            <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-charcoal leading-[1.1] max-w-[520px]">
               Three Generations of Getting This Right
             </h2>
             <Link to="/about" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-walnut-dark transition-colors group">
@@ -198,9 +262,9 @@ export default function Home() {
       {/* ── 5. WHAT ── */}
       <section className="bg-ivory">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px]">
-          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">What we offer</p>
+          <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">What we offer</p>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
-            <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-charcoal leading-[1.1] max-w-[480px]">
+            <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-charcoal leading-[1.1] max-w-[480px]">
               Everything You Need, Under One Roof
             </h2>
             <Link to="/products" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-walnut-dark transition-colors group">
@@ -210,7 +274,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {serviceCards.map((s) => (
-              <Link key={s.name} to="/products" className="group bg-ivory border border-sand rounded-[3px] overflow-hidden hover:border-walnut/40 transition-colors">
+              <Link key={s.name} to={s.href} className="group bg-ivory border border-sand rounded-[3px] overflow-hidden hover:border-walnut/40 transition-colors">
                 <div className="aspect-[16/9] overflow-hidden bg-sand/30">
                   <img src={s.img} alt={s.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 </div>
@@ -227,8 +291,8 @@ export default function Home() {
       {/* ── 6. Big-Box Difference ── */}
       <section className="bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px]">
-          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">The difference</p>
-          <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-charcoal mb-5 leading-[1.1] max-w-[600px]">
+          <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">The difference</p>
+          <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-charcoal mb-5 leading-[1.1] max-w-[600px]">
             Why Homeowners Choose Us Over the Big-Box Aisle
           </h2>
           <p className="font-sans text-base text-charcoal/60 leading-relaxed mb-12 max-w-[560px]">
@@ -237,7 +301,7 @@ export default function Home() {
           <div className="rounded-[3px] overflow-hidden grid grid-cols-1 lg:grid-cols-2">
             {/* Left — Big Box */}
             <div className="bg-charcoal p-10 lg:p-12">
-              <p className="font-sans text-[11px] font-bold text-ivory/30 uppercase tracking-widest mb-7">Big-Box Store</p>
+              <p className="font-sans text-[11px] font-semibold text-ivory/30 uppercase tracking-widest mb-7">Big-Box Store</p>
               <div className="flex flex-col gap-5">
                 {comparison.map((row) => (
                   <div key={row.bad} className="flex items-start gap-3">
@@ -249,7 +313,7 @@ export default function Home() {
             </div>
             {/* Right — USF */}
             <div className="bg-walnut p-10 lg:p-12">
-              <p className="font-sans text-[11px] font-bold text-gold/70 uppercase tracking-widest mb-7">US Flooring &amp; Molding</p>
+              <p className="font-sans text-[11px] font-semibold text-gold/70 uppercase tracking-widest mb-7">US Flooring &amp; Molding</p>
               <div className="flex flex-col gap-5 mb-10">
                 {comparison.map((row) => (
                   <div key={row.good} className="flex items-start gap-3">
@@ -269,9 +333,9 @@ export default function Home() {
       {/* ── 7. Testimonials ── */}
       <section className="bg-ivory">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px]">
-          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Reviews</p>
+          <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Reviews</p>
           <div className="flex flex-col lg:flex-row items-end justify-between gap-8 mb-12">
-            <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-charcoal leading-[1.1]">Don't Take Our Word for It</h2>
+            <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-charcoal leading-[1.1]">Don't Take Our Word for It</h2>
             <Link to="/reviews" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-walnut-dark transition-colors group">
               Read More Reviews <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
@@ -312,8 +376,8 @@ export default function Home() {
       <section className="bg-walnut">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px] grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="font-sans text-[11px] font-bold text-gold/60 uppercase tracking-widest mb-4">About us</p>
-            <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-ivory leading-[1.1] mb-6">
+            <p className="font-sans text-[11px] font-semibold text-gold/60 uppercase tracking-widest mb-4">About us</p>
+            <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-ivory leading-[1.1] mb-6">
               Meet the Family Behind the Floors
             </h2>
             <p className="font-sans text-base text-ivory/60 leading-relaxed mb-8">
@@ -339,8 +403,8 @@ export default function Home() {
         <div className="max-w-[1180px] mx-auto px-6 py-[72px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Local presence</p>
-              <h2 className="font-serif text-[28px] lg:text-[36px] font-bold text-charcoal mb-4 leading-tight">
+              <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Local presence</p>
+              <h2 className="font-serif text-[28px] lg:text-[36px] font-semibold text-charcoal mb-4 leading-tight">
                 Proudly Serving Burbank and the Surrounding Valley
               </h2>
               <p className="font-sans text-base text-charcoal/60 leading-relaxed">
@@ -365,7 +429,7 @@ export default function Home() {
             <div className="flex gap-0.5 justify-center mb-6">
               {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
             </div>
-            <h2 className="font-serif text-[32px] lg:text-[52px] font-bold text-ivory leading-[1.1] mb-5">
+            <h2 className="font-serif text-[32px] lg:text-[52px] font-semibold text-ivory leading-[1.1] mb-5">
               Ready for a Floor You Won't Second-Guess?
             </h2>
             <p className="font-sans text-base text-ivory/55 leading-relaxed mb-4">

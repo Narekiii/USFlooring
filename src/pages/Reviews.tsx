@@ -1,4 +1,7 @@
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import Breadcrumb, { breadcrumbJsonLd } from '@/components/Breadcrumb';
+import { BUSINESS } from '@/lib/business';
 
 function StarIcon({ size = 14 }: { size?: number }) {
   return (
@@ -67,16 +70,29 @@ const pullQuotes = [
   { quote: '"The best contractor experience we\'ve had."', author: 'North Hollywood, CA' },
 ];
 
+const reviewsCrumbs = [{ label: 'Home', href: '/' }, { label: 'Reviews' }];
+
 export default function Reviews() {
   return (
     <div className="pb-[72px] lg:pb-0">
+      <SEO
+        title="US Flooring & Molding Reviews | Burbank, CA"
+        description="Read verified customer experiences with US Flooring & Molding Inc. for flooring products, molding, consultation, and installation in Burbank and Los Angeles."
+        canonical="https://www.usflooring.la/reviews"
+        ogTitle="Customer Reviews | US Flooring & Molding"
+        ogDescription="See what verified customers say about working with US Flooring & Molding Inc. in Burbank."
+        ogUrl="https://www.usflooring.la/reviews"
+        jsonLd={breadcrumbJsonLd(reviewsCrumbs)}
+      />
+      <Breadcrumb crumbs={reviewsCrumbs} />
+
       {/* Header */}
-      <section className="pt-32 pb-16 bg-[#F0E9DC]">
+      <section className="pt-8 pb-16 bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Customer Reviews</p>
-            <h1 className="font-serif text-[40px] lg:text-[56px] font-bold text-charcoal leading-[1.06] mb-4">
-              Don't Take Our Word for It
+            <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Customer Reviews</p>
+            <h1 className="font-serif text-[40px] lg:text-[56px] font-semibold text-charcoal leading-[1.06] mb-4">
+              Customer Reviews for US Flooring &amp; Molding
             </h1>
             <p className="font-sans text-base text-charcoal/55 leading-relaxed">
               These are real people who hired us for real projects. Their experience is the most honest description of what it's like to work with us.
@@ -84,18 +100,17 @@ export default function Reviews() {
           </div>
           <div className="bg-ivory border border-sand rounded-[3px] p-8 flex flex-col gap-5">
             <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <StarIcon key={i} size={22} />)}</div>
-            <div className="font-serif text-[52px] font-bold text-charcoal leading-none">5.0</div>
+            <div className="font-serif text-[52px] font-semibold text-charcoal leading-none">5.0</div>
             <div>
               <p className="font-sans text-[14px] font-semibold text-charcoal">Google Rating</p>
-              <p className="font-sans text-[12px] text-charcoal/40">Based on 15 Google reviews</p>
             </div>
             <a
-              href="https://g.co/kgs/yourlisting"
+              href={BUSINESS.googleReviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-sans text-[13px] font-bold text-walnut hover:text-walnut-dark transition-colors"
             >
-              See us on Google →
+              Read our Google Reviews →
             </a>
           </div>
         </div>
@@ -147,7 +162,7 @@ export default function Reviews() {
       {/* Final CTA */}
       <section className="bg-[#F0E9DC] border-t border-sand py-16">
         <div className="max-w-[680px] mx-auto px-6 text-center">
-          <h2 className="font-serif text-[28px] lg:text-[38px] font-bold text-charcoal mb-4">Ready to Become Our Next Happy Customer?</h2>
+          <h2 className="font-serif text-[28px] lg:text-[38px] font-semibold text-charcoal mb-4">Ready to Become Our Next Happy Customer?</h2>
           <p className="font-sans text-base text-charcoal/55 leading-relaxed mb-7">
             We give every project the same care these customers experienced. Start with a free estimate.
           </p>

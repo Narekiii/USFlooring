@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import USFMark from '../components/USFMark';
+import SEO from '@/components/SEO';
+import Breadcrumb, { breadcrumbJsonLd } from '@/components/Breadcrumb';
 
 function StarIcon() {
   return (
@@ -23,17 +25,29 @@ const guarantee = [
   'No runaround, no fine-print exceptions',
 ];
 
+const aboutCrumbs = [{ label: 'Home', href: '/' }, { label: 'About' }];
+
 export default function About() {
   return (
     <div className="pb-[72px] lg:pb-0">
+      <SEO
+        title="About US Flooring & Molding | Burbank Flooring Experts"
+        description="Learn about US Flooring & Molding Inc., a family-owned Burbank flooring store and installation company backed by more than 20 years of flooring experience."
+        canonical="https://www.usflooring.la/about"
+        ogTitle="About US Flooring & Molding Inc."
+        ogDescription="Meet the family and flooring professionals behind US Flooring & Molding Inc. in Burbank, California."
+        ogUrl="https://www.usflooring.la/about"
+        jsonLd={breadcrumbJsonLd(aboutCrumbs)}
+      />
+      <Breadcrumb crumbs={aboutCrumbs} />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-[#F0E9DC]">
+      <section className="pt-8 pb-16 bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">About Us</p>
-            <h1 className="font-serif text-[40px] lg:text-[58px] font-bold text-charcoal leading-[1.06] mb-6">
-              Meet the Family Behind the Floors
+            <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">About Us</p>
+            <h1 className="font-serif text-[40px] lg:text-[58px] font-semibold text-charcoal leading-[1.06] mb-6">
+              Meet the Family Behind US Flooring &amp; Molding
             </h1>
             <p className="font-sans text-base lg:text-[18px] text-charcoal/60 leading-relaxed mb-6">
               US Flooring &amp; Molding Inc. is a family-owned flooring contractor and showroom based in Burbank, California. We've been serving homeowners, interior designers, and contractors across the greater Los Angeles area since 2005.
@@ -56,8 +70,8 @@ export default function About() {
       <section className="bg-walnut">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px] grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="font-sans text-[11px] font-bold text-gold/60 uppercase tracking-widest mb-5">The story</p>
-            <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-ivory leading-[1.1] mb-8">
+            <p className="font-sans text-[11px] font-semibold text-gold/60 uppercase tracking-widest mb-5">The story</p>
+            <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-ivory leading-[1.1] mb-8">
               It Started with a Trowel and a Father Who Demanded Excellence
             </h2>
             <div className="flex flex-col gap-5">
@@ -85,8 +99,8 @@ export default function About() {
       {/* Values */}
       <section className="bg-ivory">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px]">
-          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">What we stand for</p>
-          <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-charcoal mb-12 leading-[1.1] max-w-[480px]">
+          <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">What we stand for</p>
+          <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-charcoal mb-12 leading-[1.1] max-w-[480px]">
             The Values We Work By Every Day
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -105,8 +119,8 @@ export default function About() {
       <section className="bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6 py-[72px] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Our promise</p>
-            <h2 className="font-serif text-[32px] lg:text-[44px] font-bold text-charcoal mb-4 leading-tight">
+            <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Our promise</p>
+            <h2 className="font-serif text-[32px] lg:text-[44px] font-semibold text-charcoal mb-4 leading-tight">
               1-Year Labor Guarantee
             </h2>
             <p className="font-sans text-base text-charcoal/60 leading-relaxed">
@@ -141,7 +155,7 @@ export default function About() {
               { stat: '1-Year', label: 'Labor Guarantee' },
             ].map((s) => (
               <div key={s.label} className="text-center">
-                <div className="font-serif text-[40px] lg:text-[52px] font-bold text-ivory mb-2">{s.stat}</div>
+                <div className="font-serif text-[40px] lg:text-[52px] font-semibold text-ivory mb-2">{s.stat}</div>
                 <div className="font-sans text-[12px] font-semibold text-ivory/30 uppercase tracking-widest">{s.label}</div>
               </div>
             ))}
@@ -153,8 +167,8 @@ export default function About() {
       <section className="bg-ivory">
         <div className="max-w-[1180px] mx-auto px-6 py-[72px] grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Find us</p>
-            <h2 className="font-serif text-[28px] font-bold text-charcoal mb-4">Visit the Showroom</h2>
+            <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Find us</p>
+            <h2 className="font-serif text-[28px] font-semibold text-charcoal mb-4">Visit the Showroom</h2>
             <div className="font-sans text-[14px] text-charcoal/55 leading-relaxed mb-6">
               <p className="mb-1">1508 W Burbank Blvd</p>
               <p className="mb-1">Burbank, CA 91506</p>
@@ -172,7 +186,7 @@ export default function About() {
           </div>
           <div className="bg-[#F0E9DC] border border-sand rounded-[3px] p-8">
             <div className="flex gap-0.5 mb-4">{[...Array(5)].map((_, i) => <StarIcon key={i} />)}</div>
-            <blockquote className="font-serif text-[20px] font-bold text-charcoal italic mb-4 leading-snug">
+            <blockquote className="font-serif text-[20px] font-medium italic text-charcoal mb-4 leading-snug">
               "Fair pricing, respect for customers, quality that beat Lowe's and Home Depot outright."
             </blockquote>
             <p className="font-sans text-[13px] text-charcoal/40">— Bob S., Santa Monica, CA</p>

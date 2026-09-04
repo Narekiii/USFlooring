@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import Breadcrumb, { breadcrumbJsonLd } from '@/components/Breadcrumb';
 
 const allPhotos = [
   { src: 'https://images.unsplash.com/photo-1773098587044-0c830e398428?w=800&h=600&fit=crop&auto=format', alt: 'Hardwood floor in a warm living room', cats: ['hardwood', 'residential'] },
@@ -18,20 +20,43 @@ const allPhotos = [
 
 const categories = ['all', 'hardwood', 'laminate', 'vinyl', 'moldings', 'installation'];
 
+const galleryCrumbs = [{ label: 'Home', href: '/' }, { label: 'Gallery' }];
+
 export default function Gallery() {
   const [active, setActive] = useState('all');
   const [modal, setModal] = useState<number | null>(null);
   const shown = active === 'all' ? allPhotos : allPhotos.filter((p) => p.cats.includes(active));
 
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setModal(null);
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, []);
+
   return (
     <div className="pb-[72px] lg:pb-0">
+      <SEO
+        title="Flooring Installation Projects in Los Angeles | US Flooring"
+        description="View hardwood, laminate, luxury vinyl, molding, and flooring installation work from US Flooring & Molding Inc. in Burbank and greater Los Angeles."
+        canonical="https://www.usflooring.la/gallery"
+        ogTitle="Flooring Project Gallery | US Flooring & Molding"
+        ogDescription="Explore flooring and molding projects from US Flooring & Molding Inc. serving Burbank and greater Los Angeles."
+        ogUrl="https://www.usflooring.la/gallery"
+        jsonLd={breadcrumbJsonLd(galleryCrumbs)}
+      />
+      <Breadcrumb crumbs={galleryCrumbs} />
+
       {/* Header */}
-      <section className="pt-32 pb-12 bg-[#F0E9DC]">
+      <section className="pt-8 pb-12 bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6">
-          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Gallery</p>
-          <h1 className="font-serif text-[40px] lg:text-[56px] font-bold text-charcoal leading-[1.06] mb-4">Our Work</h1>
-          <p className="font-sans text-base text-charcoal/55 leading-relaxed max-w-[500px]">
-            Real floors in real Burbank homes. Every project installed by our own crew.
+          <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Gallery</p>
+          <h1 className="font-serif text-[40px] lg:text-[56px] font-semibold text-charcoal leading-[1.06] mb-4">
+            Flooring Installation Projects in Burbank and Los Angeles
+          </h1>
+          <p className="font-sans text-base text-charcoal/55 leading-relaxed max-w-[560px]">
+            Explore flooring styles, materials, patterns, and installation inspiration. Contact our team to discuss which options are suitable for your property.
           </p>
         </div>
       </section>
@@ -120,7 +145,7 @@ export default function Gallery() {
       {/* CTA */}
       <section className="bg-[#F0E9DC] py-16 border-t border-sand">
         <div className="max-w-[680px] mx-auto px-6 text-center">
-          <h2 className="font-serif text-[28px] lg:text-[36px] font-bold text-charcoal mb-4">Ready to Start Your Project?</h2>
+          <h2 className="font-serif text-[28px] lg:text-[36px] font-semibold text-charcoal mb-4">Ready to Start Your Project?</h2>
           <p className="font-sans text-base text-charcoal/55 leading-relaxed mb-7">
             Visit our Burbank showroom to see samples in person, or request a free estimate and we'll come to you.
           </p>
