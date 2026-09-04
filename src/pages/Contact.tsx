@@ -93,12 +93,11 @@ export default function Contact() {
           </div>
 
           {/* Map */}
-          <div className="overflow-hidden rounded-[3px] aspect-[4/3] bg-sand/30 border border-sand">
+          <div className="relative overflow-hidden rounded-[3px] bg-sand/30 border border-sand" style={{ paddingBottom: '75%' }}>
             <iframe
               title="US Flooring & Molding Location"
               src="https://www.openstreetmap.org/export/embed.html?bbox=-118.3235%2C34.1770%2C-118.3035%2C34.1870&layer=mapnik&marker=34.1820%2C-118.3135"
-              width="100%"
-              height="100%"
+              className="absolute inset-0 w-full h-full"
               style={{ border: 0 }}
               loading="lazy"
             />
