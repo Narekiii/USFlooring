@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import USFMark from './USFMark';
+import logoImg from '@/imports/us-flooring-header-logo-400x160.png';
 
 function PhoneIcon() {
   return (
@@ -25,11 +25,8 @@ export default function Nav() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-ivory border-b border-sand">
         <div className="max-w-[1180px] mx-auto px-6 h-16 flex items-center justify-between gap-8">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
-            <USFMark size={34} />
-            <span className="font-sans text-walnut text-[14px] font-semibold leading-tight hidden sm:block">
-              US Flooring &amp; Molding
-            </span>
+          <Link to="/" className="flex items-center shrink-0" onClick={() => setOpen(false)}>
+            <img src={logoImg} alt="US Flooring & Molding" className="h-20 w-auto object-contain" />
           </Link>
 
           {/* Desktop nav */}
@@ -60,7 +57,7 @@ export default function Nav() {
             </a>
             <Link
               to="/contact"
-              className="bg-terracotta text-ivory px-5 py-2.5 rounded-[2px] font-sans text-[13px] font-bold hover:bg-terra-dark transition-colors"
+              className="bg-walnut text-ivory px-5 py-2.5 rounded-[2px] font-sans text-[13px] font-bold hover:bg-walnut-dark transition-colors"
             >
               Free Estimate
             </Link>
@@ -74,7 +71,7 @@ export default function Nav() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="bg-terracotta text-ivory px-4 py-2 rounded-[2px] font-sans text-[12px] font-bold hover:bg-terra-dark transition-colors"
+              className="bg-walnut text-ivory px-4 py-2 rounded-[2px] font-sans text-[12px] font-bold hover:bg-walnut-dark transition-colors"
             >
               Estimate
             </Link>
@@ -121,7 +118,7 @@ export default function Nav() {
         </a>
         <Link
           to="/contact"
-          className="flex-1 bg-terracotta text-ivory py-3 rounded-[2px] font-sans text-sm font-bold text-center hover:bg-terra-dark transition-colors"
+          className="flex-1 bg-walnut text-ivory py-3 rounded-[2px] font-sans text-sm font-bold text-center hover:bg-walnut-dark transition-colors"
         >
           Free Estimate
         </Link>

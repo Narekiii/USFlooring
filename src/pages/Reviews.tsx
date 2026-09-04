@@ -74,7 +74,7 @@ export default function Reviews() {
       <section className="pt-32 pb-16 bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">Customer Reviews</p>
+            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Customer Reviews</p>
             <h1 className="font-serif text-[40px] lg:text-[56px] font-bold text-charcoal leading-[1.06] mb-4">
               Don't Take Our Word for It
             </h1>
@@ -93,7 +93,7 @@ export default function Reviews() {
               href="https://g.co/kgs/yourlisting"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-sans text-[13px] font-bold text-terracotta hover:text-terra-dark transition-colors"
+              className="inline-flex items-center gap-2 font-sans text-[13px] font-bold text-walnut hover:text-walnut-dark transition-colors"
             >
               See us on Google →
             </a>
@@ -152,7 +152,7 @@ export default function Reviews() {
             We give every project the same care these customers experienced. Start with a free estimate.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/contact" className="bg-terracotta text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-terra-dark transition-colors">
+            <Link to="/contact" className="bg-walnut text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors">
               Get a Free Estimate
             </Link>
             <a href="tel:+18185150009" className="border-[1.5px] border-walnut text-walnut px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-sand/30 transition-colors">

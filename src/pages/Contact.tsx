@@ -47,7 +47,7 @@ export default function Contact() {
       <section className="pt-32 pb-12 bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">Get in Touch</p>
+            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Get in Touch</p>
             <h1 className="font-serif text-[40px] lg:text-[56px] font-bold text-charcoal leading-[1.06] mb-5">
               Let's Talk About Your Floor
             </h1>
@@ -56,7 +56,7 @@ export default function Contact() {
             </p>
             {/* Quick CTAs */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-              <a href="tel:+18185150009" className="flex items-center gap-3 bg-terracotta text-ivory px-5 py-4 rounded-[2px] hover:bg-terra-dark transition-colors group">
+              <a href="tel:+18185150009" className="flex items-center gap-3 bg-walnut text-ivory px-5 py-4 rounded-[2px] hover:bg-walnut-dark transition-colors group">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
@@ -109,7 +109,7 @@ export default function Contact() {
       {/* Form */}
       <section className="bg-ivory">
         <div className="max-w-[780px] mx-auto px-6 py-16">
-          <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">Free Estimate</p>
+          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Free Estimate</p>
           <h2 className="font-serif text-[32px] lg:text-[44px] font-bold text-charcoal mb-8 leading-tight">
             Request Your Free Estimate
           </h2>
@@ -200,7 +200,7 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="bg-terracotta text-ivory py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-terra-dark transition-colors mt-2"
+                className="bg-walnut text-ivory py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors mt-2"
               >
                 Submit Estimate Request
               </button>
@@ -220,7 +220,7 @@ export default function Contact() {
             <p className="font-sans text-[13px] text-ivory/50">1508 W Burbank Blvd · Mon – Sat, 9am – 6pm</p>
           </div>
           <div className="flex gap-3">
-            <a href="tel:+18185150009" className="bg-terracotta text-ivory px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:bg-terra-dark transition-colors">
+            <a href="tel:+18185150009" className="bg-walnut text-ivory px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:bg-walnut-dark transition-colors">
               Call to Schedule
             </a>
             <a href="mailto:hello@USFlooring.LA" className="border-[1.5px] border-ivory/30 text-ivory/60 px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:border-ivory/60 hover:text-ivory transition-colors">

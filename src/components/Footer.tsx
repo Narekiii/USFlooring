@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import USFMark from './USFMark';
+import logoImg from '@/imports/us-flooring-header-logo-400x160.png';
 
 const serviceAreas = ['Burbank', 'Glendale', 'North Hollywood', 'Toluca Lake', 'Studio City', 'Sun Valley', 'San Fernando Valley'];
 
@@ -9,11 +9,8 @@ export default function Footer() {
       <div className="max-w-[1180px] mx-auto px-6 pt-16 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand */}
         <div className="lg:col-span-1">
-          <div className="flex items-center gap-3 mb-5">
-            <USFMark size={40} />
-            <span className="font-sans text-ivory text-[13px] font-semibold leading-tight">
-              US Flooring<br />&amp; Molding
-            </span>
+          <div className="mb-5 inline-block bg-ivory rounded-[3px] px-3 py-2">
+            <img src={logoImg} alt="US Flooring & Molding" className="h-16 w-auto object-contain" />
           </div>
           <p className="font-sans text-[13px] text-ivory/45 leading-relaxed mb-5">
             Family-owned flooring store and contractor in Burbank, CA. Three generations in the trade, every floor treated like it's going in our own home.
@@ -69,18 +66,44 @@ export default function Footer() {
             </address>
             <p className="font-sans text-[12px] text-ivory/25">Mon – Sat · 9am – 6pm</p>
           </div>
-          <Link to="/contact" className="inline-block bg-terracotta text-ivory px-5 py-2.5 rounded-[2px] font-sans text-[13px] font-bold hover:bg-terra-dark transition-colors">
+          <Link to="/contact" className="inline-block bg-walnut text-ivory px-5 py-2.5 rounded-[2px] font-sans text-[13px] font-bold hover:bg-walnut-dark transition-colors">
             Get Free Estimate
           </Link>
         </div>
       </div>
 
-      <div className="border-t border-ivory/10 px-6 py-5">
-        <div className="max-w-[1180px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="font-sans text-[11px] text-ivory/20">
-            © 2024 US Flooring &amp; Molding Inc. All rights reserved. · Burbank, CA
-          </p>
-          <p className="font-sans text-[11px] text-ivory/15">Family Flooring. Honest People. Floors Built to Last.</p>
+      {/* Compact location strip */}
+      <div className="border-t border-ivory/10 px-6 py-6">
+        <div className="max-w-[1180px] mx-auto flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
+          <div className="flex flex-col sm:flex-row gap-6 sm:items-center">
+            {/* Pin icon + address */}
+            <div className="flex items-start gap-2.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C89B5A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="shrink-0 mt-0.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
+              </svg>
+              <div>
+                <p className="font-sans text-[12px] text-ivory/55">1508 W Burbank Blvd, Burbank, CA 91506</p>
+                <a href="tel:+18185150009" className="font-sans text-[12px] text-ivory/40 hover:text-ivory/70 transition-colors">(818) 515-0009</a>
+              </div>
+            </div>
+            <a
+              href="https://maps.app.goo.gl/jX5UrM4rbZP5CSq5A"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-sans text-[12px] font-semibold text-gold/60 hover:text-gold transition-colors whitespace-nowrap"
+            >
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              View on Google Maps
+            </a>
+          </div>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+            <p className="font-sans text-[11px] text-ivory/20">
+              © 2025 US Flooring &amp; Molding Inc. All rights reserved.
+            </p>
+            <p className="font-sans text-[11px] text-ivory/15">Family Flooring. Honest People. Floors Built to Last.</p>
+          </div>
         </div>
       </div>
     </footer>

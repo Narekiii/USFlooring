@@ -51,14 +51,14 @@ export default function Products() {
       {/* Header */}
       <section className="pt-32 pb-16 bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6">
-          <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">Products &amp; Services</p>
+          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Products &amp; Services</p>
           <h1 className="font-serif text-[40px] lg:text-[60px] font-bold text-charcoal leading-[1.06] max-w-[580px] mb-5">
             Everything You Need, Under One Roof
           </h1>
           <p className="font-sans text-base lg:text-[18px] text-charcoal/60 leading-relaxed max-w-[560px] mb-8">
-            Flooring, moldings, and professional installation — all from a family that has been getting this right for over fifteen years in Burbank.
+            Flooring, moldings, and professional installation — all from a family that has been getting this right since 2005 in Burbank.
           </p>
-          <Link to="/contact" className="inline-block bg-terracotta text-ivory px-8 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-terra-dark transition-colors">
+          <Link to="/contact" className="inline-block bg-walnut text-ivory px-8 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors">
             Get a Free Estimate
           </Link>
         </div>
@@ -74,7 +74,7 @@ export default function Products() {
                   <img src={s.img} alt={s.name} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div>
-                  <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-3">{s.tagline}</p>
+                  <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-3">{s.tagline}</p>
                   <h2 className="font-serif text-[28px] lg:text-[36px] font-bold text-charcoal mb-4 leading-tight">{s.name}</h2>
                   <p className="font-sans text-base text-charcoal/60 leading-relaxed mb-6">{s.desc}</p>
                   <ul className="flex flex-col gap-2.5 mb-8">
@@ -85,7 +85,7 @@ export default function Products() {
                       </li>
                     ))}
                   </ul>
-                  <Link to="/contact" className="inline-flex items-center gap-2 font-sans text-[14px] font-bold text-terracotta hover:text-terra-dark transition-colors group">
+                  <Link to="/contact" className="inline-flex items-center gap-2 font-sans text-[14px] font-bold text-walnut hover:text-walnut-dark transition-colors group">
                     Ask about {s.name} <span className="group-hover:translate-x-1 transition-transform">→</span>
                   </Link>
                 </div>
@@ -103,7 +103,7 @@ export default function Products() {
             Come by the showroom or give us a call. We'll help you figure out the right material for your space, your lifestyle, and your budget.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/contact" className="bg-terracotta text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-terra-dark transition-colors">
+            <Link to="/contact" className="bg-walnut text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors">
               Request Free Estimate
             </Link>
             <a href="tel:+18185150009" className="border-[1.5px] border-ivory/30 text-ivory/70 px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:border-ivory/60 hover:text-ivory transition-colors">

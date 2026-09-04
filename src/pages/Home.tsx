@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import heroBg from '@/imports/hero-bg.png';
+import heroBg from '@/imports/ChatGPT_Image_Sep_3__2026__04_50_48_PM.png';
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
 function StarIcon({ size = 14 }: { size?: number }) {
@@ -29,10 +29,10 @@ function XIcon() {
 // ── Data ──────────────────────────────────────────────────────────────────────
 const trustItems = [
   '5.0★ Google Rating',
-  '15 Happy Customers',
+
   'Free Estimates',
   '1-Year Labor Guarantee',
-  'Family-Owned in Burbank',
+  '20+ Years in Burbank',
   'Hardwood · Laminate · Vinyl · Moldings',
 ];
 
@@ -100,7 +100,7 @@ export default function Home() {
             We're the local flooring team Burbank homeowners call when they want it done right — real guidance, real craftsmanship, and a family name behind every install.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
-            <Link to="/contact" className="bg-terracotta text-ivory px-8 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-terra-dark transition-colors text-center">
+            <Link to="/contact" className="bg-walnut text-ivory px-8 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors text-center">
               Get Your Free Estimate
             </Link>
             <a href="tel:+18185150009" className="border-[1.5px] border-walnut text-walnut px-8 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-sand/30 transition-colors text-center">
@@ -109,7 +109,7 @@ export default function Home() {
           </div>
           {/* Trust micro-line */}
           <p className="font-sans text-[12px] font-semibold text-charcoal/40 tracking-wide">
-            ★ 5.0 Google Rating · 15 Reviews · 15+ Years in Burbank · 1-Year Labor Guarantee
+            ★ 5.0 Google Rating · 15 Reviews · 20+ Years in Burbank · 1-Year Labor Guarantee
           </p>
         </div>
         {/* Hero photo */}
@@ -139,7 +139,7 @@ export default function Home() {
       <section className="bg-ivory">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px] grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">Why we exist</p>
+            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Why we exist</p>
             <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-charcoal mb-6 leading-[1.1]">
               Flooring Shouldn't Feel Like a Gamble
             </h2>
@@ -149,7 +149,7 @@ export default function Home() {
             <p className="font-sans text-base lg:text-[17px] text-charcoal/65 leading-relaxed mb-8">
               We're not here to sell you the most expensive option on the floor. We're here to tell you the truth about what will actually work in your home — and then do the work ourselves, right.
             </p>
-            <Link to="/contact" className="inline-flex items-center gap-2 font-sans text-[15px] font-bold text-terracotta hover:text-terra-dark transition-colors group">
+            <Link to="/contact" className="inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-walnut-dark transition-colors group">
               Let's Talk About Your Floor
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
@@ -166,12 +166,12 @@ export default function Home() {
       {/* ── 4. HOW ── */}
       <section className="bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px]">
-          <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">How we do it</p>
+          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">How we do it</p>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
             <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-charcoal leading-[1.1] max-w-[520px]">
               Three Generations of Getting This Right
             </h2>
-            <Link to="/about" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-terracotta hover:text-terra-dark transition-colors group">
+            <Link to="/about" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-walnut-dark transition-colors group">
               See Why Burbank Trusts Us
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
@@ -186,7 +186,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {howCards.map((card, i) => (
               <div key={card.title} className="bg-ivory border border-sand rounded-[3px] p-7">
-                <div className="w-6 h-[2.5px] mb-4" style={{ backgroundColor: i % 3 === 0 ? '#6B4A2D' : i % 3 === 1 ? '#B5502E' : '#C89B5A' }} />
+                <div className="w-6 h-[2.5px] mb-4" style={{ backgroundColor: i % 3 === 0 ? '#6B4A2D' : i % 3 === 1 ? '#C89B5A' : '#8A867D' }} />
                 <h3 className="font-sans text-[15px] font-bold text-charcoal mb-2">{card.title}</h3>
                 <p className="font-sans text-[13px] text-charcoal/55 leading-relaxed">{card.desc}</p>
               </div>
@@ -198,12 +198,12 @@ export default function Home() {
       {/* ── 5. WHAT ── */}
       <section className="bg-ivory">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px]">
-          <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">What we offer</p>
+          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">What we offer</p>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
             <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-charcoal leading-[1.1] max-w-[480px]">
               Everything You Need, Under One Roof
             </h2>
-            <Link to="/products" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-terracotta hover:text-terra-dark transition-colors group">
+            <Link to="/products" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-walnut-dark transition-colors group">
               Visit Our Burbank Showroom
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
@@ -227,7 +227,7 @@ export default function Home() {
       {/* ── 6. Big-Box Difference ── */}
       <section className="bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px]">
-          <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">The difference</p>
+          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">The difference</p>
           <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-charcoal mb-5 leading-[1.1] max-w-[600px]">
             Why Homeowners Choose Us Over the Big-Box Aisle
           </h2>
@@ -258,7 +258,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <Link to="/contact" className="inline-block bg-terracotta text-ivory px-7 py-3.5 rounded-[2px] font-sans text-[14px] font-bold hover:bg-terra-dark transition-colors">
+              <Link to="/contact" className="inline-block bg-walnut text-ivory px-7 py-3.5 rounded-[2px] font-sans text-[14px] font-bold hover:bg-walnut-dark transition-colors">
                 Get the Personal Treatment — Request an Estimate →
               </Link>
             </div>
@@ -269,10 +269,10 @@ export default function Home() {
       {/* ── 7. Testimonials ── */}
       <section className="bg-ivory">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px]">
-          <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">Reviews</p>
+          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Reviews</p>
           <div className="flex flex-col lg:flex-row items-end justify-between gap-8 mb-12">
             <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-charcoal leading-[1.1]">Don't Take Our Word for It</h2>
-            <Link to="/reviews" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-terracotta hover:text-terra-dark transition-colors group">
+            <Link to="/reviews" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-walnut-dark transition-colors group">
               Read More Reviews <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
@@ -339,7 +339,7 @@ export default function Home() {
         <div className="max-w-[1180px] mx-auto px-6 py-[72px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">Local presence</p>
+              <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Local presence</p>
               <h2 className="font-serif text-[28px] lg:text-[36px] font-bold text-charcoal mb-4 leading-tight">
                 Proudly Serving Burbank and the Surrounding Valley
               </h2>
@@ -376,7 +376,7 @@ export default function Home() {
               (818) 515-0009 · Fax (818) 840-8222
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
-              <a href="tel:+18185150009" className="bg-terracotta text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-terra-dark transition-colors">
+              <a href="tel:+18185150009" className="bg-walnut text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors">
                 Call Now
               </a>
               <Link to="/contact" className="bg-ivory text-charcoal px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-sand transition-colors">

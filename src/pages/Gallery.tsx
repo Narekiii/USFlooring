@@ -28,7 +28,7 @@ export default function Gallery() {
       {/* Header */}
       <section className="pt-32 pb-12 bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6">
-          <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">Gallery</p>
+          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Gallery</p>
           <h1 className="font-serif text-[40px] lg:text-[56px] font-bold text-charcoal leading-[1.06] mb-4">Our Work</h1>
           <p className="font-sans text-base text-charcoal/55 leading-relaxed max-w-[500px]">
             Real floors in real Burbank homes. Every project installed by our own crew.
@@ -125,7 +125,7 @@ export default function Gallery() {
             Visit our Burbank showroom to see samples in person, or request a free estimate and we'll come to you.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/contact" className="bg-terracotta text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-terra-dark transition-colors">
+            <Link to="/contact" className="bg-walnut text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors">
               Request Free Estimate
             </Link>
             <a href="tel:+18185150009" className="border-[1.5px] border-walnut text-walnut px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-sand/30 transition-colors">

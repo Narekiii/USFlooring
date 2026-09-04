@@ -13,7 +13,7 @@ const values = [
   { title: 'Honest Guidance', desc: "We tell you what will actually work for your space — not just what's easiest for us to sell. That means sometimes talking you out of an option that doesn't fit." },
   { title: 'Family Accountability', desc: 'Our name is on every project. When something needs attention after we leave, we answer the phone and we come back. That is what family businesses do.' },
   { title: 'Skilled Craft', desc: "Prep is where installs are won or lost. We don't rush subfloor work because the clock is running. We do it right so the floor holds for decades." },
-  { title: 'Local Knowledge', desc: "Fifteen years in Burbank means we understand how homes here are built, how they settle, and what conditions your floor will actually live in." },
+  { title: 'Local Knowledge', desc: "Twenty years in Burbank means we understand how homes here are built, how they settle, and what conditions your floor will actually live in." },
 ];
 
 const guarantee = [
@@ -31,12 +31,12 @@ export default function About() {
       <section className="pt-32 pb-16 bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">About Us</p>
+            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">About Us</p>
             <h1 className="font-serif text-[40px] lg:text-[58px] font-bold text-charcoal leading-[1.06] mb-6">
               Meet the Family Behind the Floors
             </h1>
             <p className="font-sans text-base lg:text-[18px] text-charcoal/60 leading-relaxed mb-6">
-              US Flooring &amp; Molding Inc. is a family-owned flooring contractor and showroom based in Burbank, California. We've been serving homeowners, interior designers, and contractors across the greater Los Angeles area for over fifteen years.
+              US Flooring &amp; Molding Inc. is a family-owned flooring contractor and showroom based in Burbank, California. We've been serving homeowners, interior designers, and contractors across the greater Los Angeles area since 2005.
             </p>
             <p className="font-sans text-base text-charcoal/60 leading-relaxed">
               We're not a franchise. We're not a big-box satellite. Every floor we sell and every install we run carries our family name — and that means something to us.
@@ -85,14 +85,14 @@ export default function About() {
       {/* Values */}
       <section className="bg-ivory">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px]">
-          <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">What we stand for</p>
+          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">What we stand for</p>
           <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-charcoal mb-12 leading-[1.1] max-w-[480px]">
             The Values We Work By Every Day
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {values.map((v, i) => (
               <div key={v.title} className="bg-[#F0E9DC] border border-sand rounded-[3px] p-8">
-                <div className="w-6 h-[2.5px] mb-5" style={{ backgroundColor: i % 2 === 0 ? '#6B4A2D' : '#B5502E' }} />
+                <div className="w-6 h-[2.5px] mb-5" style={{ backgroundColor: i % 2 === 0 ? '#6B4A2D' : '#C89B5A' }} />
                 <h3 className="font-sans text-[16px] font-bold text-charcoal mb-3">{v.title}</h3>
                 <p className="font-sans text-[14px] text-charcoal/55 leading-relaxed">{v.desc}</p>
               </div>
@@ -105,7 +105,7 @@ export default function About() {
       <section className="bg-[#F0E9DC]">
         <div className="max-w-[1180px] mx-auto px-6 py-[72px] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">Our promise</p>
+            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Our promise</p>
             <h2 className="font-serif text-[32px] lg:text-[44px] font-bold text-charcoal mb-4 leading-tight">
               1-Year Labor Guarantee
             </h2>
@@ -135,7 +135,7 @@ export default function About() {
         <div className="max-w-[1180px] mx-auto px-6 py-[72px]">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
             {[
-              { stat: '15+', label: 'Years in Burbank' },
+              { stat: '20+', label: 'Years in Burbank' },
               { stat: '5.0★', label: 'Google Rating' },
               { stat: '100%', label: 'Family-Owned' },
               { stat: '1-Year', label: 'Labor Guarantee' },
@@ -153,16 +153,16 @@ export default function About() {
       <section className="bg-ivory">
         <div className="max-w-[1180px] mx-auto px-6 py-[72px] grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <p className="font-sans text-[11px] font-bold text-terracotta uppercase tracking-widest mb-4">Find us</p>
+            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Find us</p>
             <h2 className="font-serif text-[28px] font-bold text-charcoal mb-4">Visit the Showroom</h2>
             <div className="font-sans text-[14px] text-charcoal/55 leading-relaxed mb-6">
               <p className="mb-1">1508 W Burbank Blvd</p>
               <p className="mb-1">Burbank, CA 91506</p>
               <p className="mb-4">Mon – Sat · 9am – 6pm</p>
-              <a href="tel:+18185150009" className="font-bold text-walnut hover:text-terracotta transition-colors">(818) 515-0009</a>
+              <a href="tel:+18185150009" className="font-bold text-walnut hover:text-walnut transition-colors">(818) 515-0009</a>
             </div>
             <div className="flex gap-3">
-              <Link to="/contact" className="bg-terracotta text-ivory px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:bg-terra-dark transition-colors">
+              <Link to="/contact" className="bg-walnut text-ivory px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:bg-walnut-dark transition-colors">
                 Request Estimate
               </Link>
               <a href="https://www.google.com/maps/dir/?api=1&destination=1508+W+Burbank+Blvd+Burbank+CA+91506" target="_blank" rel="noopener noreferrer" className="border-[1.5px] border-sand text-charcoal/55 px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:border-walnut/40 transition-colors">
@@ -177,7 +177,7 @@ export default function About() {
             </blockquote>
             <p className="font-sans text-[13px] text-charcoal/40">— Bob S., Santa Monica, CA</p>
             <div className="mt-6 pt-6 border-t border-sand">
-              <Link to="/reviews" className="font-sans text-[14px] font-bold text-terracotta hover:text-terra-dark transition-colors inline-flex items-center gap-1.5 group">
+              <Link to="/reviews" className="font-sans text-[14px] font-bold text-walnut hover:text-walnut-dark transition-colors inline-flex items-center gap-1.5 group">
                 Read all reviews <span className="group-hover:translate-x-1 transition-transform">→</span>
               </Link>
             </div>
@@ -195,7 +195,7 @@ export default function About() {
               <p className="font-sans text-[12px] text-charcoal/40">Family Flooring. Honest People. Floors Built to Last.</p>
             </div>
           </div>
-          <Link to="/contact" className="bg-terracotta text-ivory px-7 py-3.5 rounded-[2px] font-sans text-[14px] font-bold hover:bg-terra-dark transition-colors">
+          <Link to="/contact" className="bg-walnut text-ivory px-7 py-3.5 rounded-[2px] font-sans text-[14px] font-bold hover:bg-walnut-dark transition-colors">
             Get Your Free Estimate
           </Link>
         </div>
