@@ -111,9 +111,15 @@ const homeJsonLd = [
         closes: '18:00',
       },
     ],
+    hasMap: 'https://maps.app.goo.gl/tj7qojTHfH3svRqD6',
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 34.1818843,
+      longitude: -118.3279698,
+    },
     sameAs: [
       BUSINESS.mapsUrl,
-      'https://www.yelp.com/biz/us-flooring-and-molding-burbank',
+      'https://m.yelp.com/biz/us-flooring-and-molding-burbank',
     ],
     address: {
       '@type': 'PostalAddress',
@@ -199,6 +205,15 @@ export default function Home() {
           {/* Trust micro-line */}
           <p className="font-sans text-[12px] font-semibold text-charcoal/40 tracking-wide">
             ★ Verified Google Reviews · 20+ Years in Burbank · 1-Year Labor Guarantee
+          </p>
+        </div>
+      </section>
+
+      {/* ── 1b. GEO Answer Block ── */}
+      <section className="bg-ivory border-b border-sand/60">
+        <div className="max-w-[1180px] mx-auto px-6 py-5">
+          <p className="font-sans text-[14px] text-charcoal/55 leading-relaxed">
+            US Flooring &amp; Molding Inc. is a family-owned flooring store and installation company located at 1508 W Burbank Blvd in Burbank, California. We help homeowners, designers, contractors, and property professionals choose and install hardwood, laminate, luxury vinyl, molding, and baseboards throughout Burbank and the greater Los Angeles area.
           </p>
         </div>
       </section>

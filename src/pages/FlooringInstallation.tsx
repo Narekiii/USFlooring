@@ -7,9 +7,9 @@ const crumbs = [{ label: 'Home', href: '/' }, { label: 'Products & Services', hr
 const faqs = [
   { q: 'Does US Flooring & Molding use its own installation crew?', a: 'Yes. We do not subcontract installation. Our own team handles the work from start to finish, which is how we maintain consistent quality and accountability on every project.' },
   { q: 'What does the 1-year labor guarantee cover?', a: 'Our labor guarantee covers installation workmanship defects for one year from project completion. If something is wrong with how the floor was installed — not manufacturer material defects or normal wear — we come back and correct it.' },
-  { q: 'Do you remove existing flooring before installing?', a: "We can include demolition and haul-away of existing flooring as part of the project scope. Whether it's required depends on the new material, the existing flooring height, and subfloor condition. We discuss this during the estimate." },
+  { q: 'Do you remove existing flooring before installing?', a: "Removal of existing flooring is not included in our standard installation service. We recommend arranging demolition and haul-away separately before our crew arrives. We are happy to advise on what needs to be cleared during the estimate." },
   { q: 'What subfloor preparation do you perform?', a: 'We inspect the subfloor for moisture, structural issues, flatness, and squeaks before installation begins. Proper subfloor preparation is one of the most important factors in a durable flooring installation and is not something we skip.' },
-  { q: 'Do you move furniture?', a: 'We handle standard furniture moving as part of the project. Large or specialty items such as pianos, pool tables, or built-ins are usually excluded and should be discussed during the estimate.' },
+  { q: 'Do I need to clear the room before installation?', a: 'Yes. Please have furniture removed from the work area before our crew arrives. We do not provide furniture moving as part of the installation service. If you have questions about what needs to be cleared, we are happy to walk you through it during the estimate.' },
   { q: 'How long does installation typically take?', a: 'A single room may take one day. A full home with multiple rooms and flooring types may take several days. Timeline depends on square footage, flooring type, subfloor condition, and any additional prep work. We provide a realistic schedule during the estimate process.' },
 ];
 
@@ -60,9 +60,8 @@ export default function FlooringInstallation() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
               { title: 'Subfloor Inspection & Preparation', desc: 'We inspect for moisture, flatness, squeaks, and structural issues before any flooring goes down. Poor subfloor preparation is the leading cause of installation failure, and we address it properly.' },
-              { title: 'Furniture Moving', desc: 'Standard furniture is moved by our crew before installation and replaced afterward. Large specialty items should be discussed during the estimate.' },
-              { title: 'Material Acclimation', desc: 'Some materials — particularly solid hardwood — need time to acclimate to your home environment before installation. We factor this into the project schedule.' },
-              { title: 'Installation', desc: 'Hardwood, laminate, luxury vinyl plank, and tile — our crew is experienced with all flooring types we sell. Installation methods vary by material and subfloor.' },
+              { title: 'Material Delivery & Staging', desc: 'We coordinate material delivery and staging so the right product is on-site and ready before the crew begins. Some materials require acclimation time that we factor into the schedule.' },
+              { title: 'Installation', desc: 'Hardwood, laminate, luxury vinyl plank — our crew is experienced with all flooring types we sell. Installation methods vary by material and subfloor type.' },
               { title: 'Molding & Transition Installation', desc: 'Baseboards, shoe molding, T-moldings, stair nose, and end caps are installed as part of the project to complete the finish.' },
               { title: 'Cleanup & Final Walkthrough', desc: 'We clean up the work area and do a complete walkthrough with you before we consider the project finished.' },
             ].map((b) => (

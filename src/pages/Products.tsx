@@ -41,7 +41,7 @@ const services = [
     tagline: 'Our name is on every install.',
     desc: "We don't hand your job off to a subcontractor you've never met. Our own crew handles the work — prep, install, cleanup, and follow-up. That's the accountability a family name demands.",
     img: 'https://images.unsplash.com/photo-1622936063167-e32e9f955438?w=700&h=500&fit=crop&auto=format',
-    features: ['Moisture & subfloor prep', 'Furniture moving', 'Haul-away & cleanup', '1-year labor guarantee'],
+    features: ['Moisture & subfloor prep', 'Molding & transition installation', 'Cleanup & final walkthrough', '1-year labor guarantee'],
     href: '/flooring-installation-burbank',
   },
   {
@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     q: 'What should I do to prepare before installation?',
-    a: "Preparation depends on the project scope, flooring type, and your home's conditions. We will walk you through specific steps during the estimate process. General considerations include clearing furniture from the work area, ensuring the subfloor is accessible, and confirming material delivery timing. We can advise on whether acclimation time is needed for the material you choose.",
+    a: "Preparation depends on the project scope, flooring type, and your home's conditions. We will walk you through specific steps during the estimate process. General considerations include ensuring the subfloor is accessible and confirming material delivery timing. We can advise on whether acclimation time is needed for the material you choose.",
   },
   {
     q: 'How long does flooring installation typically take?',

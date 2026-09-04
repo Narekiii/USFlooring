@@ -58,6 +58,12 @@ const contactJsonLd = {
   url: BUSINESS.website,
   telephone: BUSINESS.phone,
   email: BUSINESS.email,
+  hasMap: 'https://maps.app.goo.gl/tj7qojTHfH3svRqD6',
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 34.1818843,
+    longitude: -118.3279698,
+  },
   address: {
     '@type': 'PostalAddress',
     streetAddress: BUSINESS.address.street,
@@ -229,8 +235,19 @@ export default function Contact() {
             </div>
             {/* Info */}
             <address className="not-italic bg-ivory border border-sand rounded-[3px] p-6 flex flex-col gap-3">
+              <div className="flex gap-4">
+                <span className="font-sans text-[11px] font-bold text-charcoal/35 uppercase tracking-wide w-14 shrink-0 pt-0.5">Address</span>
+                <a
+                  href="https://maps.app.goo.gl/tj7qojTHfH3svRqD6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open US Flooring & Molding Inc. in Google Maps"
+                  className="font-sans text-[14px] text-charcoal/65 hover:text-walnut transition-colors"
+                >
+                  {BUSINESS.address.full}
+                </a>
+              </div>
               {[
-                { label: 'Address', value: BUSINESS.address.full },
                 { label: 'Phone', value: BUSINESS.phoneDisplay },
                 { label: 'Fax', value: BUSINESS.fax },
                 { label: 'Email', value: BUSINESS.email },
@@ -245,14 +262,30 @@ export default function Contact() {
           </div>
 
           {/* Map */}
-          <div className="relative overflow-hidden rounded-[3px] bg-sand/30 border border-sand" style={{ paddingBottom: '75%' }}>
-            <iframe
-              title="US Flooring & Molding Location — 1508 W Burbank Blvd, Burbank, CA"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-118.3235%2C34.1770%2C-118.3035%2C34.1870&layer=mapnik&marker=34.1820%2C-118.3135"
-              className="absolute inset-0 w-full h-full"
-              style={{ border: 0 }}
-              loading="lazy"
-            />
+          <div className="flex flex-col gap-3">
+            <div className="relative w-full min-h-[320px] md:min-h-[400px] overflow-hidden rounded-[3px] bg-sand/30 border border-sand">
+              <iframe
+                src="https://www.google.com/maps?q=US+Flooring+%26+Molding+Inc.%2C+1508+W+Burbank+Blvd%2C+Burbank%2C+CA+91506&z=16&output=embed"
+                title="Google Maps location of US Flooring & Molding Inc. in Burbank"
+                className="absolute inset-0 w-full h-full"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <a
+              href="https://maps.app.goo.gl/tj7qojTHfH3svRqD6"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Get directions to US Flooring & Molding Inc. in Google Maps"
+              className="inline-flex items-center gap-2 self-start border-[1.5px] border-walnut text-walnut px-5 py-3 rounded-[2px] font-sans text-[13px] font-bold hover:bg-sand/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-walnut transition-colors"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
+              </svg>
+              Get Directions
+            </a>
           </div>
         </div>
       </section>

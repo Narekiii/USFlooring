@@ -15,7 +15,7 @@ const details = [
   { title: 'Moisture Protection', desc: 'Moisture barriers and sealers applied as required for the material and subfloor type — critical in California climates.' },
   { title: 'Transitions & Thresholds', desc: 'T-molding, reducers, and threshold strips fitted precisely between flooring materials and room transitions.' },
   { title: 'Baseboard Installation', desc: 'Baseboards and quarter-round installed after flooring to protect walls and create a clean, finished appearance.' },
-  { title: 'Complete Cleanup', desc: 'All debris, packaging, and installation materials removed. Space left clean and ready to move furniture back in.' },
+  { title: 'Complete Cleanup', desc: 'All debris, packaging, and installation materials removed. Space left clean and ready to enjoy.' },
 ];
 
 export default function Installation() {

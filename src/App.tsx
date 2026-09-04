@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -13,10 +14,22 @@ import LuxuryVinylFlooring from './pages/LuxuryVinylFlooring';
 import FlooringInstallation from './pages/FlooringInstallation';
 import MoldingInstallation from './pages/MoldingInstallation';
 import NotFound from './pages/NotFound';
+import { initAnalytics, trackPageView } from './lib/analytics';
+
+initAnalytics();
+
+function RouteTracker() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    trackPageView(pathname);
+  }, [pathname]);
+  return null;
+}
 
 export default function App() {
   return (
     <BrowserRouter>
+      <RouteTracker />
       <div className="min-h-full flex flex-col bg-ivory font-sans">
         <Nav />
         <main className="flex-1">
