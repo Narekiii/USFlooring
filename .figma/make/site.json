@@ -1,12 +1,13 @@
 {
-  "description": "Offers a streamlined platform to build and launch professional websites quickly, empowering users to establish their online presence with ease.",
+  "title": "US Flooring & Molding Inc. | Flooring Store in Burbank, CA",
+  "description": "US Flooring & Molding Inc. offers hardwood, laminate, luxury vinyl, molding, and professional flooring installation in Burbank and greater Los Angeles. Call (818) 515-0009 for a free estimate.",
   "robots": {
-    "index": false
+    "index": true
   },
   "icons": {
     "icon": "/.figma/make/favicon.png"
   },
-  "accessibility": {
+"accessibility": {
     "addBypassLinks": false,
     "ignoreReducedMotion": false
   }

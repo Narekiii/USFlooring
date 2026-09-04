@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.usflooring.la/sitemap.xmlUser-agent: *
-Allow: /
-
 Sitemap: https://www.usflooring.la/sitemap.xml

@@ -7,7 +7,8 @@ export default function NotFound() {
       <SEO
         title="Page Not Found | US Flooring & Molding Inc."
         description="The page you were looking for could not be found. Visit US Flooring & Molding Inc. for flooring and molding services in Burbank, CA."
-        canonical="https://www.usflooring.la/404"
+        canonical={typeof window !== 'undefined' ? window.location.href : 'https://www.usflooring.la/'}
+        robots="noindex, follow"
       />
       <section className="pt-40 pb-24 bg-[#F0E9DC] min-h-[70vh] flex items-center">
         <div className="max-w-[600px] mx-auto px-6 text-center">

@@ -4,31 +4,49 @@ import Breadcrumb, { breadcrumbJsonLd } from '@/components/Breadcrumb';
 import { BUSINESS } from '@/lib/business';
 
 type FormData = {
-  firstName: string;
-  lastName: string;
+  fullName: string;
   phone: string;
   email: string;
-  projectType: string;
-  flooringType: string;
-  message: string;
-  preferredContactMethod: string;
+  projectAddress: string;
+  serviceNeeded: string;
+  squareFootage: string;
+  timeline: string;
+  projectDetails: string;
+  consent: boolean;
   _honey: string;
 };
 
 const init: FormData = {
-  firstName: '',
-  lastName: '',
+  fullName: '',
   phone: '',
   email: '',
-  projectType: '',
-  flooringType: '',
-  message: '',
-  preferredContactMethod: 'phone',
+  projectAddress: '',
+  serviceNeeded: '',
+  squareFootage: '',
+  timeline: '',
+  projectDetails: '',
+  consent: false,
   _honey: '',
 };
 
-const projectTypes = ['New Installation', 'Replacement / Renovation', 'Repair', 'Refinishing', 'Commercial Project', 'Other'];
-const flooringTypes = ['Hardwood', 'Laminate', 'Luxury Vinyl (LVP/LVT)', 'Moldings & Trim', 'Not sure yet'];
+const serviceOptions = [
+  'Flooring Purchase',
+  'Flooring Installation',
+  'Laminate Flooring',
+  'Hardwood Flooring',
+  'Vinyl Flooring',
+  'Baseboard or Molding',
+  'Flooring Repair',
+  'Other',
+];
+
+const timelineOptions = [
+  'As Soon as Possible',
+  'Within 2 Weeks',
+  'Within 1 Month',
+  'Within 2–3 Months',
+  'Just Researching',
+];
 
 const contactCrumbs = [{ label: 'Home', href: '/' }, { label: 'Free Estimate' }];
 
@@ -50,55 +68,106 @@ const contactJsonLd = {
   },
 };
 
+function isValidEmail(v: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+}
+
+function isValidPhone(v: string) {
+  return v.replace(/\D/g, '').length >= 10;
+}
+
 export default function Contact() {
   const [form, setForm] = useState<FormData>(init);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-  const formRef = useRef<HTMLFormElement>(null);
+  const [fieldErrors, setFieldErrors] = useState<Partial<Record<keyof FormData, string>>>({});
+  const submittingRef = useRef(false);
 
-  const set = (k: keyof FormData) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
-    setForm((f) => ({ ...f, [k]: e.target.value }));
+  const set =
+    (k: keyof FormData) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+      const val = e.target.type === 'checkbox' ? (e.target as HTMLInputElement).checked : e.target.value;
+      setForm((f) => ({ ...f, [k]: val }));
+      if (fieldErrors[k]) setFieldErrors((prev) => ({ ...prev, [k]: undefined }));
+    };
 
-  const emailRequired = form.preferredContactMethod === 'email';
+  function validate(): boolean {
+    const errs: Partial<Record<keyof FormData, string>> = {};
+    if (!form.fullName.trim()) errs.fullName = 'Full name is required.';
+    if (!form.phone.trim()) {
+      errs.phone = 'Phone number is required.';
+    } else if (!isValidPhone(form.phone)) {
+      errs.phone = 'Enter a valid phone number (at least 10 digits).';
+    }
+    if (!form.email.trim()) {
+      errs.email = 'Email address is required.';
+    } else if (!isValidEmail(form.email)) {
+      errs.email = 'Enter a valid email address.';
+    }
+    if (!form.projectAddress.trim()) errs.projectAddress = 'Project address or ZIP is required.';
+    if (!form.serviceNeeded) errs.serviceNeeded = 'Please select a service.';
+    if (!form.projectDetails.trim()) errs.projectDetails = 'Please describe your project.';
+    if (!form.consent) errs.consent = 'You must agree to be contacted.';
+    setFieldErrors(errs);
+    return Object.keys(errs).length === 0;
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (form._honey) return;
-    if (status === 'submitting') return;
+    if (submittingRef.current) return;
+    if (!validate()) return;
 
+    submittingRef.current = true;
     setStatus('submitting');
-    try {
-      const body = new FormData();
-      body.append('firstName', form.firstName);
-      body.append('lastName', form.lastName);
-      body.append('phone', form.phone);
-      body.append('email', form.email);
-      body.append('projectType', form.projectType);
-      body.append('flooringType', form.flooringType);
-      body.append('message', form.message);
-      body.append('preferredContactMethod', form.preferredContactMethod);
-      body.append('_subject', `Estimate Request from ${form.firstName} ${form.lastName}`);
-      body.append('_captcha', 'false');
-      body.append('_template', 'table');
 
-      const res = await fetch('https://formsubmit.co/hello@USFlooring.LA', {
+    try {
+      const payload = {
+        access_key: '3f19eb6d-1c9e-4e4a-bda0-bacdc9bcf02d',
+        subject: 'New Free Estimate Request — US Flooring Website',
+        from_name: 'US Flooring Website',
+        replyto: form.email.trim(),
+        name: form.fullName.trim(),
+        email: form.email.trim(),
+        phone: form.phone.trim(),
+        project_address: form.projectAddress.trim(),
+        service_needed: form.serviceNeeded,
+        square_footage: form.squareFootage.trim() || 'Not provided',
+        timeline: form.timeline || 'Not provided',
+        project_details: form.projectDetails.trim(),
+      };
+
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body,
-        headers: { Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
       });
 
-      if (res.ok) {
+      const data = await res.json();
+      if (res.ok && data.success) {
         setStatus('success');
+        setForm(init);
+        setFieldErrors({});
+        (window as any).gtag?.('event', 'estimate_form_submit', { status: 'success' });
       } else {
         setStatus('error');
       }
     } catch {
       setStatus('error');
+    } finally {
+      submittingRef.current = false;
     }
   };
 
   const labelCls = 'font-sans text-[12px] font-bold text-charcoal/60 uppercase tracking-wide block mb-1.5';
-  const inputCls = 'w-full bg-ivory border border-sand rounded-[2px] px-4 py-3 font-sans text-[14px] text-charcoal placeholder:text-charcoal/25 focus:outline-none focus:border-walnut transition-colors';
+  const inputCls =
+    'w-full bg-ivory border border-sand rounded-[2px] px-4 py-3 font-sans text-[14px] text-charcoal placeholder:text-charcoal/25 focus:outline-none focus:border-walnut transition-colors';
+  const inputErrCls = inputCls.replace('border-sand', 'border-red-400');
   const selectCls = inputCls + ' appearance-none';
+  const selectErrCls = inputErrCls + ' appearance-none';
+  const errMsg = 'font-sans text-[12px] text-red-600 mt-1';
+
+  const inp = (k: keyof FormData) => (fieldErrors[k] ? inputErrCls : inputCls);
+  const sel = (k: keyof FormData) => (fieldErrors[k] ? selectErrCls : selectCls);
 
   return (
     <div className="pb-[72px] lg:pb-0">
@@ -196,122 +265,221 @@ export default function Contact() {
             Request Your Free Estimate
           </h2>
 
+          {/* Success state */}
           {status === 'success' ? (
-            <div className="bg-[#F0E9DC] border border-sand rounded-[3px] p-10 text-center">
+            <div
+              role="status"
+              aria-live="polite"
+              className="bg-[#F0E9DC] border border-sand rounded-[3px] p-10 text-center"
+            >
               <div className="font-serif text-[28px] font-semibold text-walnut mb-3">Request Received</div>
               <p className="font-sans text-base text-charcoal/60 leading-relaxed">
-                Thank you. Your estimate request was received successfully. A member of the US Flooring &amp; Molding team will contact you within one business day. For immediate assistance, call {BUSINESS.phoneDisplay}.
+                Thank you! Your estimate request has been received. A member of the US Flooring team will contact you shortly.
               </p>
             </div>
           ) : (
-            <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-6" noValidate>
-              {/* Honeypot — hidden from real users, traps bots */}
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6" noValidate aria-label="Free estimate request form">
+              {/* Honeypot — hidden from real users */}
               <div style={{ display: 'none' }} aria-hidden="true">
-                <label>Leave this blank
-                  <input tabIndex={-1} autoComplete="off" value={form._honey} onChange={set('_honey')} />
+                <label>
+                  Leave this blank
+                  <input tabIndex={-1} autoComplete="off" name="_honey" value={form._honey} onChange={set('_honey')} />
                 </label>
               </div>
 
-              {/* Name row */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="firstName" className={labelCls}>First Name *</label>
-                  <input id="firstName" required name="firstName" value={form.firstName} onChange={set('firstName')} className={inputCls} placeholder="Jane" />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className={labelCls}>Last Name *</label>
-                  <input id="lastName" required name="lastName" value={form.lastName} onChange={set('lastName')} className={inputCls} placeholder="Smith" />
-                </div>
-              </div>
-
-              {/* Contact row */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="phone" className={labelCls}>Phone *</label>
-                  <input id="phone" required type="tel" name="phone" value={form.phone} onChange={set('phone')} className={inputCls} placeholder="(818) 555-0100" />
-                </div>
-                <div>
-                  <label htmlFor="email" className={labelCls}>Email {emailRequired ? '*' : ''}</label>
-                  <input id="email" type="email" name="email" required={emailRequired} value={form.email} onChange={set('email')} className={inputCls} placeholder="jane@email.com" />
-                </div>
-              </div>
-
-              {/* Project row */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="projectType" className={labelCls}>Project Type *</label>
-                  <div className="relative">
-                    <select id="projectType" required name="projectType" value={form.projectType} onChange={set('projectType')} className={selectCls}>
-                      <option value="">Select…</option>
-                      {projectTypes.map((t) => <option key={t}>{t}</option>)}
-                    </select>
-                    <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-charcoal/30 text-[10px]" aria-hidden="true">▼</span>
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="flooringType" className={labelCls}>Preferred Flooring Type</label>
-                  <div className="relative">
-                    <select id="flooringType" name="flooringType" value={form.flooringType} onChange={set('flooringType')} className={selectCls}>
-                      <option value="">Select…</option>
-                      {flooringTypes.map((t) => <option key={t}>{t}</option>)}
-                    </select>
-                    <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-charcoal/30 text-[10px]" aria-hidden="true">▼</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Message */}
+              {/* Full Name */}
               <div>
-                <label htmlFor="message" className={labelCls}>Tell Us About Your Project</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={form.message}
-                  onChange={set('message')}
-                  rows={5}
-                  className={inputCls + ' resize-none'}
-                  placeholder="Square footage, timeline, special considerations…"
+                <label htmlFor="fullName" className={labelCls}>Full Name *</label>
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  autoComplete="name"
+                  required
+                  value={form.fullName}
+                  onChange={set('fullName')}
+                  className={inp('fullName')}
+                  placeholder="Jane Smith"
+                  aria-describedby={fieldErrors.fullName ? 'err-fullName' : undefined}
+                  aria-invalid={!!fieldErrors.fullName}
                 />
+                {fieldErrors.fullName && <p id="err-fullName" className={errMsg} role="alert">{fieldErrors.fullName}</p>}
               </div>
 
-              {/* Preferred contact method */}
-              <fieldset>
-                <legend className={labelCls}>Preferred Contact Method *</legend>
-                <div className="flex gap-6 mt-1">
-                  {['phone', 'email', 'text'].map((method) => (
-                    <label key={method} className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="preferredContactMethod"
-                        value={method}
-                        checked={form.preferredContactMethod === method}
-                        onChange={set('preferredContactMethod')}
-                        className="accent-walnut"
-                      />
-                      <span className="font-sans text-[14px] text-charcoal/65 capitalize">{method}</span>
-                    </label>
-                  ))}
+              {/* Phone + Email */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="phone" className={labelCls}>Phone Number *</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    autoComplete="tel"
+                    required
+                    value={form.phone}
+                    onChange={set('phone')}
+                    className={inp('phone')}
+                    placeholder="(818) 555-0100"
+                    aria-describedby={fieldErrors.phone ? 'err-phone' : undefined}
+                    aria-invalid={!!fieldErrors.phone}
+                  />
+                  {fieldErrors.phone && <p id="err-phone" className={errMsg} role="alert">{fieldErrors.phone}</p>}
                 </div>
-                {form.preferredContactMethod === 'text' && (
-                  <p className="font-sans text-[12px] text-charcoal/45 mt-2">
-                    By selecting Text, you consent to receiving a single text message reply to your estimate request. Standard messaging rates may apply. We do not send marketing texts.
-                  </p>
-                )}
-              </fieldset>
+                <div>
+                  <label htmlFor="email" className={labelCls}>Email Address *</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    value={form.email}
+                    onChange={set('email')}
+                    className={inp('email')}
+                    placeholder="jane@email.com"
+                    aria-describedby={fieldErrors.email ? 'err-email' : undefined}
+                    aria-invalid={!!fieldErrors.email}
+                  />
+                  {fieldErrors.email && <p id="err-email" className={errMsg} role="alert">{fieldErrors.email}</p>}
+                </div>
+              </div>
 
+              {/* Project Address */}
+              <div>
+                <label htmlFor="projectAddress" className={labelCls}>Project Address or ZIP Code *</label>
+                <input
+                  id="projectAddress"
+                  name="projectAddress"
+                  type="text"
+                  autoComplete="street-address"
+                  required
+                  value={form.projectAddress}
+                  onChange={set('projectAddress')}
+                  className={inp('projectAddress')}
+                  placeholder="123 Main St, Burbank CA  or  91506"
+                  aria-describedby={fieldErrors.projectAddress ? 'err-projectAddress' : undefined}
+                  aria-invalid={!!fieldErrors.projectAddress}
+                />
+                {fieldErrors.projectAddress && <p id="err-projectAddress" className={errMsg} role="alert">{fieldErrors.projectAddress}</p>}
+              </div>
+
+              {/* Service + Square Footage */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="serviceNeeded" className={labelCls}>Service Needed *</label>
+                  <div className="relative">
+                    <select
+                      id="serviceNeeded"
+                      name="serviceNeeded"
+                      required
+                      value={form.serviceNeeded}
+                      onChange={set('serviceNeeded')}
+                      className={sel('serviceNeeded')}
+                      aria-describedby={fieldErrors.serviceNeeded ? 'err-serviceNeeded' : undefined}
+                      aria-invalid={!!fieldErrors.serviceNeeded}
+                    >
+                      <option value="">Select a service…</option>
+                      {serviceOptions.map((o) => <option key={o}>{o}</option>)}
+                    </select>
+                    <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-charcoal/30 text-[10px]" aria-hidden="true">▼</span>
+                  </div>
+                  {fieldErrors.serviceNeeded && <p id="err-serviceNeeded" className={errMsg} role="alert">{fieldErrors.serviceNeeded}</p>}
+                </div>
+                <div>
+                  <label htmlFor="squareFootage" className={labelCls}>Approximate Square Footage <span className="normal-case font-normal">(optional)</span></label>
+                  <input
+                    id="squareFootage"
+                    name="squareFootage"
+                    type="text"
+                    inputMode="numeric"
+                    value={form.squareFootage}
+                    onChange={set('squareFootage')}
+                    className={inputCls}
+                    placeholder="e.g. 800"
+                  />
+                </div>
+              </div>
+
+              {/* Timeline */}
+              <div>
+                <label htmlFor="timeline" className={labelCls}>Desired Project Timeline <span className="normal-case font-normal">(optional)</span></label>
+                <div className="relative">
+                  <select
+                    id="timeline"
+                    name="timeline"
+                    value={form.timeline}
+                    onChange={set('timeline')}
+                    className={selectCls}
+                  >
+                    <option value="">Select a timeline…</option>
+                    {timelineOptions.map((o) => <option key={o}>{o}</option>)}
+                  </select>
+                  <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-charcoal/30 text-[10px]" aria-hidden="true">▼</span>
+                </div>
+              </div>
+
+              {/* Project Details */}
+              <div>
+                <label htmlFor="projectDetails" className={labelCls}>Project Details *</label>
+                <textarea
+                  id="projectDetails"
+                  name="projectDetails"
+                  required
+                  value={form.projectDetails}
+                  onChange={set('projectDetails')}
+                  rows={5}
+                  className={`${inp('projectDetails')} resize-none`}
+                  placeholder="Tell us about your space, existing flooring, any special considerations…"
+                  aria-describedby={fieldErrors.projectDetails ? 'err-projectDetails' : undefined}
+                  aria-invalid={!!fieldErrors.projectDetails}
+                />
+                {fieldErrors.projectDetails && <p id="err-projectDetails" className={errMsg} role="alert">{fieldErrors.projectDetails}</p>}
+              </div>
+
+              {/* Consent */}
+              <div>
+                <label className="flex items-start gap-3 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    name="consent"
+                    checked={form.consent}
+                    onChange={set('consent')}
+                    className="mt-0.5 accent-walnut w-4 h-4 shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-walnut"
+                    aria-describedby={fieldErrors.consent ? 'err-consent' : undefined}
+                    aria-invalid={!!fieldErrors.consent}
+                  />
+                  <span className="font-sans text-[13px] text-charcoal/65 leading-snug group-hover:text-charcoal/80 transition-colors">
+                    I agree that US Flooring &amp; Molding Inc. may contact me regarding my estimate request. *
+                  </span>
+                </label>
+                {fieldErrors.consent && <p id="err-consent" className={`${errMsg} mt-1.5 ml-7`} role="alert">{fieldErrors.consent}</p>}
+              </div>
+
+              {/* Error banner */}
               {status === 'error' && (
-                <div role="alert" className="bg-red-50 border border-red-200 rounded-[2px] px-5 py-4 font-sans text-[14px] text-red-700">
-                  We couldn't send your request. Please try again or call us at {BUSINESS.phoneDisplay}.
+                <div
+                  role="alert"
+                  aria-live="assertive"
+                  className="bg-red-50 border border-red-200 rounded-[2px] px-5 py-4"
+                >
+                  <p className="font-sans text-[14px] text-red-700 mb-1">
+                    We couldn't send your request. Please try again or call us directly at:
+                  </p>
+                  <a
+                    href={`tel:${BUSINESS.phone}`}
+                    className="font-sans text-[14px] font-bold text-red-700 hover:text-red-800 underline underline-offset-2"
+                  >
+                    {BUSINESS.phoneDisplay}
+                  </a>
                 </div>
               )}
 
               <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className="bg-walnut text-ivory py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
-                onClick={() => status === 'idle' && (window as any).gtag?.('event', 'estimate_cta_click')}
+                className="bg-walnut text-ivory py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-walnut transition-colors mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                {status === 'submitting' ? 'Sending…' : 'Submit Estimate Request'}
+                {status === 'submitting' ? 'Sending Request…' : 'Submit Estimate Request'}
               </button>
               <p className="font-sans text-[12px] text-charcoal/30 text-center">
                 We respond within one business day. No spam, no pressure.

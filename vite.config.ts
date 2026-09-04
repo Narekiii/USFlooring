@@ -124,7 +124,14 @@ function figmaSiteConfiguration(config: FigmaSiteConfiguration): Plugin {
         result = replaceHtmlCommentSlot(result, 'figma:body-end', bodyEnd)
 
         const tags: HtmlTagDescriptor[] = []
-        if (description) {
+        // Only inject description/robots/og tags when not already present in index.html
+        const hasDescription = html.includes('name="description"')
+        const hasOgTitle = html.includes('property="og:title"')
+        const hasOgDescription = html.includes('property="og:description"')
+        const hasOgImage = html.includes('property="og:image"')
+        const hasTwitterCard = html.includes('name="twitter:card"')
+
+        if (description && !hasDescription) {
           tags.push({ tag: 'meta', attrs: { name: 'description', content: description }, injectTo: 'head' })
         }
         if (config.robots?.index === false) {
@@ -133,15 +140,19 @@ function figmaSiteConfiguration(config: FigmaSiteConfiguration): Plugin {
         if (favicon) {
           tags.push({ tag: 'link', attrs: { rel: 'icon', href: favicon }, injectTo: 'head' })
         }
-        if (title) {
+        if (title && !hasOgTitle) {
           tags.push({ tag: 'meta', attrs: { property: 'og:title', content: title }, injectTo: 'head' })
         }
-        if (description) {
+        if (description && !hasOgDescription) {
           tags.push({ tag: 'meta', attrs: { property: 'og:description', content: description }, injectTo: 'head' })
         }
-        if (socialImage) {
+        if (socialImage && !hasOgImage) {
           tags.push(
             { tag: 'meta', attrs: { property: 'og:image', content: socialImage }, injectTo: 'head' },
+          )
+        }
+        if (socialImage && !hasTwitterCard) {
+          tags.push(
             { tag: 'meta', attrs: { name: 'twitter:card', content: 'summary_large_image' }, injectTo: 'head' },
             { tag: 'meta', attrs: { name: 'twitter:image', content: socialImage }, injectTo: 'head' },
           )

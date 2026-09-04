@@ -159,6 +159,29 @@ export default function Reviews() {
         </div>
       </section>
 
+      {/* Yelp CTA */}
+      <section className="bg-[#F0E9DC] border-t border-sand py-14">
+        <div className="max-w-[680px] mx-auto px-6 text-center">
+          <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">See More Customer Experiences</p>
+          <p className="font-sans text-base text-charcoal/55 leading-relaxed mb-7">
+            Visit our official Yelp profile to read more about what local customers say about US Flooring &amp; Molding Inc.
+          </p>
+          <a
+            href="https://www.yelp.com/biz/us-flooring-and-molding-burbank"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read our reviews on Yelp"
+            className="inline-flex items-center gap-2.5 border-[1.5px] border-walnut text-walnut px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-sand/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-walnut transition-colors"
+            onClick={() => (window as any).gtag?.('event', 'outbound_yelp_click', { link_location: 'reviews_page', destination_url: 'https://www.yelp.com/biz/us-flooring-and-molding-burbank' })}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.16 12.596c.411-.36.416-.849.015-1.166l-3.584-2.765c-.398-.311-.861-.134-.99.381l-.73 2.91c-.127.507.205.88.74.826l4.103-.44a1.3 1.3 0 0 0 .447-.204l-.001-.001v-.001zm-7.693 6.547.73 2.911c.13.515.594.694.99.381l3.584-2.765c.401-.318.396-.806-.015-1.166a1.3 1.3 0 0 0-.447-.205l-4.103-.44c-.535-.055-.868.319-.74.826zm-3.135 1.53c.35.392.827.347 1.06-.1l1.261-2.407c.234-.447.032-.895-.449-1.008l-4.012-.94c-.482-.113-.812.218-.697.718l.957 4.021c.118.5.535.73.88.341zm-3.18-7.573a1.27 1.27 0 0 0-.327.418L3.91 16.48c-.232.464.002.9.521.964l4.103.497c.52.063.854-.32.744-.847l-.845-3.884c-.11-.528-.609-.758-1.004-.416l-.042.036zM10.6 3.27c-.232-.464-.716-.528-1.05-.14L6.457 6.658c-.336.39-.262.868.162 1.065l3.667 1.71c.423.197.826-.042.899-.55l.589-4.027c.074-.51-.172-.917-.404-1.381L10.6 3.27z" />
+            </svg>
+            Read Our Reviews on Yelp
+          </a>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="bg-[#F0E9DC] border-t border-sand py-16">
         <div className="max-w-[680px] mx-auto px-6 text-center">

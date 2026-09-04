@@ -10,6 +10,7 @@ interface SEOProps {
   ogUrl?: string;
   ogImage?: string;
   jsonLd?: object | object[];
+  robots?: string;
 }
 
 function setMeta(property: string, content: string, attr: 'name' | 'property' = 'name') {
@@ -56,11 +57,12 @@ export default function SEO({
   ogUrl,
   ogImage = BUSINESS.ogImage,
   jsonLd,
+  robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
 }: SEOProps) {
   useEffect(() => {
     document.title = title;
     setMeta('description', description);
-    setMeta('robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+    setMeta('robots', robots);
     setLink('canonical', canonical);
 
     setMeta('og:type', 'website', 'property');
@@ -84,7 +86,7 @@ export default function SEO({
     } else {
       removeJsonLd('page-jsonld');
     }
-  }, [title, description, canonical, ogTitle, ogDescription, ogUrl, ogImage, jsonLd]);
+  }, [title, description, canonical, ogTitle, ogDescription, ogUrl, ogImage, jsonLd, robots]);
 
   return null;
 }

@@ -97,8 +97,24 @@ const homeJsonLd = [
     telephone: BUSINESS.phone,
     email: BUSINESS.email,
     image: BUSINESS.ogImage,
+    logo: {
+      '@type': 'ImageObject',
+      url: BUSINESS.logoUrl,
+    },
     description: 'Family-owned flooring store and installation company serving Burbank and greater Los Angeles with hardwood, laminate, luxury vinyl, molding, and professional installation services.',
     priceRange: '$$',
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '09:00',
+        closes: '18:00',
+      },
+    ],
+    sameAs: [
+      BUSINESS.mapsUrl,
+      'https://www.yelp.com/biz/us-flooring-and-molding-burbank',
+    ],
     address: {
       '@type': 'PostalAddress',
       streetAddress: BUSINESS.address.street,
@@ -362,13 +378,22 @@ export default function Home() {
             ))}
           </div>
           {/* Pull quotes strip */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
             {pullQuotes.map((q) => (
               <div key={q} className="bg-charcoal rounded-[2px] px-5 py-4">
                 <p className="font-sans text-[13px] text-ivory/65 italic leading-relaxed">{q}</p>
               </div>
             ))}
           </div>
+          <a
+            href="https://www.yelp.com/biz/us-flooring-and-molding-burbank"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 font-sans text-[13px] text-charcoal/40 hover:text-walnut focus-visible:text-walnut focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-walnut transition-colors"
+            onClick={() => (window as any).gtag?.('event', 'outbound_yelp_click', { link_location: 'homepage_testimonials', destination_url: 'https://www.yelp.com/biz/us-flooring-and-molding-burbank' })}
+          >
+            Read more customer reviews on Yelp →
+          </a>
         </div>
       </section>
 
