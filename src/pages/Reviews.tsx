@@ -87,7 +87,7 @@ export default function Reviews() {
       <Breadcrumb crumbs={reviewsCrumbs} />
 
       {/* Header */}
-      <section className="pt-8 pb-16 bg-[#F0E9DC]">
+      <section className="pt-8 pb-16 bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Customer Reviews</p>
@@ -98,7 +98,7 @@ export default function Reviews() {
               These are real people who hired us for real projects. Their experience is the most honest description of what it's like to work with us.
             </p>
           </div>
-          <div className="bg-ivory border border-sand rounded-[3px] p-8 flex flex-col gap-5">
+          <div className="bg-ivory border border-border rounded-[3px] p-8 flex flex-col gap-5">
             <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <StarIcon key={i} size={22} />)}</div>
             <div className="font-serif text-[52px] font-semibold text-charcoal leading-none">5.0</div>
             <div>
@@ -108,7 +108,7 @@ export default function Reviews() {
               href={BUSINESS.googleReviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-sans text-[13px] font-bold text-walnut hover:text-walnut-dark transition-colors"
+              className="inline-flex items-center gap-2 font-sans text-[13px] font-bold text-walnut hover:text-charcoal transition-colors"
             >
               Read our Google Reviews →
             </a>
@@ -133,7 +133,7 @@ export default function Reviews() {
         <div className="max-w-[1180px] mx-auto px-6 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {reviews.map((r) => (
-              <div key={r.name} className="bg-[#F0E9DC] border border-sand rounded-[3px] p-7 flex flex-col">
+              <div key={r.name} className="bg-subtle border border-border rounded-[3px] p-7 flex flex-col">
                 <div className="flex gap-0.5 mb-5">
                   {[...Array(r.stars)].map((_, i) => <StarIcon key={i} />)}
                 </div>
@@ -143,8 +143,8 @@ export default function Reviews() {
                 <blockquote className="font-sans text-[14px] text-charcoal/60 leading-relaxed flex-1 mb-6">
                   {r.quote}
                 </blockquote>
-                <div className="flex items-center gap-3 border-t border-sand pt-5">
-                  <div className="w-9 h-9 rounded-full bg-walnut flex items-center justify-center shrink-0">
+                <div className="flex items-center gap-3 border-t border-border pt-5">
+                  <div className="w-9 h-9 rounded-full bg-charcoal flex items-center justify-center shrink-0">
                     <span className="font-sans text-ivory text-[12px] font-bold">{r.name[0]}</span>
                   </div>
                   <div>
@@ -160,7 +160,7 @@ export default function Reviews() {
       </section>
 
       {/* Yelp CTA */}
-      <section className="bg-[#F0E9DC] border-t border-sand py-14">
+      <section className="bg-subtle border-t border-border py-14">
         <div className="max-w-[680px] mx-auto px-6 text-center">
           <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">See More Customer Experiences</p>
           <p className="font-sans text-base text-charcoal/55 leading-relaxed mb-7">
@@ -171,7 +171,7 @@ export default function Reviews() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Read our reviews on Yelp"
-            className="inline-flex items-center gap-2.5 border-[1.5px] border-walnut text-walnut px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-sand/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-walnut transition-colors"
+            className="inline-flex items-center gap-2.5 border-[1.5px] border-charcoal text-charcoal px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-subtle/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-walnut transition-colors"
             onClick={() => (window as any).gtag?.('event', 'outbound_yelp_click', { link_location: 'reviews_page', destination_url: 'https://www.yelp.com/biz/us-flooring-and-molding-burbank' })}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -183,17 +183,17 @@ export default function Reviews() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-[#F0E9DC] border-t border-sand py-16">
+      <section className="bg-subtle border-t border-border py-16">
         <div className="max-w-[680px] mx-auto px-6 text-center">
           <h2 className="font-serif text-[28px] lg:text-[38px] font-semibold text-charcoal mb-4">Ready to Become Our Next Happy Customer?</h2>
           <p className="font-sans text-base text-charcoal/55 leading-relaxed mb-7">
             We give every project the same care these customers experienced. Start with a free estimate.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/contact" className="bg-walnut text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors">
+            <Link to="/contact" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors">
               Get a Free Estimate
             </Link>
-            <a href="tel:+18185150009" className="border-[1.5px] border-walnut text-walnut px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-sand/30 transition-colors">
+            <a href="tel:+18185150009" className="border-[1.5px] border-charcoal text-charcoal px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-subtle/60 transition-colors">
               Call (818) 515-0009
             </a>
           </div>

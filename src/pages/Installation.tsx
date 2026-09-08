@@ -21,7 +21,7 @@ const details = [
 export default function Installation() {
   return (
     <div className="pb-[72px] lg:pb-0">
-      <section className="pt-32 pb-[72px] bg-walnut">
+      <section className="pt-32 pb-[72px] bg-charcoal">
         <div className="max-w-[1180px] mx-auto px-6">
           <p className="font-sans text-[11px] font-semibold text-light-oak uppercase tracking-wider mb-4">Services</p>
           <h1 className="font-serif text-[36px] lg:text-[52px] font-semibold text-warm-white leading-[1.08] mb-4">Professional Installation</h1>
@@ -72,7 +72,7 @@ export default function Installation() {
       </section>
 
       {/* Guarantee */}
-      <section className="bg-walnut py-[88px]">
+      <section className="bg-charcoal py-[88px]">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="w-6 h-[2px] bg-light-oak mb-6" />
@@ -80,7 +80,7 @@ export default function Installation() {
             <p className="font-sans text-base text-warm-white/50 leading-relaxed mb-8">
               Every installation we perform is backed by a one-year workmanship guarantee. If anything related to the installation itself fails within the first year, we return and correct it at no charge. That's how confident we are in our work.
             </p>
-            <Link to="/estimate" className="inline-block bg-warm-white text-walnut px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-sand transition-colors">
+            <Link to="/estimate" className="inline-block bg-warm-white text-walnut px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-subtle transition-colors">
               Request a Free Estimate
             </Link>
           </div>

@@ -42,7 +42,7 @@ export default function About() {
       <Breadcrumb crumbs={aboutCrumbs} />
 
       {/* Hero */}
-      <section className="pt-8 pb-16 bg-[#F0E9DC]">
+      <section className="pt-8 pb-16 bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">About Us</p>
@@ -56,7 +56,7 @@ export default function About() {
               We're not a franchise. We're not a big-box satellite. Every floor we sell and every install we run carries our family name — and that means something to us.
             </p>
           </div>
-          <div className="overflow-hidden rounded-[3px] aspect-[4/3] bg-sand/30">
+          <div className="overflow-hidden rounded-[3px] aspect-[4/3] bg-subtle/30">
             <img
               src="https://images.unsplash.com/photo-1712171984461-9a18baa57c42?w=720&h=560&fit=crop&auto=format"
               alt="Expert flooring craftsman at work"
@@ -67,7 +67,7 @@ export default function About() {
       </section>
 
       {/* Vick's Story */}
-      <section className="bg-walnut">
+      <section className="bg-charcoal">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px] grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-sans text-[11px] font-semibold text-gold/60 uppercase tracking-widest mb-5">The story</p>
@@ -105,7 +105,7 @@ export default function About() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {values.map((v, i) => (
-              <div key={v.title} className="bg-[#F0E9DC] border border-sand rounded-[3px] p-8">
+              <div key={v.title} className="bg-subtle border border-border rounded-[3px] p-8">
                 <div className="w-6 h-[2.5px] mb-5" style={{ backgroundColor: i % 2 === 0 ? '#6B4A2D' : '#C89B5A' }} />
                 <h3 className="font-sans text-[16px] font-bold text-charcoal mb-3">{v.title}</h3>
                 <p className="font-sans text-[14px] text-charcoal/55 leading-relaxed">{v.desc}</p>
@@ -116,7 +116,7 @@ export default function About() {
       </section>
 
       {/* Guarantee */}
-      <section className="bg-[#F0E9DC]">
+      <section className="bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6 py-[72px] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Our promise</p>
@@ -127,7 +127,7 @@ export default function About() {
               We stand behind everything we install. If something is wrong with the workmanship within a year of completion, we come back and make it right — no fine print, no runaround.
             </p>
           </div>
-          <div className="bg-ivory border border-sand rounded-[3px] p-8">
+          <div className="bg-ivory border border-border rounded-[3px] p-8">
             <ul className="flex flex-col gap-4">
               {guarantee.map((g) => (
                 <li key={g} className="flex items-start gap-4 font-sans text-[14px] text-charcoal/65">
@@ -176,22 +176,22 @@ export default function About() {
               <a href="tel:+18185150009" className="font-bold text-walnut hover:text-walnut transition-colors">(818) 515-0009</a>
             </div>
             <div className="flex gap-3">
-              <Link to="/contact" className="bg-walnut text-ivory px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:bg-walnut-dark transition-colors">
+              <Link to="/contact" className="bg-red text-white px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:bg-red-dark transition-colors">
                 Request Estimate
               </Link>
-              <a href="https://www.google.com/maps/dir/?api=1&destination=1508+W+Burbank+Blvd+Burbank+CA+91506" target="_blank" rel="noopener noreferrer" className="border-[1.5px] border-sand text-charcoal/55 px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:border-walnut/40 transition-colors">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=1508+W+Burbank+Blvd+Burbank+CA+91506" target="_blank" rel="noopener noreferrer" className="border-[1.5px] border-border text-charcoal/55 px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:border-walnut/40 transition-colors">
                 Directions →
               </a>
             </div>
           </div>
-          <div className="bg-[#F0E9DC] border border-sand rounded-[3px] p-8">
+          <div className="bg-subtle border border-border rounded-[3px] p-8">
             <div className="flex gap-0.5 mb-4">{[...Array(5)].map((_, i) => <StarIcon key={i} />)}</div>
             <blockquote className="font-serif text-[20px] font-medium italic text-charcoal mb-4 leading-snug">
               "Fair pricing, respect for customers, quality that beat Lowe's and Home Depot outright."
             </blockquote>
             <p className="font-sans text-[13px] text-charcoal/40">— Bob S., Santa Monica, CA</p>
-            <div className="mt-6 pt-6 border-t border-sand">
-              <Link to="/reviews" className="font-sans text-[14px] font-bold text-walnut hover:text-walnut-dark transition-colors inline-flex items-center gap-1.5 group">
+            <div className="mt-6 pt-6 border-t border-border">
+              <Link to="/reviews" className="font-sans text-[14px] font-bold text-walnut hover:text-charcoal transition-colors inline-flex items-center gap-1.5 group">
                 Read all reviews <span className="group-hover:translate-x-1 transition-transform">→</span>
               </Link>
             </div>
@@ -200,7 +200,7 @@ export default function About() {
       </section>
 
       {/* Brand mark footer */}
-      <section className="bg-[#F0E9DC] border-t border-sand py-12">
+      <section className="bg-subtle border-t border-border py-12">
         <div className="max-w-[1180px] mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <USFMark size={44} />
@@ -209,7 +209,7 @@ export default function About() {
               <p className="font-sans text-[12px] text-charcoal/40">Family Flooring. Honest People. Floors Built to Last.</p>
             </div>
           </div>
-          <Link to="/contact" className="bg-walnut text-ivory px-7 py-3.5 rounded-[2px] font-sans text-[14px] font-bold hover:bg-walnut-dark transition-colors">
+          <Link to="/contact" className="bg-red text-white px-7 py-3.5 rounded-[2px] font-sans text-[14px] font-bold hover:bg-red-dark transition-colors">
             Get Your Free Estimate
           </Link>
         </div>

@@ -195,10 +195,10 @@ export default function Home() {
             We're the local flooring team Burbank homeowners call when they want it done right — real guidance, real craftsmanship, and a family name behind every install.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
-            <Link to="/contact" className="bg-walnut text-ivory px-8 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors text-center">
+            <Link to="/contact" className="bg-red text-white px-8 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors text-center">
               Get Your Free Estimate
             </Link>
-            <a href="tel:+18185150009" className="border-[1.5px] border-walnut text-walnut px-8 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-sand/30 transition-colors text-center">
+            <a href="tel:+18185150009" className="border-[1.5px] border-charcoal text-charcoal px-8 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-subtle/60 transition-colors text-center">
               Call (818) 515-0009
             </a>
           </div>
@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* ── 1b. GEO Answer Block ── */}
-      <section className="bg-ivory border-b border-sand/60">
+      <section className="bg-ivory border-b border-border/60">
         <div className="max-w-[1180px] mx-auto px-6 py-5">
           <p className="font-sans text-[14px] text-charcoal/55 leading-relaxed">
             US Flooring &amp; Molding Inc. is a family-owned flooring store and installation company located at 1508 W Burbank Blvd in Burbank, California. We help homeowners, designers, contractors, and property professionals choose and install hardwood, laminate, luxury vinyl, molding, and baseboards throughout Burbank and the greater Los Angeles area.
@@ -219,11 +219,11 @@ export default function Home() {
       </section>
 
       {/* ── 2. Trust Bar ── */}
-      <section className="bg-charcoal">
+      <section className="bg-light border-y border-border">
         <div className="max-w-[1180px] mx-auto px-6 py-5 flex flex-wrap gap-x-7 gap-y-2 items-center justify-center">
           {trustItems.map((item, i) => (
-            <span key={item} className="flex items-center gap-3 font-sans text-[12px] font-semibold text-ivory/55 whitespace-nowrap uppercase tracking-wide">
-              {i !== 0 && <span className="w-px h-3 bg-ivory/20" aria-hidden="true" />}
+            <span key={item} className="flex items-center gap-3 font-sans text-[12px] font-semibold text-charcoal/65 whitespace-nowrap uppercase tracking-wide">
+              {i !== 0 && <span className="w-px h-3 bg-charcoal/20" aria-hidden="true" />}
               {item}
             </span>
           ))}
@@ -244,12 +244,12 @@ export default function Home() {
             <p className="font-sans text-base lg:text-[17px] text-charcoal/65 leading-relaxed mb-8">
               We're not here to sell you the most expensive option on the floor. We're here to tell you the truth about what will actually work in your home — and then do the work ourselves, right.
             </p>
-            <Link to="/contact" className="inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-walnut-dark transition-colors group">
+            <Link to="/contact" className="inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-charcoal transition-colors group">
               Let's Talk About Your Floor
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
-          <div className="bg-sand/30 border border-sand p-10 rounded-[3px]">
+          <div className="bg-subtle/30 border border-border p-10 rounded-[3px]">
             <div className="w-8 h-[3px] bg-gold mb-6" />
             <blockquote className="font-serif text-[22px] lg:text-[26px] font-medium italic text-charcoal leading-snug">
               "Your floor isn't just a surface. It's the first thing your family feels underfoot every single day. We help you get it right."
@@ -259,14 +259,14 @@ export default function Home() {
       </section>
 
       {/* ── 4. HOW ── */}
-      <section className="bg-[#F0E9DC]">
+      <section className="bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px]">
           <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">How we do it</p>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
             <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-charcoal leading-[1.1] max-w-[520px]">
               Three Generations of Getting This Right
             </h2>
-            <Link to="/about" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-walnut-dark transition-colors group">
+            <Link to="/about" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-charcoal transition-colors group">
               See Why Burbank Trusts Us
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
@@ -280,7 +280,7 @@ export default function Home() {
           {/* Feature cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {howCards.map((card, i) => (
-              <div key={card.title} className="bg-ivory border border-sand rounded-[3px] p-7">
+              <div key={card.title} className="bg-ivory border border-border rounded-[3px] p-7">
                 <div className="w-6 h-[2.5px] mb-4" style={{ backgroundColor: i % 3 === 0 ? '#6B4A2D' : i % 3 === 1 ? '#C89B5A' : '#8A867D' }} />
                 <h3 className="font-sans text-[15px] font-bold text-charcoal mb-2">{card.title}</h3>
                 <p className="font-sans text-[13px] text-charcoal/55 leading-relaxed">{card.desc}</p>
@@ -298,15 +298,15 @@ export default function Home() {
             <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-charcoal leading-[1.1] max-w-[480px]">
               Everything You Need, Under One Roof
             </h2>
-            <Link to="/products" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-walnut-dark transition-colors group">
+            <Link to="/products" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-charcoal transition-colors group">
               Visit Our Burbank Showroom
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {serviceCards.map((s) => (
-              <Link key={s.name} to={s.href} className="group bg-ivory border border-sand rounded-[3px] overflow-hidden hover:border-walnut/40 transition-colors">
-                <div className="aspect-[16/9] overflow-hidden bg-sand/30">
+              <Link key={s.name} to={s.href} className="group bg-ivory border border-border rounded-[3px] overflow-hidden hover:border-walnut/40 transition-colors">
+                <div className="aspect-[16/9] overflow-hidden bg-subtle/30">
                   <img src={s.img} alt={s.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 </div>
                 <div className="p-6">
@@ -320,7 +320,7 @@ export default function Home() {
       </section>
 
       {/* ── 6. Big-Box Difference ── */}
-      <section className="bg-[#F0E9DC]">
+      <section className="bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px]">
           <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">The difference</p>
           <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-charcoal mb-5 leading-[1.1] max-w-[600px]">
@@ -343,7 +343,7 @@ export default function Home() {
               </div>
             </div>
             {/* Right — USF */}
-            <div className="bg-walnut p-10 lg:p-12">
+            <div className="bg-charcoal p-10 lg:p-12">
               <p className="font-sans text-[11px] font-semibold text-gold/70 uppercase tracking-widest mb-7">US Flooring &amp; Molding</p>
               <div className="flex flex-col gap-5 mb-10">
                 {comparison.map((row) => (
@@ -353,7 +353,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <Link to="/contact" className="inline-block bg-walnut text-ivory px-7 py-3.5 rounded-[2px] font-sans text-[14px] font-bold hover:bg-walnut-dark transition-colors">
+              <Link to="/contact" className="inline-block bg-ivory text-charcoal px-7 py-3.5 rounded-[2px] font-sans text-[14px] font-bold hover:bg-white transition-colors">
                 Get the Personal Treatment — Request an Estimate →
               </Link>
             </div>
@@ -367,21 +367,21 @@ export default function Home() {
           <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Reviews</p>
           <div className="flex flex-col lg:flex-row items-end justify-between gap-8 mb-12">
             <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-charcoal leading-[1.1]">Don't Take Our Word for It</h2>
-            <Link to="/reviews" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-walnut-dark transition-colors group">
+            <Link to="/reviews" className="shrink-0 inline-flex items-center gap-2 font-sans text-[15px] font-bold text-walnut hover:text-charcoal transition-colors group">
               Read More Reviews <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
             {testimonials.map((t) => (
-              <div key={t.name} className="bg-[#F0E9DC] border border-sand rounded-[3px] p-7 flex flex-col">
+              <div key={t.name} className="bg-subtle border border-border rounded-[3px] p-7 flex flex-col">
                 <div className="flex gap-0.5 mb-4">
                   {[...Array(t.stars)].map((_, i) => <StarIcon key={i} />)}
                 </div>
                 <blockquote className="font-sans text-[14px] text-charcoal/65 leading-relaxed mb-6 flex-1 italic">
                   "{t.quote}"
                 </blockquote>
-                <div className="flex items-center gap-3 border-t border-sand pt-5">
-                  <div className="w-9 h-9 rounded-full bg-walnut flex items-center justify-center shrink-0">
+                <div className="flex items-center gap-3 border-t border-border pt-5">
+                  <div className="w-9 h-9 rounded-full bg-charcoal flex items-center justify-center shrink-0">
                     <span className="font-sans text-ivory text-[12px] font-bold">{t.name[0]}</span>
                   </div>
                   <div>
@@ -413,7 +413,7 @@ export default function Home() {
       </section>
 
       {/* ── 8. About Teaser ── */}
-      <section className="bg-walnut">
+      <section className="bg-charcoal">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px] grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="font-sans text-[11px] font-semibold text-gold/60 uppercase tracking-widest mb-4">About us</p>
@@ -428,7 +428,7 @@ export default function Home() {
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
-          <div className="overflow-hidden rounded-[3px] aspect-[4/3] bg-walnut/50">
+          <div className="overflow-hidden rounded-[3px] aspect-[4/3] bg-charcoal/50">
             <img
               src="https://images.unsplash.com/photo-1712171984461-9a18baa57c42?w=720&h=560&fit=crop&auto=format"
               alt="Expert flooring craftsman at work"
@@ -439,7 +439,7 @@ export default function Home() {
       </section>
 
       {/* ── 9. Local Presence ── */}
-      <section className="bg-[#F0E9DC]">
+      <section className="bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6 py-[72px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -453,7 +453,7 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap gap-2">
               {['Burbank', 'Glendale', 'North Hollywood', 'Toluca Lake', 'Studio City', 'Sun Valley', 'San Fernando Valley'].map((area) => (
-                <span key={area} className="border border-sand/80 bg-ivory text-charcoal/55 font-sans text-[13px] px-4 py-2 rounded-full">
+                <span key={area} className="border border-border/80 bg-ivory text-charcoal/55 font-sans text-[13px] px-4 py-2 rounded-full">
                   {area}
                 </span>
               ))}
@@ -480,10 +480,10 @@ export default function Home() {
               (818) 515-0009 · Fax (818) 840-8222
             </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
-              <a href="tel:+18185150009" className="bg-walnut text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors">
+              <a href="tel:+18185150009" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors">
                 Call Now
               </a>
-              <Link to="/contact" className="bg-ivory text-charcoal px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-sand transition-colors">
+              <Link to="/contact" className="bg-ivory text-charcoal px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-subtle transition-colors">
                 Request a Free Estimate
               </Link>
               <a href="https://www.google.com/maps/dir/?api=1&destination=1508+W+Burbank+Blvd+Burbank+CA+91506" target="_blank" rel="noopener noreferrer" className="border-[1.5px] border-ivory/30 text-ivory/60 px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:border-ivory/60 hover:text-ivory transition-colors">

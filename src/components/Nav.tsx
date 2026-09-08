@@ -22,7 +22,7 @@ export default function Nav() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-ivory border-b border-sand">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-ivory border-b border-border">
         <div className="max-w-[1180px] mx-auto px-6 h-16 flex items-center justify-between gap-8">
           {/* Logo */}
           <Link to="/" className="flex items-center shrink-0" onClick={() => setOpen(false)}>
@@ -37,7 +37,7 @@ export default function Nav() {
                 to={link.to}
                 className={({ isActive }) =>
                   `font-sans text-[13px] font-medium transition-colors ${
-                    isActive ? 'text-walnut' : 'text-charcoal/55 hover:text-charcoal'
+                    isActive ? 'text-red' : 'text-charcoal/60 hover:text-red'
                   }`
                 }
               >
@@ -50,14 +50,14 @@ export default function Nav() {
           <div className="hidden lg:flex items-center gap-4 shrink-0">
             <a
               href="tel:+18185150009"
-              className="flex items-center gap-2 font-sans text-[13px] text-charcoal/50 hover:text-walnut transition-colors"
+              className="flex items-center gap-2 font-sans text-[13px] text-charcoal/55 hover:text-charcoal transition-colors"
             >
               <PhoneIcon />
               (818) 515-0009
             </a>
             <Link
               to="/contact"
-              className="bg-walnut text-ivory px-5 py-2.5 rounded-[2px] font-sans text-[13px] font-bold hover:bg-walnut-dark transition-colors"
+              className="bg-red text-white px-5 py-2.5 rounded-[2px] font-sans text-[13px] font-bold hover:bg-red-dark transition-colors"
             >
               Free Estimate
             </Link>
@@ -65,13 +65,13 @@ export default function Nav() {
 
           {/* Mobile right */}
           <div className="lg:hidden flex items-center gap-3">
-            <a href="tel:+18185150009" className="text-charcoal/50 hover:text-walnut transition-colors" aria-label="Call us">
+            <a href="tel:+18185150009" className="text-charcoal/55 hover:text-charcoal transition-colors" aria-label="Call us">
               <PhoneIcon />
             </a>
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="bg-walnut text-ivory px-4 py-2 rounded-[2px] font-sans text-[12px] font-bold hover:bg-walnut-dark transition-colors"
+              className="bg-red text-white px-4 py-2 rounded-[2px] font-sans text-[12px] font-bold hover:bg-red-dark transition-colors"
             >
               Estimate
             </Link>
@@ -80,16 +80,16 @@ export default function Nav() {
               aria-label="Toggle menu"
               className="flex flex-col justify-center items-center gap-[5px] w-9 h-9 shrink-0"
             >
-              <span className={`block w-5 h-px bg-walnut transition-all origin-center ${open ? 'rotate-45 translate-y-[3px]' : ''}`} />
-              <span className={`block w-5 h-px bg-walnut transition-opacity ${open ? 'opacity-0' : ''}`} />
-              <span className={`block w-5 h-px bg-walnut transition-all origin-center ${open ? '-rotate-45 -translate-y-[3px]' : ''}`} />
+              <span className={`block w-5 h-px bg-charcoal transition-all origin-center ${open ? 'rotate-45 translate-y-[3px]' : ''}`} />
+              <span className={`block w-5 h-px bg-charcoal transition-opacity ${open ? 'opacity-0' : ''}`} />
+              <span className={`block w-5 h-px bg-charcoal transition-all origin-center ${open ? '-rotate-45 -translate-y-[3px]' : ''}`} />
             </button>
           </div>
         </div>
 
         {/* Mobile drawer */}
         {open && (
-          <div className="lg:hidden bg-ivory border-t border-sand px-6 py-6 flex flex-col gap-4">
+          <div className="lg:hidden bg-ivory border-t border-border px-6 py-6 flex flex-col gap-4">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
@@ -97,7 +97,7 @@ export default function Nav() {
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
                   `font-sans text-[16px] font-medium py-1 transition-colors ${
-                    isActive ? 'text-walnut' : 'text-charcoal/60 hover:text-charcoal'
+                    isActive ? 'text-red' : 'text-charcoal/60 hover:text-red'
                   }`
                 }
               >
@@ -108,17 +108,17 @@ export default function Nav() {
         )}
       </header>
 
-      {/* Mobile sticky bottom bar */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-ivory border-t border-sand px-4 py-3 flex gap-3">
+      {/* Mobile sticky bottom bar — navy background per spec */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-charcoal px-4 py-3 flex gap-3 pb-[max(12px,env(safe-area-inset-bottom))]">
         <a
           href="tel:+18185150009"
-          className="flex-1 border-[1.5px] border-walnut text-walnut py-3 rounded-[2px] font-sans text-sm font-bold text-center hover:bg-sand/30 transition-colors"
+          className="flex-1 border-[1.5px] border-ivory/30 text-ivory py-3 rounded-[2px] font-sans text-sm font-bold text-center hover:border-ivory/60 transition-colors"
         >
           Call Now
         </a>
         <Link
           to="/contact"
-          className="flex-1 bg-walnut text-ivory py-3 rounded-[2px] font-sans text-sm font-bold text-center hover:bg-walnut-dark transition-colors"
+          className="flex-1 bg-red text-white py-3 rounded-[2px] font-sans text-sm font-bold text-center hover:bg-red-dark transition-colors"
         >
           Free Estimate
         </Link>

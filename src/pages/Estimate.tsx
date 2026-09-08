@@ -23,7 +23,7 @@ export default function Estimate() {
 
   return (
     <div className="pb-[72px] lg:pb-0">
-      <section className="pt-32 pb-[72px] bg-walnut">
+      <section className="pt-32 pb-[72px] bg-charcoal">
         <div className="max-w-[1180px] mx-auto px-6">
           <p className="font-sans text-[11px] font-semibold text-light-oak uppercase tracking-wider mb-4">Get started</p>
           <h1 className="font-serif text-[36px] lg:text-[52px] font-semibold text-warm-white leading-[1.08] mb-4">Request a Free Estimate</h1>
@@ -37,7 +37,7 @@ export default function Estimate() {
         <div className="max-w-[860px] mx-auto px-6">
           {done ? (
             <div className="bg-cream border border-divider rounded-[3px] p-12 text-center">
-              <div className="w-12 h-12 rounded-full bg-walnut/10 flex items-center justify-center mx-auto mb-6">
+              <div className="w-12 h-12 rounded-full bg-charcoal/10 flex items-center justify-center mx-auto mb-6">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B1D16" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>
               </div>
               <h2 className="font-serif text-[28px] font-semibold text-walnut mb-3">Thank you, {form.firstName}.</h2>
@@ -45,7 +45,7 @@ export default function Estimate() {
                 Your estimate request has been received. We'll follow up within one business day via your preferred contact method.
               </p>
               <div className="flex gap-3 justify-center flex-wrap">
-                <a href="tel:+18185150009" className="bg-walnut text-warm-white px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-espresso transition-colors">Call (818) 515-0009</a>
+                <a href="tel:+18185150009" className="bg-charcoal text-warm-white px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-espresso transition-colors">Call (818) 515-0009</a>
                 <button onClick={() => { setDone(false); setForm(init); }} className="border border-divider text-brown/45 px-7 py-3.5 rounded-[2px] font-sans text-[14px] hover:border-walnut hover:text-walnut transition-colors">Submit Another Request</button>
               </div>
             </div>
@@ -167,7 +167,7 @@ export default function Estimate() {
 
               {/* Submit */}
               <div>
-                <button type="submit" className="w-full bg-walnut text-warm-white py-4 rounded-[2px] font-sans font-semibold text-[15px] hover:bg-espresso transition-colors">
+                <button type="submit" className="w-full bg-charcoal text-warm-white py-4 rounded-[2px] font-sans font-semibold text-[15px] hover:bg-espresso transition-colors">
                   Request My Free Estimate
                 </button>
                 <p className="font-sans text-[12px] text-brown/30 text-center mt-3">We follow up within one business day. No spam, no pressure.</p>

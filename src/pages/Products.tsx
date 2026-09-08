@@ -126,7 +126,7 @@ export default function Products() {
       <Breadcrumb crumbs={productsCrumbs} />
 
       {/* Header */}
-      <section className="pt-8 pb-16 bg-[#F0E9DC]">
+      <section className="pt-8 pb-16 bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6">
           <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Products &amp; Services</p>
           <h1 className="font-serif text-[40px] lg:text-[60px] font-semibold text-charcoal leading-[1.06] max-w-[580px] mb-3">
@@ -138,7 +138,7 @@ export default function Products() {
           <p className="font-sans text-base lg:text-[18px] text-charcoal/60 leading-relaxed max-w-[560px] mb-8">
             Flooring, moldings, and professional installation — all from a family that has been getting this right since 2005 in Burbank.
           </p>
-          <Link to="/contact" className="inline-block bg-walnut text-ivory px-8 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors">
+          <Link to="/contact" className="inline-block bg-red text-white px-8 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors">
             Get a Free Estimate
           </Link>
         </div>
@@ -150,7 +150,7 @@ export default function Products() {
           <div className="flex flex-col gap-20">
             {services.map((s, i) => (
               <div key={s.name} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className={`overflow-hidden rounded-[3px] aspect-[4/3] bg-sand/30 ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
+                <div className={`overflow-hidden rounded-[3px] aspect-[4/3] bg-subtle/30 ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
                   <img src={s.img} alt={`${s.name} — US Flooring & Molding, Burbank`} className="w-full h-full object-cover" loading="lazy" width="700" height="500" />
                 </div>
                 <div>
@@ -160,12 +160,12 @@ export default function Products() {
                   <ul className="flex flex-col gap-2.5 mb-8" aria-label={`${s.name} features`}>
                     {s.features.map((f) => (
                       <li key={f} className="flex items-center gap-3 font-sans text-[13px] text-charcoal/65">
-                        <span className="w-1.5 h-1.5 rounded-full bg-walnut shrink-0" aria-hidden="true" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-charcoal shrink-0" aria-hidden="true" />
                         {f}
                       </li>
                     ))}
                   </ul>
-                  <Link to={s.href} className="inline-flex items-center gap-2 font-sans text-[14px] font-bold text-walnut hover:text-walnut-dark transition-colors group">
+                  <Link to={s.href} className="inline-flex items-center gap-2 font-sans text-[14px] font-bold text-walnut hover:text-charcoal transition-colors group">
                     Learn about {s.name} <span className="group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
                   </Link>
                 </div>
@@ -176,7 +176,7 @@ export default function Products() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-[#F0E9DC] border-t border-sand">
+      <section className="bg-subtle border-t border-border">
         <div className="max-w-[860px] mx-auto px-6 py-20">
           <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Common Questions</p>
           <h2 className="font-serif text-[32px] lg:text-[42px] font-semibold text-charcoal leading-tight mb-12">
@@ -216,7 +216,7 @@ export default function Products() {
             Come by the showroom or give us a call. We'll help you figure out the right material for your space, your lifestyle, and your budget.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/contact" className="bg-walnut text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors">
+            <Link to="/contact" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors">
               Request Free Estimate
             </Link>
             <a href="tel:+18185150009" className="border-[1.5px] border-ivory/30 text-ivory/70 px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:border-ivory/60 hover:text-ivory transition-colors">

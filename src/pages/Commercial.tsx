@@ -23,7 +23,7 @@ const capabilities = [
 export default function Commercial() {
   return (
     <div className="pb-[72px] lg:pb-0">
-      <section className="pt-32 pb-[72px] bg-walnut">
+      <section className="pt-32 pb-[72px] bg-charcoal">
         <div className="max-w-[1180px] mx-auto px-6">
           <p className="font-sans text-[11px] font-semibold text-light-oak uppercase tracking-wider mb-4">Services</p>
           <h1 className="font-serif text-[36px] lg:text-[52px] font-semibold text-warm-white leading-[1.08] mb-4">Commercial Services</h1>
@@ -47,11 +47,11 @@ export default function Commercial() {
             <p className="font-sans text-base text-brown/65 leading-relaxed mb-8">
               After 20+ years of Los Angeles projects, we bring that coordination discipline to every commercial engagement — from a single-unit rental refresh to a multi-floor office build-out.
             </p>
-            <Link to="/estimate" className="inline-block bg-walnut text-warm-white px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-espresso transition-colors">
+            <Link to="/estimate" className="inline-block bg-charcoal text-warm-white px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-espresso transition-colors">
               Request a Commercial Estimate
             </Link>
           </div>
-          <div className="overflow-hidden rounded-[3px] aspect-[4/3] bg-sand">
+          <div className="overflow-hidden rounded-[3px] aspect-[4/3] bg-subtle">
             <img src="https://images.unsplash.com/photo-1643902917449-98c7ef8c9685?w=700&h=520&fit=crop&auto=format" alt="Commercial flooring project" className="w-full h-full object-cover" />
           </div>
         </div>
@@ -93,12 +93,12 @@ export default function Commercial() {
         </div>
       </section>
 
-      <section className="bg-walnut py-[72px]">
+      <section className="bg-charcoal py-[72px]">
         <div className="max-w-[1180px] mx-auto px-6 text-center">
           <h2 className="font-serif text-[28px] lg:text-[36px] font-semibold text-warm-white mb-4 leading-tight">Start a Commercial Project</h2>
           <p className="font-sans text-base text-warm-white/45 mb-8 max-w-[44ch] mx-auto">Request a commercial flooring estimate or call to discuss your project requirements.</p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to="/estimate" className="bg-warm-white text-walnut px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-sand transition-colors">Request an Estimate</Link>
+            <Link to="/estimate" className="bg-warm-white text-walnut px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-subtle transition-colors">Request an Estimate</Link>
             <a href="tel:+18185150009" className="border-[1.5px] border-warm-white/35 text-warm-white/70 px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:border-warm-white hover:text-warm-white transition-colors">Call (818) 515-0009</a>
           </div>
         </div>

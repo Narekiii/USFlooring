@@ -12,7 +12,7 @@ const types = [
 export default function Molding() {
   return (
     <div className="pb-[72px] lg:pb-0">
-      <section className="pt-32 pb-[72px] bg-walnut">
+      <section className="pt-32 pb-[72px] bg-charcoal">
         <div className="max-w-[1180px] mx-auto px-6">
           <p className="font-sans text-[11px] font-semibold text-light-oak uppercase tracking-wider mb-4">Services</p>
           <h1 className="font-serif text-[36px] lg:text-[52px] font-semibold text-warm-white leading-[1.08] mb-4">Molding &amp; Trim</h1>
@@ -41,7 +41,7 @@ export default function Molding() {
             <p className="font-sans text-base text-brown/65 leading-relaxed mb-8">
               After 20+ years of flooring and molding installations across Los Angeles, we understand how critical precise fitting, proper mitering, and correct material selection are to the finished result.
             </p>
-            <Link to="/estimate" className="inline-block bg-walnut text-warm-white px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-espresso transition-colors">
+            <Link to="/estimate" className="inline-block bg-charcoal text-warm-white px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-espresso transition-colors">
               Get a Molding Estimate
             </Link>
           </div>
@@ -72,14 +72,14 @@ export default function Molding() {
         </div>
       </section>
 
-      <section className="bg-walnut py-[72px]">
+      <section className="bg-charcoal py-[72px]">
         <div className="max-w-[1180px] mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div>
             <h2 className="font-serif text-[24px] font-semibold text-warm-white mb-2">Ready to Finish the Room?</h2>
             <p className="font-sans text-base text-warm-white/45">Get a free estimate for molding and trim installation.</p>
           </div>
           <div className="flex gap-4 shrink-0">
-            <Link to="/estimate" className="bg-warm-white text-walnut px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-sand transition-colors">Get a Free Estimate</Link>
+            <Link to="/estimate" className="bg-warm-white text-walnut px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-subtle transition-colors">Get a Free Estimate</Link>
             <a href="tel:+18185150009" className="border-[1.5px] border-warm-white/35 text-warm-white/70 px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:border-warm-white hover:text-warm-white transition-colors">Call Us</a>
           </div>
         </div>

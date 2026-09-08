@@ -166,8 +166,8 @@ export default function Contact() {
 
   const labelCls = 'font-sans text-[12px] font-bold text-charcoal/60 uppercase tracking-wide block mb-1.5';
   const inputCls =
-    'w-full bg-ivory border border-sand rounded-[2px] px-4 py-3 font-sans text-[14px] text-charcoal placeholder:text-charcoal/25 focus:outline-none focus:border-walnut transition-colors';
-  const inputErrCls = inputCls.replace('border-sand', 'border-red-400');
+    'w-full bg-ivory border border-border rounded-[2px] px-4 py-3 font-sans text-[14px] text-charcoal placeholder:text-charcoal/25 focus:outline-none focus:border-navy transition-colors';
+  const inputErrCls = inputCls.replace('border-border', 'border-red-400');
   const selectCls = inputCls + ' appearance-none';
   const selectErrCls = inputErrCls + ' appearance-none';
   const errMsg = 'font-sans text-[12px] text-red-600 mt-1';
@@ -189,7 +189,7 @@ export default function Contact() {
       <Breadcrumb crumbs={contactCrumbs} />
 
       {/* Header */}
-      <section className="pt-8 pb-12 bg-[#F0E9DC]">
+      <section className="pt-8 pb-12 bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Get in Touch</p>
@@ -206,7 +206,7 @@ export default function Contact() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               <a
                 href={`tel:${BUSINESS.phone}`}
-                className="flex items-center gap-3 bg-walnut text-ivory px-5 py-4 rounded-[2px] hover:bg-walnut-dark transition-colors group"
+                className="flex items-center gap-3 bg-red text-white px-5 py-4 rounded-[2px] hover:bg-red-dark transition-colors group"
                 onClick={() => (window as any).gtag?.('event', 'phone_click')}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -221,7 +221,7 @@ export default function Contact() {
                 href={BUSINESS.directionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 bg-ivory border border-sand px-5 py-4 rounded-[2px] hover:border-walnut/40 transition-colors"
+                className="flex items-center gap-3 bg-ivory border border-border px-5 py-4 rounded-[2px] hover:border-walnut/40 transition-colors"
                 onClick={() => (window as any).gtag?.('event', 'directions_click')}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B4A2D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -234,7 +234,7 @@ export default function Contact() {
               </a>
             </div>
             {/* Info */}
-            <address className="not-italic bg-ivory border border-sand rounded-[3px] p-6 flex flex-col gap-3">
+            <address className="not-italic bg-ivory border border-border rounded-[3px] p-6 flex flex-col gap-3">
               <div className="flex gap-4">
                 <span className="font-sans text-[11px] font-bold text-charcoal/35 uppercase tracking-wide w-14 shrink-0 pt-0.5">Address</span>
                 <a
@@ -263,7 +263,7 @@ export default function Contact() {
 
           {/* Map */}
           <div className="flex flex-col gap-3">
-            <div className="relative w-full min-h-[320px] md:min-h-[400px] overflow-hidden rounded-[3px] bg-sand/30 border border-sand">
+            <div className="relative w-full min-h-[320px] md:min-h-[400px] overflow-hidden rounded-[3px] bg-subtle/30 border border-border">
               <iframe
                 src="https://www.google.com/maps?q=US+Flooring+%26+Molding+Inc.%2C+1508+W+Burbank+Blvd%2C+Burbank%2C+CA+91506&z=16&output=embed"
                 title="Google Maps location of US Flooring & Molding Inc. in Burbank"
@@ -279,7 +279,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Get directions to US Flooring & Molding Inc. in Google Maps"
-              className="inline-flex items-center gap-2 self-start border-[1.5px] border-walnut text-walnut px-5 py-3 rounded-[2px] font-sans text-[13px] font-bold hover:bg-sand/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-walnut transition-colors"
+              className="inline-flex items-center gap-2 self-start border-[1.5px] border-charcoal text-charcoal px-5 py-3 rounded-[2px] font-sans text-[13px] font-bold hover:bg-subtle/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-walnut transition-colors"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
@@ -303,7 +303,7 @@ export default function Contact() {
             <div
               role="status"
               aria-live="polite"
-              className="bg-[#F0E9DC] border border-sand rounded-[3px] p-10 text-center"
+              className="bg-subtle border border-border rounded-[3px] p-10 text-center"
             >
               <div className="font-serif text-[28px] font-semibold text-walnut mb-3">Request Received</div>
               <p className="font-sans text-base text-charcoal/60 leading-relaxed">
@@ -477,7 +477,7 @@ export default function Contact() {
                     name="consent"
                     checked={form.consent}
                     onChange={set('consent')}
-                    className="mt-0.5 accent-walnut w-4 h-4 shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-walnut"
+                    className="mt-0.5 accent-red w-4 h-4 shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-walnut"
                     aria-describedby={fieldErrors.consent ? 'err-consent' : undefined}
                     aria-invalid={!!fieldErrors.consent}
                   />
@@ -510,7 +510,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className="bg-walnut text-ivory py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-walnut transition-colors mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                className="bg-red text-white py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-walnut transition-colors mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {status === 'submitting' ? 'Sending Request…' : 'Submit Estimate Request'}
               </button>
@@ -523,14 +523,14 @@ export default function Contact() {
       </section>
 
       {/* Schedule appointment strip */}
-      <section className="bg-walnut py-12">
+      <section className="bg-charcoal py-12">
         <div className="max-w-[1180px] mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="font-sans text-[13px] font-bold text-ivory mb-1">Schedule a Showroom Appointment</p>
             <p className="font-sans text-[13px] text-ivory/50">{BUSINESS.address.street} · {BUSINESS.hours}</p>
           </div>
           <div className="flex gap-3">
-            <a href={`tel:${BUSINESS.phone}`} className="bg-walnut text-ivory px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:bg-walnut-dark transition-colors">
+            <a href={`tel:${BUSINESS.phone}`} className="bg-red text-white px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:bg-red-dark transition-colors">
               Call to Schedule
             </a>
             <a href={`mailto:${BUSINESS.email}`} className="border-[1.5px] border-ivory/30 text-ivory/60 px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:border-ivory/60 hover:text-ivory transition-colors">

@@ -54,7 +54,7 @@ const categories = [
 export default function Flooring() {
   return (
     <div className="pb-[72px] lg:pb-0">
-      <section className="pt-32 pb-[72px] bg-walnut">
+      <section className="pt-32 pb-[72px] bg-charcoal">
         <div className="max-w-[1180px] mx-auto px-6">
           <p className="font-sans text-[11px] font-semibold text-light-oak uppercase tracking-wider mb-4">Products</p>
           <h1 className="font-serif text-[36px] lg:text-[52px] font-semibold text-warm-white leading-[1.08] mb-4">Flooring Products</h1>
@@ -97,7 +97,7 @@ export default function Flooring() {
                       <p className="font-sans text-[13px] text-brown/55">{c.maintenance}</p>
                     </div>
                   </div>
-                  <Link to="/estimate" className="inline-block bg-walnut text-warm-white px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-espresso transition-colors">
+                  <Link to="/estimate" className="inline-block bg-charcoal text-warm-white px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-espresso transition-colors">
                     Ask About {c.name}
                   </Link>
                 </div>
@@ -112,8 +112,8 @@ export default function Flooring() {
           <h2 className="font-serif text-[28px] lg:text-[36px] font-semibold text-walnut mb-4 leading-tight">Visit Our Burbank Showroom</h2>
           <p className="font-sans text-base text-brown/50 mb-8 max-w-[44ch] mx-auto">See and compare flooring samples in person with expert guidance. No appointment needed.</p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to="/estimate" className="bg-walnut text-warm-white px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-espresso transition-colors">Request a Free Estimate</Link>
-            <a href="tel:+18185150009" className="border-[1.5px] border-walnut text-walnut px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-cream transition-colors">Call (818) 515-0009</a>
+            <Link to="/estimate" className="bg-charcoal text-warm-white px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-espresso transition-colors">Request a Free Estimate</Link>
+            <a href="tel:+18185150009" className="border-[1.5px] border-charcoal text-charcoal px-7 py-3.5 rounded-[2px] font-sans font-semibold text-[14px] hover:bg-cream transition-colors">Call (818) 515-0009</a>
           </div>
         </div>
       </section>

@@ -49,7 +49,7 @@ export default function Gallery() {
       <Breadcrumb crumbs={galleryCrumbs} />
 
       {/* Header */}
-      <section className="pt-8 pb-12 bg-[#F0E9DC]">
+      <section className="pt-8 pb-12 bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6">
           <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Gallery</p>
           <h1 className="font-serif text-[40px] lg:text-[56px] font-semibold text-charcoal leading-[1.06] mb-4">
@@ -62,7 +62,7 @@ export default function Gallery() {
       </section>
 
       {/* Filter */}
-      <section className="bg-ivory border-b border-sand sticky top-16 z-30">
+      <section className="bg-ivory border-b border-border sticky top-16 z-30">
         <div className="max-w-[1180px] mx-auto px-6 py-4 flex gap-2 flex-wrap">
           {categories.map((cat) => (
             <button
@@ -71,7 +71,7 @@ export default function Gallery() {
               className={`font-sans text-[12px] font-bold uppercase tracking-wide px-4 py-2 rounded-[2px] transition-colors capitalize ${
                 active === cat
                   ? 'bg-charcoal text-ivory'
-                  : 'bg-sand/40 text-charcoal/55 hover:bg-sand hover:text-charcoal'
+                  : 'bg-subtle/40 text-charcoal/55 hover:bg-subtle hover:text-charcoal'
               }`}
             >
               {cat === 'all' ? 'All Projects' : cat}
@@ -143,17 +143,17 @@ export default function Gallery() {
       )}
 
       {/* CTA */}
-      <section className="bg-[#F0E9DC] py-16 border-t border-sand">
+      <section className="bg-subtle py-16 border-t border-border">
         <div className="max-w-[680px] mx-auto px-6 text-center">
           <h2 className="font-serif text-[28px] lg:text-[36px] font-semibold text-charcoal mb-4">Ready to Start Your Project?</h2>
           <p className="font-sans text-base text-charcoal/55 leading-relaxed mb-7">
             Visit our Burbank showroom to see samples in person, or request a free estimate and we'll come to you.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/contact" className="bg-walnut text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors">
+            <Link to="/contact" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors">
               Request Free Estimate
             </Link>
-            <a href="tel:+18185150009" className="border-[1.5px] border-walnut text-walnut px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-sand/30 transition-colors">
+            <a href="tel:+18185150009" className="border-[1.5px] border-charcoal text-charcoal px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-subtle/60 transition-colors">
               Call (818) 515-0009
             </a>
           </div>

@@ -33,7 +33,7 @@ export default function LaminateFlooring() {
       />
       <Breadcrumb crumbs={crumbs} />
 
-      <section className="pt-8 pb-16 bg-[#F0E9DC]">
+      <section className="pt-8 pb-16 bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Laminate Flooring · Burbank, CA</p>
@@ -44,11 +44,11 @@ export default function LaminateFlooring() {
               The look of wood at a price that keeps the rest of your budget intact. Durable, scratch-resistant, and available in dozens of realistic finishes.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link to="/contact" className="bg-walnut text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors text-center">Get a Free Estimate</Link>
-              <a href="tel:+18185150009" className="border-[1.5px] border-walnut text-walnut px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-sand/30 transition-colors text-center">Call (818) 515-0009</a>
+              <Link to="/contact" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors text-center">Get a Free Estimate</Link>
+              <a href="tel:+18185150009" className="border-[1.5px] border-charcoal text-charcoal px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-subtle/60 transition-colors text-center">Call (818) 515-0009</a>
             </div>
           </div>
-          <div className="overflow-hidden rounded-[3px] aspect-[4/3] bg-sand/30">
+          <div className="overflow-hidden rounded-[3px] aspect-[4/3] bg-subtle/30">
             <img src="https://images.unsplash.com/photo-1787625349019-2ad6b4cadc87?w=720&h=540&fit=crop&auto=format" alt="Laminate flooring in a modern interior" className="w-full h-full object-cover" loading="eager" fetchPriority="high" width="720" height="540" />
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function LaminateFlooring() {
               { title: 'Fast Installation', desc: 'Most laminate uses click-lock systems that go down quickly, which can reduce installation time and disruption to your household.' },
               { title: 'Wide Selection', desc: 'Available in plank widths from standard to wide-plank, in light, medium, and dark tones, with textures ranging from smooth to hand-scraped.' },
             ].map((b) => (
-              <div key={b.title} className="bg-[#F0E9DC] border border-sand rounded-[3px] p-7">
+              <div key={b.title} className="bg-subtle border border-border rounded-[3px] p-7">
                 <h3 className="font-sans text-[15px] font-semibold text-charcoal mb-3">{b.title}</h3>
                 <p className="font-sans text-[13px] text-charcoal/55 leading-relaxed">{b.desc}</p>
               </div>
@@ -75,7 +75,7 @@ export default function LaminateFlooring() {
         </div>
       </section>
 
-      <section className="bg-[#F0E9DC] border-t border-sand">
+      <section className="bg-subtle border-t border-border">
         <div className="max-w-[860px] mx-auto px-6 py-16">
           <h2 className="font-serif text-[28px] lg:text-[38px] font-semibold text-charcoal leading-tight mb-10">Laminate Flooring FAQ</h2>
           <div className="flex flex-col divide-y divide-sand">
@@ -89,12 +89,12 @@ export default function LaminateFlooring() {
         </div>
       </section>
 
-      <section className="bg-ivory border-t border-sand">
+      <section className="bg-ivory border-t border-border">
         <div className="max-w-[1180px] mx-auto px-6 py-12">
           <h2 className="font-sans text-[13px] font-semibold text-charcoal/40 uppercase tracking-widest mb-6">Related Services</h2>
           <div className="flex flex-wrap gap-3">
             {[{ label: 'Hardwood Flooring', href: '/hardwood-flooring-burbank' }, { label: 'Luxury Vinyl Flooring', href: '/luxury-vinyl-flooring-burbank' }, { label: 'Professional Installation', href: '/flooring-installation-burbank' }, { label: 'Moldings & Trim', href: '/molding-baseboard-installation-burbank' }].map((l) => (
-              <Link key={l.href} to={l.href} className="border border-sand bg-[#F0E9DC] text-charcoal/60 font-sans text-[13px] px-4 py-2 rounded-[2px] hover:border-walnut/40 hover:text-walnut transition-colors">{l.label}</Link>
+              <Link key={l.href} to={l.href} className="border border-border bg-subtle text-charcoal/60 font-sans text-[13px] px-4 py-2 rounded-[2px] hover:border-walnut/40 hover:text-walnut transition-colors">{l.label}</Link>
             ))}
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function LaminateFlooring() {
           <h2 className="font-serif text-[28px] lg:text-[38px] font-semibold text-ivory mb-4">See Laminate Samples in the Showroom</h2>
           <p className="font-sans text-base text-ivory/50 leading-relaxed mb-8">Visit us at 1508 W Burbank Blvd to compare finishes side by side in natural light. Free estimates, no pressure.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/contact" className="bg-walnut text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-walnut-dark transition-colors">Request Free Estimate</Link>
+            <Link to="/contact" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors">Request Free Estimate</Link>
             <a href="tel:+18185150009" className="border-[1.5px] border-ivory/30 text-ivory/70 px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:border-ivory/60 hover:text-ivory transition-colors">Call (818) 515-0009</a>
           </div>
         </div>
