@@ -13,6 +13,7 @@ import LaminateFlooring from './pages/LaminateFlooring';
 import LuxuryVinylFlooring from './pages/LuxuryVinylFlooring';
 import FlooringInstallation from './pages/FlooringInstallation';
 import MoldingInstallation from './pages/MoldingInstallation';
+import BuyersGuide from './pages/BuyersGuide';
 import NotFound from './pages/NotFound';
 import { initAnalytics, trackPageView } from './lib/analytics';
 
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/buyers-guide" element={<BuyersGuide />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

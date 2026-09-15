@@ -65,6 +65,7 @@ export default function Footer() {
                 { to: '/gallery', label: 'Gallery' },
                 { to: '/reviews', label: 'Reviews' },
                 { to: '/contact', label: 'Free Estimate' },
+                { to: '/buyers-guide', label: "Buyer's Guide" },
               ].map((link) => (
                 <li key={link.to + link.label}>
                   <Link to={link.to} className="font-sans text-[13px] text-charcoal/55 hover:text-charcoal transition-colors">

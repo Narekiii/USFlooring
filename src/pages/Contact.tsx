@@ -259,6 +259,83 @@ export default function Contact() {
                 </div>
               ))}
             </address>
+
+            {/* Social media */}
+            <div className="mt-6">
+              <p className="font-sans text-[11px] font-semibold text-charcoal/35 uppercase tracking-widest mb-4">Follow Us</p>
+              <div className="flex items-center gap-3 flex-wrap">
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/usflooring.la"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="US Flooring on Instagram"
+                  className="w-10 h-10 flex items-center justify-center rounded-[3px] bg-ivory border border-border text-charcoal/50 hover:text-charcoal hover:border-charcoal/40 transition-colors"
+                  onClick={() => (window as any).gtag?.('event', 'social_click', { platform: 'instagram' })}
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
+                </a>
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/usflooring.la"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="US Flooring on Facebook"
+                  className="w-10 h-10 flex items-center justify-center rounded-[3px] bg-ivory border border-border text-charcoal/50 hover:text-charcoal hover:border-charcoal/40 transition-colors"
+                  onClick={() => (window as any).gtag?.('event', 'social_click', { platform: 'facebook' })}
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  </svg>
+                </a>
+                {/* LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/company/us-flooring-molding"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="US Flooring on LinkedIn"
+                  className="w-10 h-10 flex items-center justify-center rounded-[3px] bg-ivory border border-border text-charcoal/50 hover:text-charcoal hover:border-charcoal/40 transition-colors"
+                  onClick={() => (window as any).gtag?.('event', 'social_click', { platform: 'linkedin' })}
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </a>
+                {/* YouTube */}
+                <a
+                  href="https://www.youtube.com/@usflooring"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="US Flooring on YouTube"
+                  className="w-10 h-10 flex items-center justify-center rounded-[3px] bg-ivory border border-border text-charcoal/50 hover:text-charcoal hover:border-charcoal/40 transition-colors"
+                  onClick={() => (window as any).gtag?.('event', 'social_click', { platform: 'youtube' })}
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                    <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none" />
+                  </svg>
+                </a>
+                {/* Yelp */}
+                <a
+                  href="https://www.yelp.com/biz/us-flooring-and-molding-burbank"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="US Flooring on Yelp"
+                  className="w-10 h-10 flex items-center justify-center rounded-[3px] bg-ivory border border-border text-charcoal/50 hover:text-[#d32323] hover:border-[#d32323]/30 transition-colors"
+                  onClick={() => (window as any).gtag?.('event', 'outbound_yelp_click', { link_location: 'contact_page', destination_url: 'https://www.yelp.com/biz/us-flooring-and-molding-burbank' })}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+                    <path d="M20.16 12.596c.411-.36.416-.849.015-1.166l-3.584-2.765c-.398-.311-.861-.134-.99.381l-.73 2.91c-.127.507.205.88.74.826l4.103-.44a1.3 1.3 0 0 0 .447-.204l-.001-.001v-.001zm-7.693 6.547.73 2.911c.13.515.594.694.99.381l3.584-2.765c.401-.318.396-.806-.015-1.166a1.3 1.3 0 0 0-.447-.205l-4.103-.44c-.535-.055-.868.319-.74.826zm-3.135 1.53c.35.392.827.347 1.06-.1l1.261-2.407c.234-.447.032-.895-.449-1.008l-4.012-.94c-.482-.113-.812.218-.697.718l.957 4.021c.118.5.535.73.88.341zm-3.18-7.573a1.27 1.27 0 0 0-.327.418L3.91 16.48c-.232.464.002.9.521.964l4.103.497c.52.063.854-.32.744-.847l-.845-3.884c-.11-.528-.609-.758-1.004-.416l-.042.036zM10.6 3.27c-.232-.464-.716-.528-1.05-.14L6.457 6.658c-.336.39-.262.868.162 1.065l3.667 1.71c.423.197.826-.042.899-.55l.589-4.027c.074-.51-.172-.917-.404-1.381L10.6 3.27z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Map */}

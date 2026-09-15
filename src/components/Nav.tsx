@@ -55,6 +55,18 @@ export default function Nav() {
               <PhoneIcon />
               (818) 515-0009
             </a>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `border-[1.5px] px-5 py-2.5 rounded-[2px] font-sans text-[13px] font-bold transition-colors ${
+                  isActive
+                    ? 'border-charcoal bg-charcoal text-ivory'
+                    : 'border-charcoal text-charcoal hover:bg-charcoal hover:text-ivory'
+                }`
+              }
+            >
+              Contact Us
+            </NavLink>
             <Link
               to="/contact"
               className="bg-red text-white px-5 py-2.5 rounded-[2px] font-sans text-[13px] font-bold hover:bg-red-dark transition-colors"
@@ -104,6 +116,17 @@ export default function Nav() {
                 {link.label}
               </NavLink>
             ))}
+            <NavLink
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `font-sans text-[16px] font-medium py-1 transition-colors ${
+                  isActive ? 'text-red' : 'text-charcoal/60 hover:text-red'
+                }`
+              }
+            >
+              Contact Us
+            </NavLink>
           </div>
         )}
       </header>
