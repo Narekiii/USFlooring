@@ -38,7 +38,7 @@ export default function Gallery() {
   return (
     <div className="pb-[72px] lg:pb-0">
       <SEO
-        title="Flooring Installation Projects in Los Angeles | US Flooring"
+        title="Flooring Project Gallery | Burbank & Los Angeles"
         description="View hardwood, laminate, luxury vinyl, molding, and flooring installation work from US Flooring & Molding Inc. in Burbank and greater Los Angeles."
         canonical="https://www.usflooring.la/gallery"
         ogTitle="Flooring Project Gallery | US Flooring & Molding"

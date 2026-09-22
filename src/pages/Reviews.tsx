@@ -76,7 +76,7 @@ export default function Reviews() {
   return (
     <div className="pb-[72px] lg:pb-0">
       <SEO
-        title="US Flooring & Molding Reviews | Burbank, CA"
+        title="US Flooring Customer Reviews | Burbank, CA"
         description="Read verified customer experiences with US Flooring & Molding Inc. for flooring products, molding, consultation, and installation in Burbank and Los Angeles."
         canonical="https://www.usflooring.la/reviews"
         ogTitle="Customer Reviews | US Flooring & Molding"
@@ -104,14 +104,21 @@ export default function Reviews() {
             <div>
               <p className="font-sans text-[14px] font-semibold text-charcoal">Google Rating</p>
             </div>
-            <a
-              href={BUSINESS.googleReviewsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-sans text-[13px] font-bold text-walnut hover:text-charcoal transition-colors"
-            >
-              Read our Google Reviews →
-            </a>
+            {/* TODO: replace this link with the verified Google Business Profile review URL once confirmed by owner */}
+            {BUSINESS.googleReviewsUrl ? (
+              <a
+                href={BUSINESS.googleReviewsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-sans text-[13px] font-bold text-walnut hover:text-charcoal transition-colors"
+              >
+                Read our Google Reviews →
+              </a>
+            ) : (
+              <p className="font-sans text-[12px] text-charcoal/35 italic">
+                Google review link — TODO: verify with owner
+              </p>
+            )}
           </div>
         </div>
       </section>

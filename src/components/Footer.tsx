@@ -32,15 +32,7 @@ export default function Footer() {
               </svg>
             ))}
           </div>
-          <a
-            href={BUSINESS.googleReviewsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block font-sans text-[12px] text-charcoal/45 hover:text-charcoal transition-colors mb-2"
-            onClick={() => (window as any).gtag?.('event', 'google_reviews_click')}
-          >
-            Read our Google reviews →
-          </a>
+          {/* TODO: add verified Google review URL from owner */}
           <a
             href={YELP_URL}
             target="_blank"
@@ -126,7 +118,7 @@ export default function Footer() {
             >
               {BUSINESS.phoneDisplay}
             </a>
-            <p className="font-sans text-[13px] text-charcoal/45">Fax: {BUSINESS.fax}</p>
+            {/* Fax — TODO: verify with owner before displaying */}
             <a
               href={`mailto:${BUSINESS.email}`}
               className="font-sans text-[13px] text-charcoal/55 hover:text-charcoal transition-colors"
@@ -171,7 +163,7 @@ export default function Footer() {
               </div>
             </div>
             <a
-              href={BUSINESS.mapsUrl}
+              href={BUSINESS.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 font-sans text-[12px] font-semibold text-walnut hover:text-charcoal transition-colors whitespace-nowrap"

@@ -93,33 +93,22 @@ const homeJsonLd = [
     '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
     '@id': 'https://www.usflooring.la/#business',
     name: BUSINESS.name,
+    legalName: BUSINESS.legalName,
     url: BUSINESS.website,
     telephone: BUSINESS.phone,
-    email: BUSINESS.email,
     image: BUSINESS.ogImage,
     logo: {
       '@type': 'ImageObject',
       url: BUSINESS.logoUrl,
     },
-    description: 'Family-owned flooring store and installation company serving Burbank and greater Los Angeles with hardwood, laminate, luxury vinyl, molding, and professional installation services.',
-    priceRange: '$$',
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '09:00',
-        closes: '18:00',
-      },
-    ],
-    hasMap: 'https://maps.app.goo.gl/tj7qojTHfH3svRqD6',
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 34.1818843,
-      longitude: -118.3279698,
-    },
+    description: 'Flooring store and installation company serving Burbank and greater Los Angeles with hardwood, laminate, luxury vinyl, molding, and professional installation services.',
+    // TODO: add openingHoursSpecification after owner verifies hours
+    // TODO: add geo coordinates after verification
+    // TODO: add priceRange only after owner approves meaningful value
     sameAs: [
-      BUSINESS.mapsUrl,
-      'https://m.yelp.com/biz/us-flooring-and-molding-burbank',
+      BUSINESS.googleMapsUrl,
+      BUSINESS.yelpUrl,
+      BUSINESS.linkedInUrl,
     ],
     address: {
       '@type': 'PostalAddress',
@@ -163,11 +152,11 @@ export default function Home() {
   return (
     <div className="pb-[72px] lg:pb-0">
       <SEO
-        title="Flooring Store & Installation in Burbank, CA | US Flooring"
-        description="Shop hardwood, laminate, and luxury vinyl flooring in Burbank. Professional flooring and molding installation across Los Angeles. Free estimates — call (818) 515-0009."
+        title="Flooring Store & Installation in Burbank | US Flooring"
+        description="Shop hardwood, laminate and luxury vinyl flooring in Burbank. Professional flooring and molding installation across Los Angeles. Free estimates."
         canonical="https://www.usflooring.la/"
-        ogTitle="US Flooring & Molding Inc. | Burbank Flooring Experts"
-        ogDescription="Hardwood, laminate, luxury vinyl, molding, and professional flooring installation from US Flooring & Molding Inc. in Burbank — 20+ years of experience."
+        ogTitle="Flooring Store & Installation in Burbank | US Flooring"
+        ogDescription="Hardwood, laminate, luxury vinyl, molding and professional flooring installation from a local Burbank showroom."
         ogUrl="https://www.usflooring.la/"
         jsonLd={homeJsonLd}
       />
@@ -186,7 +175,7 @@ export default function Home() {
         {/* Text panel */}
         <div className="flex flex-col justify-center bg-ivory px-6 lg:pl-[max(24px,calc((100vw-1180px)/2+24px))] pr-6 lg:pr-16 py-12 lg:py-20 lg:order-1">
           <h1 className="font-serif text-[36px] lg:text-[58px] font-semibold text-charcoal leading-[1.06] mb-3 max-w-[520px]">
-            Trusted Flooring Store and Installation Company in Burbank
+            Flooring, Molding and Professional Installation in Burbank
           </h1>
           <p className="font-sans text-base lg:text-[18px] text-walnut font-semibold mb-5">
             Two Decades of Craftsmanship You Can Trust

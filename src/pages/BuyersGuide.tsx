@@ -360,7 +360,7 @@ export default function BuyersGuide() {
   return (
     <div className="pb-[72px] lg:pb-0">
       <SEO
-        title="Flooring Buyer's Guide | Hardwood vs. Engineered vs. Laminate vs. Vinyl"
+        title="Flooring Buyer's Guide | Hardwood, Laminate & Vinyl"
         description="Compare hardwood, engineered wood, laminate, and vinyl flooring based on durability, waterproofing, refinishability, price tier, and resale value. Serving Burbank and Los Angeles."
         canonical="https://www.usflooring.la/buyers-guide"
         ogTitle="Flooring Buyer's Guide | US Flooring & Molding"
