@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { services, SITE_URL } from "../lib/business";
+export const metadata: Metadata = { title: "Flooring Products & Services in Burbank", description: "Explore hardwood, laminate, luxury vinyl, molding, and professional flooring installation from US Flooring & Molding.", alternates: { canonical: "/products" }, openGraph: { title: "Flooring Products & Services in Burbank", description: "Flooring materials and installation services in Burbank.", url: `${SITE_URL}/products` }, twitter: { card: "summary_large_image" } };
+export default function Products() { return <section className="section container"><p className="eyebrow">Products & services</p><h1>Flooring products and installation in Burbank</h1><p className="lead">Find the right material for your home, then let our experienced team handle the installation.</p><div className="cards">{services.map(([name, href, description]) => <Link className="card" key={href} href={href}><h2>{name}</h2><p>{description}</p><span>Learn more →</span></Link>)}</div></section>; }
