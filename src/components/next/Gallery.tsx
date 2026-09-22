@@ -1,0 +1,4 @@
+"use client";
+import Image from "next/image";
+const photos=["https://images.unsplash.com/photo-1773098587044-0c830e398428","https://images.unsplash.com/photo-1608752503578-52f35965e3d9","https://images.unsplash.com/photo-1787625349019-2ad6b4cadc87","https://images.unsplash.com/photo-1695191388218-f6259600223f","https://images.unsplash.com/photo-1655457397686-4dd23e78a918","https://images.unsplash.com/photo-1622936063167-e32e9f955438"];
+export default function Gallery(){return <section className="section container gallery-grid">{photos.map((p,i)=><div className="gallery-photo" key={p}><Image src={p+"?w=900&auto=format&fit=crop"} alt={["Hardwood floor in a living room","Oak hardwood installation","Wide-plank laminate flooring","Luxury vinyl flooring","Baseboard molding","Professional flooring installation"][i]} fill sizes="(max-width:700px) 100vw, 33vw"/></div>)}</section>}
