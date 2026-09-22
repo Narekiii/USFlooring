@@ -17,5 +17,15 @@
     "paths": { "@/*": ["./*"] }
   },
   "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "legacy-vite", "dist", ".next"]
+  "exclude": [
+    "node_modules",
+    "legacy-vite",
+    "src/App.tsx",
+    "src/main.tsx",
+    "src/components",
+    "src/lib",
+    "vite.config.ts",
+    "dist",
+    ".next"
+  ] (Validate Next.js build and isolate legacy Vite pages)
 }
