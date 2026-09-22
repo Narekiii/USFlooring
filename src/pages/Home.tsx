@@ -189,7 +189,7 @@ export default function Home() {
             Trusted Flooring Store and Installation Company in Burbank
           </h1>
           <p className="font-sans text-base lg:text-[18px] text-walnut font-semibold mb-5">
-            Flooring Company That You Can Trust.
+            Two Decades of Craftsmanship You Can Trust
           </p>
           <p className="font-sans text-base lg:text-[17px] text-charcoal/65 leading-relaxed mb-8 max-w-[480px]">
             We're the local flooring team Burbank homeowners call when they want it done right — real guidance, real craftsmanship, and a family name behind every install.

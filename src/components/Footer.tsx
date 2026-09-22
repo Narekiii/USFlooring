@@ -3,6 +3,7 @@ import logoImg from '@/imports/us-flooring-header-logo-400x160.png';
 import { BUSINESS } from '@/lib/business';
 
 const YELP_URL = 'https://www.yelp.com/biz/us-flooring-and-molding-burbank';
+const LINKEDIN_URL = 'https://www.linkedin.com/company/usflooring/';
 
 function YelpIcon() {
   return (
@@ -50,6 +51,21 @@ export default function Footer() {
           >
             <YelpIcon />
             View us on Yelp
+          </a>
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="US Flooring & Molding Inc. on LinkedIn"
+            className="inline-flex items-center gap-2 font-sans text-[12px] text-charcoal/45 hover:text-charcoal transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
+            onClick={() => (window as any).gtag?.('event', 'social_click', { platform: 'linkedin', link_location: 'footer' })}
+          >
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            Connect on LinkedIn
           </a>
         </div>
 

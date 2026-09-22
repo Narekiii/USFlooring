@@ -294,7 +294,7 @@ export default function Contact() {
                 </a>
                 {/* LinkedIn */}
                 <a
-                  href="https://www.linkedin.com/company/us-flooring-molding"
+                  href="https://www.linkedin.com/company/usflooring/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="US Flooring on LinkedIn"
