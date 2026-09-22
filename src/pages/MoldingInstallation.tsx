@@ -24,7 +24,7 @@ export default function MoldingInstallation() {
     <div className="pb-[72px] lg:pb-0">
       <SEO
         title="Molding & Baseboard Installation in Burbank | US Flooring"
-        description="Molding and baseboard installation in Burbank and Los Angeles. Baseboards, shoe molding, T-moldings, stair nose, and trim. Professional installation. Free estimate."
+        description="Baseboard, molding, T-molding, stair nose, and trim installation in Burbank and Los Angeles. Professional finish work by US Flooring & Molding. Free estimates."
         canonical="https://www.usflooring.la/molding-baseboard-installation-burbank"
         ogTitle="Molding & Baseboard Installation in Burbank | US Flooring"
         ogDescription="Complete molding and baseboard installation from US Flooring & Molding Inc. in Burbank. The finishing detail that makes a floor look complete."

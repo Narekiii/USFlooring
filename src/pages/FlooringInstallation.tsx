@@ -24,7 +24,7 @@ export default function FlooringInstallation() {
     <div className="pb-[72px] lg:pb-0">
       <SEO
         title="Flooring Installation in Burbank, CA | US Flooring"
-        description="Professional flooring installation in Burbank and Los Angeles. Hardwood, laminate, and luxury vinyl installed by our own crew. 1-year labor guarantee. Free estimate."
+        description="Professional flooring installation in Burbank and Los Angeles. Hardwood, laminate, and vinyl installed by our own crew. 1-year labor guarantee. Free estimates."
         canonical="https://www.usflooring.la/flooring-installation-burbank"
         ogTitle="Flooring Installation in Burbank | US Flooring & Molding"
         ogDescription="Professional flooring installation by US Flooring & Molding Inc. in Burbank, California. Our own crew, 1-year labor guarantee."

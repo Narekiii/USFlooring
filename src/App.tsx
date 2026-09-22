@@ -32,8 +32,14 @@ export default function App() {
     <BrowserRouter>
       <RouteTracker />
       <div className="min-h-full flex flex-col bg-ivory font-sans">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:bg-navy focus:text-ivory focus:px-4 focus:py-2 focus:rounded-[2px] focus:font-sans focus:text-[14px] focus:font-bold focus:outline-none"
+        >
+          Skip to main content
+        </a>
         <Nav />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />

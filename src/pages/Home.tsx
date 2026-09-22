@@ -164,10 +164,10 @@ export default function Home() {
     <div className="pb-[72px] lg:pb-0">
       <SEO
         title="Flooring Store & Installation in Burbank, CA | US Flooring"
-        description="Visit US Flooring & Molding Inc. for hardwood, laminate, luxury vinyl, molding, and professional flooring installation in Burbank and greater Los Angeles. Request a free estimate."
+        description="Shop hardwood, laminate, and luxury vinyl flooring in Burbank. Professional flooring and molding installation across Los Angeles. Free estimates — call (818) 515-0009."
         canonical="https://www.usflooring.la/"
         ogTitle="US Flooring & Molding Inc. | Burbank Flooring Experts"
-        ogDescription="Hardwood, laminate, luxury vinyl, molding, and professional flooring installation from a family-owned Burbank flooring company."
+        ogDescription="Hardwood, laminate, luxury vinyl, molding, and professional flooring installation from US Flooring & Molding Inc. in Burbank — 20+ years of experience."
         ogUrl="https://www.usflooring.la/"
         jsonLd={homeJsonLd}
       />
