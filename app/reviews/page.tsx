@@ -144,7 +144,9 @@ export default function ReviewsPage() {
                 <blockquote className="mt-4 flex-1 text-sm leading-7 text-charcoal/70">“{review.quote}”</blockquote>
                 <div className="mt-6 border-t border-border pt-4">
                   <p className="font-semibold text-charcoal">{review.name}</p>
-                  <p className="text-xs text-charcoal/60">{review.city}{review.role ? ` · ${review.role}` : ""}</p>
+                  <p className="text-xs text-charcoal/60">
+  {review.city}
+  {"role" in review && review.role ? ` · ${review.role}` : ""}</p>
                 </div>
               </article>
             ))}
