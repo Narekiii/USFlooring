@@ -27,5 +27,5 @@
     "vite.config.ts",
     "dist",
     ".next"
-  ] (Validate Next.js build and isolate legacy Vite pages)
+  ]
 }
