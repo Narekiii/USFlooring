@@ -67,7 +67,7 @@ export default function ContactPage() {
             <div className="overflow-hidden rounded border border-border bg-ivory">
               <iframe src={mapUrl} title="Map showing US Flooring & Molding in Burbank" className="h-[360px] w-full border-0" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
             </div>
-            <p className="mt-4 text-sm text-charcoal/70"><strong>Directions:</strong> We are at {BUSINESS.address.full}. <a className="text-link" href={directionsUrl} target="_blank" rel="noopener noreferrer">Open directions in Google Maps</a>.</p>
+            <p className="mt-4 text-sm text-charcoal/70"><strong>Directions:</strong> We are at {`${BUSINESS.address.street}, ${BUSINESS.address.city}, ${BUSINESS.address.state} ${BUSINESS.address.zip}`}. <a className="text-link" href={directionsUrl} target="_blank" rel="noopener noreferrer">Open directions in Google Maps</a>.</p>
           </div>
         </div>
       </section>
