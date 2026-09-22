@@ -1,5 +1,3 @@
 import Link from "next/link";
-import Image from "next/image";
 import { BUSINESS } from "../lib/business";
-const links = [["Products & Services", "/products"], ["About", "/about"], ["Gallery", "/gallery"], ["Reviews", "/reviews"], ["Contact", "/contact"]];
-export default function Navigation() { return <header className="site-header"><div className="container nav-inner"><Link href="/" className="brand"><Image src="/og-image.jpg" alt={BUSINESS.name} width={100} height={52} priority /></Link><nav aria-label="Main navigation">{links.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}<Link className="button button-small" href="/contact">Free Estimate</Link></nav></div></header>; }
+export default function Navigation(){return <header className="site-header"><div className="container nav-inner"><Link href="/" className="brand"><span className="brand-mark">US Flooring &amp; Molding</span></Link><nav className="site-nav" aria-label="Main navigation"><Link href="/products">Products</Link><Link href="/about">About</Link><Link href="/gallery">Gallery</Link><Link href="/reviews">Reviews</Link><Link href="/contact">Contact</Link><a href={`tel:${BUSINESS.phone}`} aria-label={`Call ${BUSINESS.phoneDisplay}`}>{BUSINESS.phoneDisplay}</a><Link className="button" href="/contact">Free Estimate</Link></nav></div></header>}

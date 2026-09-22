@@ -1,0 +1,4 @@
+import { SITE_URL, BUSINESS } from "../lib/business";
+export function JsonLd({ data }: { data: unknown }) { return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />; }
+export function businessJsonLd(){return {"@type":["LocalBusiness","HomeAndConstructionBusiness"],"@id":`${SITE_URL}/#business`,name:BUSINESS.name,legalName:BUSINESS.legalName,url:SITE_URL,telephone:BUSINESS.phone,address:{"@type":"PostalAddress",streetAddress:BUSINESS.address.street,addressLocality:BUSINESS.address.city,addressRegion:BUSINESS.address.state,postalCode:BUSINESS.address.zip,addressCountry:"US"},sameAs:[BUSINESS.googleMapsUrl,BUSINESS.yelpUrl,BUSINESS.linkedInUrl]};}
+export function breadcrumbs(items: {name:string;url:string}[]){return {"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:items.map((x,i)=>({"@type":"ListItem",position:i+1,name:x.name,item:`${SITE_URL}${x.url}`}))};}
