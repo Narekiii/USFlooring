@@ -168,16 +168,16 @@ export default function ReviewsPage() {
             Visit our official Yelp profile to read more customer feedback, or request a free estimate for your Burbank or Los Angeles project.
           </p>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link href="/contact" className="button">Get a Free Estimate</Link>
             <a
               href={yelpUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="button"
+              className="button button-secondary"
               aria-label="Read more US Flooring reviews on Yelp"
             >
               Read More Reviews on Yelp
             </a>
-            <Link href="/contact" className="button button-secondary">Get a Free Estimate</Link>
           </div>
         </div>
       </section>
