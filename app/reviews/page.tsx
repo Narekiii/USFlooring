@@ -7,6 +7,10 @@ import { SITE_URL } from "../lib/business";
 const crumbs = [{ label: "Home", href: "/" }, { label: "Reviews" }];
 const yelpUrl = "https://www.yelp.com/biz/us-flooring-and-molding-burbank";
 
+function StarIcon({ size = 14 }: { size?: number }) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="#C89B5A" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>;
+}
+
 const reviews = [
   {
     name: "Bob S.",
@@ -108,7 +112,8 @@ export default function ReviewsPage() {
             </p>
           </div>
           <div className="rounded border border-border bg-ivory p-8">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-charcoal/60">Customer experiences</p>
+            <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <StarIcon key={i} size={22} />)}</div>
+            <p className="mt-3 text-xs font-bold uppercase tracking-[0.2em] text-charcoal/60">Customer experiences</p>
             <p className="mt-4 text-5xl font-semibold text-charcoal">5.0</p>
             <p className="mt-2 text-sm font-medium text-charcoal/70">External rating and review availability can change over time.</p>
             <a
@@ -140,6 +145,7 @@ export default function ReviewsPage() {
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {reviews.map((review) => (
               <article key={`${review.name}-${review.city}`} className="flex h-full flex-col rounded border border-border bg-subtle p-6">
+                <div className="flex gap-0.5 mb-3">{[...Array(5)].map((_, i) => <StarIcon key={i} />)}</div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-walnut">{review.highlight}</p>
                 <blockquote className="mt-4 flex-1 text-sm leading-7 text-charcoal/70">“{review.quote}”</blockquote>
                 <div className="mt-6 border-t border-border pt-4">
