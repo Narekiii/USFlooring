@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -57,6 +58,7 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
+        <Analytics />
       </div>
     </BrowserRouter>
   );
