@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BUSINESS } from "../lib/business";
 
-const logoUrl = "https://raw.githubusercontent.com/Narekiii/USFlooring/next-seo-migration/src/imports/us-flooring-header-logo-400x160.png";
+const logoUrl = "/us-flooring-header-logo-400x160.png";
 const links = [["/products", "Products & Services"], ["/about", "About"], ["/gallery", "Gallery"], ["/reviews", "Reviews"]] as const;
 
 export default function Navigation() {
