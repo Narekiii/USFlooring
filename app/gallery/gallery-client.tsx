@@ -7,6 +7,7 @@ type Photo = {
   src: string;
   largeSrc: string;
   alt: string;
+  caption: string;
   categories: readonly string[];
 };
 
@@ -60,6 +61,7 @@ export default function GalleryClient({ photos }: { photos: readonly Photo[] }) 
                 aria-label={`View larger image: ${photo.alt}`}
               >
                 <Image src={photo.src} alt={photo.alt} width={800} height={600} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105" priority={index < 3} />
+                <p className="px-4 py-3 text-sm leading-snug text-charcoal/70">{photo.caption}</p>
               </button>
             );
           })}
@@ -70,6 +72,7 @@ export default function GalleryClient({ photos }: { photos: readonly Photo[] }) 
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-charcoal/90 p-4" role="dialog" aria-modal="true" aria-label="Gallery image viewer" onClick={() => setSelected(null)}>
           <div className="relative w-full max-w-5xl" onClick={(event) => event.stopPropagation()}>
             <Image src={photos[selected].largeSrc} alt={photos[selected].alt} width={1200} height={900} sizes="100vw" className="h-auto w-full rounded object-contain" priority />
+            <p className="mt-3 text-center text-sm text-ivory/80">{photos[selected].caption}</p>
             <button ref={closeButtonRef} type="button" onClick={() => setSelected(null)} className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full bg-charcoal/80 text-2xl text-ivory hover:bg-charcoal focus:outline-none focus:ring-2 focus:ring-ivory" aria-label="Close image viewer">×</button>
             {selected > 0 && <button type="button" onClick={() => setSelected(selected - 1)} className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-charcoal/80 text-xl text-ivory hover:bg-charcoal focus:outline-none focus:ring-2 focus:ring-ivory" aria-label="Previous image">←</button>}
             {selected < photos.length - 1 && <button type="button" onClick={() => setSelected(selected + 1)} className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-charcoal/80 text-xl text-ivory hover:bg-charcoal focus:outline-none focus:ring-2 focus:ring-ivory" aria-label="Next image">→</button>}
