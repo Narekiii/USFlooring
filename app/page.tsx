@@ -77,7 +77,7 @@ export default function Home() {
         <h1 className="mb-3 max-w-[520px] font-serif text-[36px] font-bold leading-[1.06] text-charcoal lg:text-[58px]">Flooring, Molding and Professional Installation in Burbank</h1>
         <p className="mb-5 text-base font-semibold text-walnut lg:text-[18px]">Two Decades of Craftsmanship You Can Trust</p>
         <p className="mb-8 max-w-[480px] text-base leading-relaxed text-charcoal/65 lg:text-[17px]">We're the local flooring team Burbank homeowners call when they want it done right — real guidance, real craftsmanship, and a family name behind every install.</p>
-        <div className="mb-6 flex flex-col gap-3 sm:flex-row"><Link href="/contact" className="button justify-center">Get Your Free Estimate</Link><a href={`tel:${BUSINESS.phone}`} className="button button-secondary justify-center">Call {BUSINESS.phoneDisplay}</a></div>
+        <div className="mb-6 flex flex-col gap-3 sm:flex-row"><Link href="/contact" className="button justify-center">Get Your Free Estimate</Link><a href={`tel:${BUSINESS.phone}`} className="button justify-center">Call {BUSINESS.phoneDisplay}</a></div>
         <p className="text-xs font-semibold tracking-wide text-charcoal/50">★ Verified Google Reviews · 20+ Years in Burbank · 1-Year Labor Guarantee</p>
       </div>
     </section>

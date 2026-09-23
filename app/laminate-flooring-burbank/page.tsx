@@ -58,7 +58,7 @@ export default function LaminateFlooringPage() {
             <p className="font-sans text-base lg:text-[17px] text-charcoal/60 leading-relaxed mb-8">The look of wood at a price that keeps the rest of your budget intact. Durable, scratch-resistant, and available in dozens of realistic finishes.</p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link href="/contact" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors text-center">Get a Free Estimate</Link>
-              <a href="tel:+18185150009" className="border-[1.5px] border-charcoal text-charcoal px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-subtle/60 transition-colors text-center">Call (818) 515-0009</a>
+              <a href="tel:+18185150009" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors text-center">Call (818) 515-0009</a>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-[3px] aspect-[4/3] bg-subtle/30">
@@ -94,7 +94,7 @@ export default function LaminateFlooringPage() {
           <p className="font-sans text-base text-ivory/50 leading-relaxed mb-8">Visit us at 1508 W Burbank Blvd to compare finishes side by side in natural light. Free estimates, no pressure.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/contact" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors">Request Free Estimate</Link>
-            <a href="tel:+18185150009" className="border-[1.5px] border-ivory/30 text-ivory/70 px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:border-ivory/60 hover:text-ivory transition-colors">Call (818) 515-0009</a>
+            <a href="tel:+18185150009" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors">Call (818) 515-0009</a>
           </div>
         </div>
       </section>

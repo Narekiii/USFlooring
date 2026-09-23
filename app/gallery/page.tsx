@@ -143,7 +143,7 @@ export default function GalleryPage() {
           </p>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
             <a href="/contact" className="button">Request Free Estimate</a>
-            <a href="tel:+18185150009" className="button button-secondary">Call (818) 515-0009</a>
+            <a href="tel:+18185150009" className="button">Call (818) 515-0009</a>
           </div>
         </div>
       </section>

@@ -319,7 +319,7 @@ export default function BuyersGuidePage() {
           <p className="font-sans text-base text-[#E4DED4] leading-relaxed mb-9">Visit our Burbank showroom or schedule a project consultation. We&rsquo;ll help you compare suitable options based on your property, lifestyle, and budget.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/contact" className="inline-block bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors text-center">Schedule a Consultation</Link>
-            <a href="tel:+18185150009" className="inline-block border border-ivory/30 text-ivory px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:border-ivory/60 hover:bg-ivory/5 transition-colors text-center">Call Now — (818) 515-0009</a>
+            <a href="tel:+18185150009" className="inline-block bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors text-center">Call Now — (818) 515-0009</a>
           </div>
         </div>
       </section>

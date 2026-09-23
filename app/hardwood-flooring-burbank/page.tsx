@@ -65,7 +65,7 @@ export default function HardwoodFlooringPage() {
             <p className="font-sans text-base lg:text-[17px] text-charcoal/60 leading-relaxed mb-8">Real wood underfoot. We help you choose the right species, finish, and format for your home — then we install it properly so it lasts for decades.</p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link href="/contact" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors text-center">Get a Free Estimate</Link>
-              <a href="tel:+18185150009" className="border-[1.5px] border-charcoal text-charcoal px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-subtle/60 transition-colors text-center">Call (818) 515-0009</a>
+              <a href="tel:+18185150009" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors text-center">Call (818) 515-0009</a>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-[3px] aspect-[4/3] bg-subtle/30">
@@ -130,7 +130,7 @@ export default function HardwoodFlooringPage() {
           <p className="font-sans text-base text-ivory/50 leading-relaxed mb-8">Visit our Burbank showroom at 1508 W Burbank Blvd to compare species, widths, and finishes in real light before you commit. Estimates are free.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/contact" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors">Request Free Estimate</Link>
-            <a href="tel:+18185150009" className="border-[1.5px] border-ivory/30 text-ivory/70 px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:border-ivory/60 hover:text-ivory transition-colors">Call (818) 515-0009</a>
+            <a href="tel:+18185150009" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors">Call (818) 515-0009</a>
           </div>
         </div>
       </section>
