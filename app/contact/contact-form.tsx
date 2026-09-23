@@ -53,5 +53,6 @@ export default function ContactForm() {
     <div><label htmlFor="message" className="font-semibold">Message <span aria-hidden="true">*</span></label><textarea id="message" name="message" required rows={5} value={form.message} onChange={(event) => update("message", event.target.value)} className={`${inputClass} resize-y`} aria-invalid={Boolean(errors.message)} />{errors.message && <p className="mt-1 text-sm text-red-700">{errors.message}</p>}</div>
     <div aria-live="polite" role={status === "error" ? "alert" : "status"}>{status === "success" && <p className="rounded border border-green-700/30 bg-green-50 p-4 text-green-900">Thanks — your request was sent. We will be in touch.</p>}{status === "error" && <p className="rounded border border-red-700/30 bg-red-50 p-4 text-red-900">We could not send your request. Please try again or call (818) 515-0009.</p>}</div>
     <button type="submit" disabled={status === "submitting"} className="button w-full justify-center disabled:cursor-wait disabled:opacity-60">{status === "submitting" ? "Sending request…" : "Submit estimate request"}</button>
+    <p className="text-center text-xs text-charcoal/50">By submitting, you agree to our <a href="/privacy" className="underline hover:text-walnut">Privacy Policy</a>.</p>
   </form>;
 }

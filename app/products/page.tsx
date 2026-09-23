@@ -8,7 +8,7 @@ import FaqAccordion from "./faq-accordion";
 const items = [{ label: "Home", href: "/" }, { label: "Products & Services" }];
 
 export const metadata: Metadata = {
-  title: "Hardwood, Laminate & Vinyl Flooring in Burbank",
+  title: "Flooring Products in Burbank | US Flooring",
   description: "Explore hardwood, laminate, luxury vinyl, molding, trim, showroom consultation, and professional flooring installation from US Flooring & Molding in Burbank.",
   alternates: { canonical: "https://www.usflooring.la/products" },
   openGraph: { title: "Flooring Products & Installation | US Flooring Burbank", description: "Compare hardwood, laminate, luxury vinyl, molding, and professional flooring installation options for your Los Angeles-area property.", url: "https://www.usflooring.la/products" },

@@ -5,11 +5,10 @@ import { SITE_URL } from "../lib/business";
 import GalleryClient from "./gallery-client";
 
 export const metadata: Metadata = {
-  title: "Flooring Project Gallery | Burbank & Los Angeles",
+  title: "Flooring Project Gallery | US Flooring Burbank",
   description:
     "View hardwood, laminate, luxury vinyl, molding and flooring installation projects by US Flooring & Molding in Burbank and greater Los Angeles.",
   alternates: { canonical: `${SITE_URL}/gallery` },
-  robots: { index: true, follow: true },
   openGraph: {
     title: "Flooring Project Gallery | Burbank & Los Angeles",
     description:

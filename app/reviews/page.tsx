@@ -65,11 +65,10 @@ const pullQuotes = [
 ] as const;
 
 export const metadata: Metadata = {
-  title: "US Flooring Customer Reviews | Burbank, CA",
+  title: "Customer Reviews | US Flooring Burbank",
   description:
     "Read customer experiences with US Flooring & Molding in Burbank and explore professional flooring, molding and installation services.",
   alternates: { canonical: `${SITE_URL}/reviews` },
-  robots: { index: true, follow: true },
   openGraph: {
     title: "US Flooring Customer Reviews | Burbank, CA",
     description:

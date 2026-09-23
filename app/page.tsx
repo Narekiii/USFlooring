@@ -47,7 +47,6 @@ export const metadata: Metadata = {
   title: "Flooring Store & Installation in Burbank | US Flooring",
   description: "Shop hardwood, laminate and luxury vinyl flooring in Burbank. Professional flooring and molding installation across Los Angeles. Free estimates.",
   alternates: { canonical: `${SITE_URL}/` },
-  robots: { index: true, follow: true },
   openGraph: { title: "Flooring Store & Installation in Burbank | US Flooring", description: "Hardwood, laminate, luxury vinyl, molding and professional flooring installation from a local Burbank showroom.", url: `${SITE_URL}/`, images: [{ url: "/og-image.jpg", alt: "US Flooring & Molding" }], type: "website" },
   twitter: { card: "summary_large_image", title: "Flooring Store & Installation in Burbank | US Flooring", description: "Hardwood, laminate, luxury vinyl, molding and professional flooring installation from a local Burbank showroom.", images: ["/og-image.jpg"] },
 };

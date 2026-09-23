@@ -4,7 +4,7 @@ import Breadcrumbs, { breadcrumbJsonLd } from "../ui/breadcrumbs";
 import { JsonLd } from "../ui/json-ld";
 
 export const metadata: Metadata = {
-  title: "Flooring Buyer's Guide | Hardwood, Laminate & Vinyl",
+  title: "Flooring Buyer's Guide | US Flooring Burbank",
   description: "Compare hardwood, engineered wood, laminate, and vinyl flooring based on durability, waterproofing, refinishability, price tier, and resale value. Serving Burbank and Los Angeles.",
   alternates: { canonical: "https://www.usflooring.la/buyers-guide" },
   openGraph: { title: "Flooring Buyer's Guide | US Flooring & Molding", description: "An educational comparison of hardwood, engineered wood, laminate, and vinyl flooring — from a flooring company with 20+ years serving Los Angeles.", url: "https://www.usflooring.la/buyers-guide", type: "article" },

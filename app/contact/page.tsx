@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   title: "Contact US Flooring & Molding | Burbank Showroom",
   description: `Visit the US Flooring & Molding showroom at ${BUSINESS.address.street}, ${BUSINESS.address.city}, ${BUSINESS.address.state} ${BUSINESS.address.zip}. Call ${BUSINESS.phoneDisplay} or request a free estimate online.`,
   alternates: { canonical: `${SITE_URL}/contact` },
-  robots: { index: true, follow: true },
   openGraph: { title: "Request a Free Flooring Estimate | US Flooring", description: "Discuss your flooring project with the US Flooring & Molding team in Burbank, California.", url: `${SITE_URL}/contact`, images: [{ url: "/og-image.jpg", alt: "US Flooring & Molding" }], type: "website" },
   twitter: { card: "summary_large_image", title: "Contact US Flooring & Molding | Burbank Showroom", description: "Visit our Burbank showroom or request a flooring estimate.", images: ["/og-image.jpg"] },
 };

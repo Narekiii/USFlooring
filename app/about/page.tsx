@@ -5,7 +5,7 @@ import Breadcrumbs, { breadcrumbJsonLd } from "../ui/breadcrumbs";
 import { JsonLd } from "../ui/json-ld";
 
 export const metadata: Metadata = {
-  title: "About US Flooring & Molding | Burbank Flooring Experts",
+  title: "About US Flooring & Molding | Burbank Experts",
   description: "Learn about US Flooring & Molding Inc., a family-owned Burbank flooring store and installation company backed by more than 20 years of flooring experience.",
   alternates: { canonical: "https://www.usflooring.la/about" },
   openGraph: { title: "About US Flooring & Molding Inc.", description: "Meet the family and flooring professionals behind US Flooring & Molding Inc. in Burbank, California.", url: "https://www.usflooring.la/about" },
