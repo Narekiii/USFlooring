@@ -113,7 +113,7 @@ export default function ReviewsPage() {
           </div>
           <div className="rounded border border-border bg-ivory p-8">
             <div className="flex gap-0.5">{[...Array(5)].map((_, i) => <StarIcon key={i} size={22} />)}</div>
-            <p className="mt-3 text-xs font-bold uppercase tracking-[0.2em] text-charcoal/60">Customer experiences</p>
+            <p className="mt-3 text-xs font-bold uppercase tracking-widest text-charcoal/60">Customer experiences</p>
             <p className="mt-4 text-5xl font-semibold text-charcoal">5.0</p>
             <p className="mt-2 text-sm font-medium text-charcoal/70">External rating and review availability can change over time.</p>
             <a
@@ -134,7 +134,7 @@ export default function ReviewsPage() {
           {pullQuotes.map((item) => (
             <blockquote key={item.quote} className="rounded border border-white/10 bg-charcoal/80 p-4">
               <p className="text-sm italic text-ivory/80">{item.quote}</p>
-              <footer className="mt-3 text-[11px] uppercase tracking-[0.2em] text-ivory/40">— {item.author}</footer>
+              <footer className="mt-3 text-[11px] uppercase tracking-widest text-ivory/40">— {item.author}</footer>
             </blockquote>
           ))}
         </div>
@@ -146,7 +146,7 @@ export default function ReviewsPage() {
             {reviews.map((review) => (
               <article key={`${review.name}-${review.city}`} className="flex h-full flex-col rounded border border-border bg-subtle p-6">
                 <div className="flex gap-0.5 mb-3">{[...Array(5)].map((_, i) => <StarIcon key={i} />)}</div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-walnut">{review.highlight}</p>
+                <p className="text-xs font-bold uppercase tracking-widest text-walnut">{review.highlight}</p>
                 <blockquote className="mt-4 flex-1 text-sm leading-7 text-charcoal/70">“{review.quote}”</blockquote>
                 <div className="mt-6 border-t border-border pt-4">
                   <p className="font-semibold text-charcoal">{review.name}</p>

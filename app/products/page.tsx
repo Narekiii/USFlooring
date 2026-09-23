@@ -47,8 +47,8 @@ export default function ProductsPage() {
       {/* Header */}
       <section className="pt-8 pb-16 bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6">
-          <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Products &amp; Services</p>
-          <h1 className="font-serif text-[40px] lg:text-[60px] font-semibold text-charcoal leading-[1.06] max-w-[580px] mb-3">Hardwood, Laminate, Vinyl and Molding in Burbank</h1>
+          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Products &amp; Services</p>
+          <h1 className="font-serif text-[40px] lg:text-[60px] font-bold text-charcoal leading-[1.06] max-w-[580px] mb-3">Hardwood, Laminate, Vinyl and Molding in Burbank</h1>
           <p className="font-sans text-base lg:text-[18px] text-walnut font-semibold mb-5">Everything You Need, Under One Roof</p>
           <p className="font-sans text-base lg:text-[18px] text-charcoal/60 leading-relaxed max-w-[560px] mb-8">Flooring, moldings, and professional installation — all from a family that has been getting this right since 2005 in Burbank.</p>
           <Link href="/contact" className="inline-block bg-red text-white px-8 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors">Get a Free Estimate</Link>
@@ -65,8 +65,8 @@ export default function ProductsPage() {
                   <Image src={s.img} alt={`${s.name} — US Flooring & Molding, Burbank`} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                 </div>
                 <div>
-                  <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-3">{s.tagline}</p>
-                  <h2 className="font-serif text-[28px] lg:text-[36px] font-semibold text-charcoal mb-4 leading-tight">{s.name}</h2>
+                  <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-3">{s.tagline}</p>
+                  <h2 className="font-serif text-[28px] lg:text-[36px] font-bold text-charcoal mb-4 leading-tight">{s.name}</h2>
                   <p className="font-sans text-base text-charcoal/60 leading-relaxed mb-6">{s.desc}</p>
                   <ul className="flex flex-col gap-2.5 mb-8" aria-label={`${s.name} features`}>
                     {s.features.map((f) => <li key={f} className="flex items-center gap-3 font-sans text-[13px] text-charcoal/65"><span className="w-1.5 h-1.5 rounded-full bg-charcoal shrink-0" aria-hidden="true" />{f}</li>)}
@@ -82,8 +82,8 @@ export default function ProductsPage() {
       {/* FAQ */}
       <section className="bg-subtle border-t border-border">
         <div className="max-w-[860px] mx-auto px-6 py-20">
-          <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Common Questions</p>
-          <h2 className="font-serif text-[32px] lg:text-[42px] font-semibold text-charcoal leading-tight mb-12">Flooring FAQs</h2>
+          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Common Questions</p>
+          <h2 className="font-serif text-[32px] lg:text-[42px] font-bold text-charcoal leading-tight mb-12">Flooring FAQs</h2>
           <FaqAccordion faqs={faqs} />
         </div>
       </section>
@@ -91,7 +91,7 @@ export default function ProductsPage() {
       {/* CTA */}
       <section className="bg-charcoal py-20">
         <div className="max-w-[680px] mx-auto px-6 text-center">
-          <h2 className="font-serif text-[32px] lg:text-[44px] font-semibold text-ivory mb-4">Not Sure Where to Start?</h2>
+          <h2 className="font-serif text-[32px] lg:text-[44px] font-bold text-ivory mb-4">Not Sure Where to Start?</h2>
           <p className="font-sans text-base text-ivory/50 leading-relaxed mb-8">Come by the showroom or give us a call. We&apos;ll help you figure out the right material for your space, your lifestyle, and your budget.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/contact" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors">Request Free Estimate</Link>

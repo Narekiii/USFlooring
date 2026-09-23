@@ -232,7 +232,7 @@ export default function BuyersGuidePage() {
       <section className="bg-ivory pt-8 pb-20">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
-            <p className="font-sans text-[10px] font-semibold text-walnut uppercase tracking-[0.16em] mb-5">Buyer&rsquo;s Guide</p>
+            <p className="font-sans text-[10px] font-bold text-walnut uppercase tracking-widest mb-5">Buyer&rsquo;s Guide</p>
             <h1 className="font-serif text-[38px] lg:text-[56px] font-bold text-charcoal leading-[1.06] mb-5">Find the Right Flooring for Your Property</h1>
             <p className="font-sans text-base lg:text-[17px] text-[#111D27] leading-relaxed max-w-[56ch] mb-8">Compare hardwood, engineered wood, laminate, and vinyl based on appearance, durability, moisture exposure, maintenance, lifestyle, installation requirements, and budget.</p>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -247,12 +247,12 @@ export default function BuyersGuidePage() {
       {/* Comparison cards */}
       <section className="bg-subtle border-t border-border py-20">
         <div className="max-w-[1180px] mx-auto px-6">
-          <p className="font-sans text-[10px] font-semibold text-walnut uppercase tracking-[0.16em] mb-4">Material Overview</p>
+          <p className="font-sans text-[10px] font-bold text-walnut uppercase tracking-widest mb-4">Material Overview</p>
           <h2 className="font-serif text-[30px] lg:text-[40px] font-bold text-charcoal leading-tight mb-12">Four Materials, Four Different Answers</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {cards.map(({ label, title, desc, bestFor, facts, Illustration }) => (
               <article key={title} className="bg-[#FFFDFA] border border-[#DDD4C6] rounded-[3px] p-6 flex flex-col">
-                <p className="font-sans text-[9px] font-semibold text-walnut uppercase tracking-[0.14em] mb-5">{label}</p>
+                <p className="font-sans text-[9px] font-bold text-walnut uppercase tracking-widest mb-5">{label}</p>
                 <div className="mb-6 flex items-center justify-center h-[100px]"><Illustration /></div>
                 <h3 className="font-serif text-[20px] font-bold text-charcoal mb-3 leading-tight">{title}</h3>
                 <p className="font-sans text-[13px] text-[#111D27] leading-relaxed mb-5 flex-1">{desc}</p>
@@ -269,7 +269,7 @@ export default function BuyersGuidePage() {
       {/* Comparison table */}
       <section className="bg-ivory border-t border-border py-20">
         <div className="max-w-[1180px] mx-auto px-6">
-          <p className="font-sans text-[10px] font-semibold text-walnut uppercase tracking-[0.16em] mb-4">Side-by-Side</p>
+          <p className="font-sans text-[10px] font-bold text-walnut uppercase tracking-widest mb-4">Side-by-Side</p>
           <h2 className="font-serif text-[30px] lg:text-[40px] font-bold text-charcoal leading-tight mb-10">How the Materials Compare</h2>
           <div className="overflow-x-auto -mx-6 px-6">
             <table className="w-full min-w-[600px] border-collapse text-left">
@@ -299,7 +299,7 @@ export default function BuyersGuidePage() {
       {/* Educational callouts */}
       <section className="bg-subtle border-t border-border py-20">
         <div className="max-w-[1180px] mx-auto px-6">
-          <p className="font-sans text-[10px] font-semibold text-walnut uppercase tracking-[0.16em] mb-4">Technical Context</p>
+          <p className="font-sans text-[10px] font-bold text-walnut uppercase tracking-widest mb-4">Technical Context</p>
           <h2 className="font-serif text-[30px] lg:text-[40px] font-bold text-charcoal leading-tight mb-10">What the Specs Actually Mean</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {callouts.map(({ heading, body }) => (

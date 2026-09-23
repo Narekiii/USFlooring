@@ -59,8 +59,8 @@ export default function AboutPage() {
       <section className="pt-8 pb-16 bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">About Us</p>
-            <h1 className="font-serif text-[40px] lg:text-[58px] font-semibold text-charcoal leading-[1.06] mb-6">Meet the Family Behind US Flooring &amp; Molding</h1>
+            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">About Us</p>
+            <h1 className="font-serif text-[40px] lg:text-[58px] font-bold text-charcoal leading-[1.06] mb-6">Meet the Family Behind US Flooring &amp; Molding</h1>
             <p className="font-sans text-base lg:text-[18px] text-charcoal/60 leading-relaxed mb-6">US Flooring &amp; Molding Inc. is a family-owned flooring contractor and showroom based in Burbank, California. We've been serving homeowners, interior designers, and contractors across the greater Los Angeles area since 2005.</p>
             <p className="font-sans text-base text-charcoal/60 leading-relaxed">We're not a franchise. We're not a big-box satellite. Every floor we sell and every install we run carries our family name — and that means something to us.</p>
           </div>
@@ -74,8 +74,8 @@ export default function AboutPage() {
       <section className="bg-charcoal">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px] grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="font-sans text-[11px] font-semibold text-gold/60 uppercase tracking-widest mb-5">The story</p>
-            <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-ivory leading-[1.1] mb-8">It Started with a Trowel and a Father Who Demanded Excellence</h2>
+            <p className="font-sans text-[11px] font-bold text-gold/60 uppercase tracking-widest mb-5">The story</p>
+            <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-ivory leading-[1.1] mb-8">It Started with a Trowel and a Father Who Demanded Excellence</h2>
             <div className="flex flex-col gap-5">
               <p className="font-sans text-[16px] text-ivory/70 leading-relaxed">Vick was seventeen years old when his father first handed him a trowel. It wasn't ceremonial — it was work. Measure, mix, spread, check, redo if it isn't right. His father had been in the trade for decades, and he had a single standard: do it like it's going in your own house.</p>
               <p className="font-sans text-base text-ivory/60 leading-relaxed">That apprenticeship lasted years. Vick learned flooring the old way — by doing it, by making mistakes, and by fixing them while his father watched. He learned how subfloors fail and how to prevent it. He learned which materials hold up under Southern California conditions and which ones don't. He learned how to listen to a homeowner describe their space and actually understand what they need.</p>
@@ -93,8 +93,8 @@ export default function AboutPage() {
       {/* Values */}
       <section className="bg-ivory">
         <div className="max-w-[1180px] mx-auto px-6 py-[96px]">
-          <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">What we stand for</p>
-          <h2 className="font-serif text-[32px] lg:text-[48px] font-semibold text-charcoal mb-12 leading-[1.1] max-w-[480px]">The Values We Work By Every Day</h2>
+          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">What we stand for</p>
+          <h2 className="font-serif text-[32px] lg:text-[48px] font-bold text-charcoal mb-12 leading-[1.1] max-w-[480px]">The Values We Work By Every Day</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {values.map((v, i) => (
               <div key={v.title} className="bg-subtle border border-border rounded-[3px] p-8">
@@ -111,8 +111,8 @@ export default function AboutPage() {
       <section className="bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6 py-[72px] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Our promise</p>
-            <h2 className="font-serif text-[32px] lg:text-[44px] font-semibold text-charcoal mb-4 leading-tight">1-Year Labor Guarantee</h2>
+            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Our promise</p>
+            <h2 className="font-serif text-[32px] lg:text-[44px] font-bold text-charcoal mb-4 leading-tight">1-Year Labor Guarantee</h2>
             <p className="font-sans text-base text-charcoal/60 leading-relaxed">We stand behind everything we install. If something is wrong with the workmanship within a year of completion, we come back and make it right — no fine print, no runaround.</p>
           </div>
           <div className="bg-ivory border border-border rounded-[3px] p-8">
@@ -146,8 +146,8 @@ export default function AboutPage() {
       <section className="bg-ivory">
         <div className="max-w-[1180px] mx-auto px-6 py-[72px] grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Find us</p>
-            <h2 className="font-serif text-[28px] font-semibold text-charcoal mb-4">Visit the Showroom</h2>
+            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Find us</p>
+            <h2 className="font-serif text-[28px] font-bold text-charcoal mb-4">Visit the Showroom</h2>
             <div className="font-sans text-[14px] text-charcoal/55 leading-relaxed mb-6">
               <p className="mb-1">1508 W Burbank Blvd</p>
               <p className="mb-1">Burbank, CA 91506</p>

@@ -30,8 +30,8 @@ export default function ContactPage() {
       <section className="pt-8 pb-12 bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
-            <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Get in Touch</p>
-            <h1 className="font-serif text-[40px] lg:text-[56px] font-semibold text-charcoal leading-[1.06] mb-3">Visit Our Burbank Flooring Showroom</h1>
+            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Get in Touch</p>
+            <h1 className="font-serif text-[40px] lg:text-[56px] font-bold text-charcoal leading-[1.06] mb-3">Visit Our Burbank Flooring Showroom</h1>
             <p className="font-sans text-base text-walnut font-semibold mb-5">Let&apos;s Talk About Your Floor</p>
             <p className="font-sans text-base text-charcoal/60 leading-relaxed mb-8">Call us, stop by, or fill out the form. You&apos;ll get a real answer from a real person — not a script, not a call center.</p>
 
@@ -59,7 +59,7 @@ export default function ContactPage() {
 
             {/* Social */}
             <div className="mt-6">
-              <p className="font-sans text-[11px] font-semibold text-charcoal/35 uppercase tracking-widest mb-4">Follow Us</p>
+              <p className="font-sans text-[11px] font-bold text-charcoal/35 uppercase tracking-widest mb-4">Follow Us</p>
               <div className="flex items-center gap-3 flex-wrap">
                 <a href={BUSINESS.linkedInUrl} target="_blank" rel="noopener noreferrer" aria-label="US Flooring & Molding on LinkedIn" className="w-10 h-10 flex items-center justify-center rounded-[3px] bg-ivory border border-border text-charcoal/50 hover:text-charcoal hover:border-charcoal/40 transition-colors">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
@@ -87,8 +87,8 @@ export default function ContactPage() {
       {/* Form */}
       <section className="bg-ivory">
         <div className="max-w-[780px] mx-auto px-6 py-16">
-          <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Free Estimate</p>
-          <h2 className="font-serif text-[32px] lg:text-[44px] font-semibold text-charcoal mb-8 leading-tight">Request Your Free Estimate</h2>
+          <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Free Estimate</p>
+          <h2 className="font-serif text-[32px] lg:text-[44px] font-bold text-charcoal mb-8 leading-tight">Request Your Free Estimate</h2>
           <ContactForm />
           <p className="mt-5 text-center text-xs text-charcoal/60">Privacy disclosure: We use the information you submit only to respond to your request and discuss your project. We do not sell your information.</p>
         </div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
       {/* Services */}
       <section className="bg-subtle border-t border-border">
         <div className="max-w-[1180px] mx-auto px-6 py-16">
-          <h2 className="font-serif text-[28px] lg:text-[36px] font-semibold text-charcoal mb-8">Explore Our Flooring Services</h2>
+          <h2 className="font-serif text-[28px] lg:text-[36px] font-bold text-charcoal mb-8">Explore Our Flooring Services</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {services.map(([name, href, description]) => <Link key={href} href={href} className="rounded border border-border bg-ivory p-5 hover:border-walnut transition-colors"><h3 className="font-sans text-[15px] font-bold text-charcoal">{name}</h3><p className="mt-2 text-sm text-charcoal/70">{description}</p></Link>)}
           </div>

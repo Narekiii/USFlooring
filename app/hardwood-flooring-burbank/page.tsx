@@ -60,8 +60,8 @@ export default function HardwoodFlooringPage() {
       <section className="pt-8 pb-16 bg-subtle">
         <div className="max-w-[1180px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="font-sans text-[11px] font-semibold text-walnut uppercase tracking-widest mb-4">Hardwood Flooring · Burbank, CA</p>
-            <h1 className="font-serif text-[40px] lg:text-[54px] font-semibold text-charcoal leading-[1.06] mb-5">Hardwood Flooring Sales and Installation in Burbank</h1>
+            <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-4">Hardwood Flooring · Burbank, CA</p>
+            <h1 className="font-serif text-[40px] lg:text-[54px] font-bold text-charcoal leading-[1.06] mb-5">Hardwood Flooring Sales and Installation in Burbank</h1>
             <p className="font-sans text-base lg:text-[17px] text-charcoal/60 leading-relaxed mb-8">Real wood underfoot. We help you choose the right species, finish, and format for your home — then we install it properly so it lasts for decades.</p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link href="/contact" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors text-center">Get a Free Estimate</Link>
@@ -76,24 +76,24 @@ export default function HardwoodFlooringPage() {
 
       <section className="bg-ivory">
         <div className="max-w-[1180px] mx-auto px-6 py-16">
-          <h2 className="font-serif text-[28px] lg:text-[38px] font-semibold text-charcoal leading-tight mb-10">Why Choose Hardwood Flooring?</h2>
+          <h2 className="font-serif text-[28px] lg:text-[38px] font-bold text-charcoal leading-tight mb-10">Why Choose Hardwood Flooring?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((b) => <div key={b.title} className="bg-subtle border border-border rounded-[3px] p-7"><h3 className="font-sans text-[15px] font-semibold text-charcoal mb-3">{b.title}</h3><p className="font-sans text-[13px] text-charcoal/55 leading-relaxed">{b.desc}</p></div>)}
+            {benefits.map((b) => <div key={b.title} className="bg-subtle border border-border rounded-[3px] p-7"><h3 className="font-sans text-[15px] font-bold text-charcoal mb-3">{b.title}</h3><p className="font-sans text-[13px] text-charcoal/55 leading-relaxed">{b.desc}</p></div>)}
           </div>
         </div>
       </section>
 
       <section className="bg-subtle border-t border-border">
         <div className="max-w-[1180px] mx-auto px-6 py-16">
-          <h2 className="font-serif text-[28px] lg:text-[38px] font-semibold text-charcoal leading-tight mb-6">Solid vs. Engineered Hardwood</h2>
+          <h2 className="font-serif text-[28px] lg:text-[38px] font-bold text-charcoal leading-tight mb-6">Solid vs. Engineered Hardwood</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-ivory border border-border rounded-[3px] p-8">
-              <h3 className="font-sans text-[16px] font-semibold text-charcoal mb-4">Solid Hardwood</h3>
+              <h3 className="font-sans text-[16px] font-bold text-charcoal mb-4">Solid Hardwood</h3>
               <p className="font-sans text-[14px] text-charcoal/60 leading-relaxed mb-4">Milled from a single piece of wood. Can be sanded and refinished multiple times. Best for above-grade installations in climate-controlled environments.</p>
               <ul className="flex flex-col gap-2">{["Refinishable 3–5 times over its lifespan", "Available in any species or finish", "Not recommended below grade or over radiant heat", 'Typically 3/4" thick'].map((i) => <li key={i} className="flex items-start gap-2 font-sans text-[13px] text-charcoal/55"><span className="text-walnut shrink-0 mt-0.5">✓</span> {i}</li>)}</ul>
             </div>
             <div className="bg-ivory border border-border rounded-[3px] p-8">
-              <h3 className="font-sans text-[16px] font-semibold text-charcoal mb-4">Engineered Hardwood</h3>
+              <h3 className="font-sans text-[16px] font-bold text-charcoal mb-4">Engineered Hardwood</h3>
               <p className="font-sans text-[14px] text-charcoal/60 leading-relaxed mb-4">Real wood veneer over a plywood core. More dimensionally stable than solid wood, making it a better fit for environments with humidity variation.</p>
               <ul className="flex flex-col gap-2">{["Compatible with radiant floor heating", "Suitable for below-grade and on-slab installations", "Available with floating, glue-down, or nail-down installs", "Can often be refinished 1–2 times depending on veneer thickness"].map((i) => <li key={i} className="flex items-start gap-2 font-sans text-[13px] text-charcoal/55"><span className="text-walnut shrink-0 mt-0.5">✓</span> {i}</li>)}</ul>
             </div>
@@ -103,30 +103,30 @@ export default function HardwoodFlooringPage() {
 
       <section className="bg-ivory border-t border-border">
         <div className="max-w-[1180px] mx-auto px-6 py-16">
-          <h2 className="font-serif text-[28px] lg:text-[38px] font-semibold text-charcoal leading-tight mb-10">Our Installation Process</h2>
+          <h2 className="font-serif text-[28px] lg:text-[38px] font-bold text-charcoal leading-tight mb-10">Our Installation Process</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {process.map((s) => <div key={s.step} className="bg-subtle border border-border rounded-[3px] p-7"><div className="font-sans text-[11px] font-semibold text-walnut/50 uppercase tracking-widest mb-3">{s.step}</div><h3 className="font-sans text-[15px] font-semibold text-charcoal mb-3">{s.title}</h3><p className="font-sans text-[13px] text-charcoal/55 leading-relaxed">{s.desc}</p></div>)}
+            {process.map((s) => <div key={s.step} className="bg-subtle border border-border rounded-[3px] p-7"><div className="font-sans text-[11px] font-semibold text-walnut/50 uppercase tracking-widest mb-3">{s.step}</div><h3 className="font-sans text-[15px] font-bold text-charcoal mb-3">{s.title}</h3><p className="font-sans text-[13px] text-charcoal/55 leading-relaxed">{s.desc}</p></div>)}
           </div>
         </div>
       </section>
 
       <section className="bg-subtle border-t border-border">
         <div className="max-w-[860px] mx-auto px-6 py-16">
-          <h2 className="font-serif text-[28px] lg:text-[38px] font-semibold text-charcoal leading-tight mb-10">Hardwood Flooring FAQ</h2>
-          <div className="flex flex-col divide-y divide-sand">{faqs.map((faq, i) => <div key={i} className="py-5"><h3 className="font-sans text-[15px] font-semibold text-charcoal mb-2">{faq.q}</h3><p className="font-sans text-[14px] text-charcoal/60 leading-relaxed">{faq.a}</p></div>)}</div>
+          <h2 className="font-serif text-[28px] lg:text-[38px] font-bold text-charcoal leading-tight mb-10">Hardwood Flooring FAQ</h2>
+          <div className="flex flex-col divide-y divide-sand">{faqs.map((faq, i) => <div key={i} className="py-5"><h3 className="font-sans text-[15px] font-bold text-charcoal mb-2">{faq.q}</h3><p className="font-sans text-[14px] text-charcoal/60 leading-relaxed">{faq.a}</p></div>)}</div>
         </div>
       </section>
 
       <section className="bg-ivory border-t border-border">
         <div className="max-w-[1180px] mx-auto px-6 py-12">
-          <h2 className="font-sans text-[13px] font-semibold text-charcoal/40 uppercase tracking-widest mb-6">Related Services</h2>
+          <h2 className="font-sans text-[13px] font-bold text-charcoal/40 uppercase tracking-widest mb-6">Related Services</h2>
           <div className="flex flex-wrap gap-3">{related.map((l) => <Link key={l.href} href={l.href} className="border border-border bg-subtle text-charcoal/60 font-sans text-[13px] px-4 py-2 rounded-[2px] hover:border-walnut/40 hover:text-walnut transition-colors">{l.label}</Link>)}</div>
         </div>
       </section>
 
       <section className="bg-charcoal py-16">
         <div className="max-w-[680px] mx-auto px-6 text-center">
-          <h2 className="font-serif text-[28px] lg:text-[38px] font-semibold text-ivory mb-4">See Hardwood Samples in Person</h2>
+          <h2 className="font-serif text-[28px] lg:text-[38px] font-bold text-ivory mb-4">See Hardwood Samples in Person</h2>
           <p className="font-sans text-base text-ivory/50 leading-relaxed mb-8">Visit our Burbank showroom at 1508 W Burbank Blvd to compare species, widths, and finishes in real light before you commit. Estimates are free.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/contact" className="bg-red text-white px-7 py-4 rounded-[2px] font-sans text-[15px] font-bold hover:bg-red-dark transition-colors">Request Free Estimate</Link>
