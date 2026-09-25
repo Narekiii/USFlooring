@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Breadcrumbs, { breadcrumbJsonLd } from "../ui/breadcrumbs";
 import { JsonLd } from "../ui/json-ld";
 import { BUSINESS, SITE_URL } from "../lib/business";
+import EmailLink from "../ui/email-link";
 
 const items = [{ label: "Home", href: "/" }, { label: "Privacy Policy" }];
 
@@ -60,7 +61,7 @@ export default function PrivacyPage() {
 
             <div>
               <h2 className="font-serif text-[22px] font-bold text-charcoal mb-3">Contact Us</h2>
-              <p>{BUSINESS.name}<br />{BUSINESS.address.street}, {BUSINESS.address.city}, {BUSINESS.address.state} {BUSINESS.address.zip}<br /><a href={`tel:${BUSINESS.phone}`} className="text-walnut font-bold">{BUSINESS.phoneDisplay}</a><br /><a href={`mailto:${BUSINESS.email}`} className="text-walnut font-bold">{BUSINESS.email}</a></p>
+              <p>{BUSINESS.name}<br />{BUSINESS.address.street}, {BUSINESS.address.city}, {BUSINESS.address.state} {BUSINESS.address.zip}<br /><a href={`tel:${BUSINESS.phone}`} className="text-walnut font-bold">{BUSINESS.phoneDisplay}</a><br /><EmailLink className="text-walnut font-bold" /></p>
             </div>
 
             <p className="text-[13px] text-charcoal/45 border-t border-border pt-6 mt-2">This page is a general privacy notice and is not a substitute for legal advice. We recommend having it reviewed by a qualified attorney to confirm it fully addresses your specific data practices and legal obligations.</p>
