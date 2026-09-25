@@ -62,7 +62,7 @@ export default function ProductsPage() {
             {services.map((s, i) => (
               <div key={s.name} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className={`relative overflow-hidden rounded-[3px] aspect-[4/3] bg-subtle/30 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                  <Image src={s.img} alt={`${s.name} — US Flooring & Molding, Burbank`} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+                  <Image src={s.img} alt={`${s.name} — US Flooring & Molding, Burbank`} fill sizes="(max-width: 1024px) 100vw, 542px" className="object-cover" />
                 </div>
                 <div>
                   <p className="font-sans text-[11px] font-bold text-walnut uppercase tracking-widest mb-3">{s.tagline}</p>

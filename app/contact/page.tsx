@@ -4,6 +4,7 @@ import ContactForm from "./contact-form";
 import Breadcrumbs, { breadcrumbJsonLd } from "../ui/breadcrumbs";
 import { JsonLd, businessJsonLd } from "../ui/json-ld";
 import { BUSINESS, SITE_URL, services } from "../lib/business";
+import EmailLink from "../ui/email-link";
 
 const directionsUrl = "https://www.google.com/maps/dir/?api=1&destination=1508+W+Burbank+Blvd+Burbank+CA+91506";
 const mapUrl = "https://www.google.com/maps?q=US+Flooring+%26+Molding+Inc.%2C+1508+W+Burbank+Blvd%2C+Burbank%2C+CA+91506&z=16&output=embed";
@@ -53,7 +54,7 @@ export default function ContactPage() {
                 <a href={BUSINESS.googleMapsUrl} target="_blank" rel="noopener noreferrer" aria-label="Open US Flooring & Molding Inc. in Google Maps" className="font-sans text-[14px] text-charcoal/65 hover:text-walnut transition-colors">{BUSINESS.address.street}, {BUSINESS.address.city}, {BUSINESS.address.state} {BUSINESS.address.zip}</a>
               </div>
               <div className="flex gap-4"><span className="font-sans text-[11px] font-bold text-charcoal/35 uppercase tracking-wide w-14 shrink-0 pt-0.5">Phone</span><a href={`tel:${BUSINESS.phone}`} className="font-sans text-[14px] text-charcoal/65 hover:text-walnut transition-colors">{BUSINESS.phoneDisplay}</a></div>
-              <div className="flex gap-4"><span className="font-sans text-[11px] font-bold text-charcoal/35 uppercase tracking-wide w-14 shrink-0 pt-0.5">Email</span><a href={`mailto:${BUSINESS.email}`} className="font-sans text-[14px] text-charcoal/65 hover:text-walnut transition-colors">{BUSINESS.email}</a></div>
+              <div className="flex gap-4"><span className="font-sans text-[11px] font-bold text-charcoal/35 uppercase tracking-wide w-14 shrink-0 pt-0.5">Email</span><EmailLink className="font-sans text-[14px] text-charcoal/65 hover:text-walnut transition-colors" /></div>
             </address>
 
             {/* Social */}
@@ -112,7 +113,7 @@ export default function ContactPage() {
           </div>
           <div className="flex gap-3">
             <a href={`tel:${BUSINESS.phone}`} className="bg-red text-white px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:bg-red-dark transition-colors">Call to Schedule</a>
-            <a href={`mailto:${BUSINESS.email}`} className="border-[1.5px] border-ivory/30 text-ivory/60 px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:border-ivory/60 hover:text-ivory transition-colors">Email Us</a>
+            <EmailLink className="border-[1.5px] border-ivory/30 text-ivory/60 px-6 py-3 rounded-[2px] font-sans text-[14px] font-bold hover:border-ivory/60 hover:text-ivory transition-colors">Email Us</EmailLink>
           </div>
         </div>
       </section>

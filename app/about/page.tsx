@@ -65,7 +65,7 @@ export default function AboutPage() {
             <p className="font-sans text-base text-charcoal/60 leading-relaxed">We're not a franchise. We're not a big-box satellite. Every floor we sell and every install we run carries our family name — and that means something to us.</p>
           </div>
           <div className="relative overflow-hidden rounded-[3px] aspect-[4/3] bg-subtle/30">
-            <Image src="https://images.unsplash.com/photo-1712171984461-9a18baa57c42?w=720&h=560&fit=crop&auto=format" alt="Expert flooring craftsman at work" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+            <Image src="https://images.unsplash.com/photo-1712171984461-9a18baa57c42?w=720&h=560&fit=crop&auto=format" alt="Expert flooring craftsman at work" fill sizes="(max-width: 1024px) 100vw, 542px" className="object-cover" />
           </div>
         </div>
       </section>
