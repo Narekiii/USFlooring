@@ -62,7 +62,7 @@ export default function LaminateFlooringPage() {
             </div>
           </div>
           <div className="relative overflow-hidden rounded-[3px] aspect-[4/3] bg-subtle/30">
-            <Image src="https://images.unsplash.com/photo-1787625349019-2ad6b4cadc87?w=720&h=540&fit=crop&auto=format" alt="Laminate flooring in a modern interior" fill priority sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+            <Image src="https://images.unsplash.com/photo-1787625349019-2ad6b4cadc87?w=720&h=540&fit=crop&auto=format" alt="Laminate flooring in a modern interior" fill priority sizes="(max-width: 1024px) 100vw, 542px" className="object-cover" />
           </div>
         </div>
       </section>

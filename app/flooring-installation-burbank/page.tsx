@@ -61,7 +61,7 @@ export default function FlooringInstallationPage() {
             </div>
           </div>
           <div className="relative overflow-hidden rounded-[3px] aspect-[4/3] bg-subtle/30">
-            <Image src="https://images.unsplash.com/photo-1622936063167-e32e9f955438?w=720&h=540&fit=crop&auto=format" alt="Professional flooring installation in progress" fill priority sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+            <Image src="https://images.unsplash.com/photo-1622936063167-e32e9f955438?w=720&h=540&fit=crop&auto=format" alt="Professional flooring installation in progress" fill priority sizes="(max-width: 1024px) 100vw, 542px" className="object-cover" />
           </div>
         </div>
       </section>

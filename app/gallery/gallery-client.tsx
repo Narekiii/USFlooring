@@ -60,7 +60,7 @@ export default function GalleryClient({ photos }: { photos: readonly Photo[] }) 
                 className="group overflow-hidden rounded border border-border bg-subtle text-left focus:outline-none focus:ring-2 focus:ring-walnut focus:ring-offset-2"
                 aria-label={`View larger image: ${photo.alt}`}
               >
-                <Image src={photo.src} alt={photo.alt} width={800} height={600} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105" priority={index < 3} />
+                <Image src={photo.src} alt={photo.alt} width={800} height={600} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 383px" className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105" priority={index < 3} />
                 <p className="px-4 py-3 text-sm leading-snug text-charcoal/70">{photo.caption}</p>
               </button>
             );
