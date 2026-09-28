@@ -11,6 +11,7 @@ const routes = [
   "/flooring-installation-burbank",
   "/molding-baseboard-installation-burbank",
   "/about",
+  "/why-us",
   "/gallery",
   "/reviews",
   "/contact",

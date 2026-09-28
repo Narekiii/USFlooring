@@ -26,5 +26,8 @@ const nextConfig: NextConfig = {
   trailingSlash: false,
   images: { remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }] },
   async headers() { return [{ source: "/(.*)", headers: securityHeaders }]; },
+  async redirects() {
+    return [];
+  },
 };
 export default nextConfig;

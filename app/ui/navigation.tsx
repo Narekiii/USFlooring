@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { BUSINESS } from "../lib/business";
 
 const logoUrl = "/us-flooring-header-logo-400x160.png";
-const links = [["/products", "Products & Services"], ["/about", "About"], ["/gallery", "Gallery"], ["/reviews", "Reviews"]] as const;
+const links = [["/products", "Products & Services"], ["/about", "About"], ["/why-us", "Why Us"], ["/gallery", "Gallery"], ["/reviews", "Reviews"]] as const;
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
