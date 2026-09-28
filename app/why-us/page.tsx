@@ -13,9 +13,9 @@ const items = [{ label: "Home", href: "/" }, { label: "Why Us" }];
 
 export const metadata: Metadata = {
   title: "Why Choose US Flooring? | Flooring Supply & Installation in Burbank",
-  description: "Discover why Los Angeles customers choose US Flooring for trusted flooring brands, local Burbank inventory, honest guidance and professional flooring and molding installation.",
+  description: "Why Los Angeles customers choose US Flooring: trusted brands, a local Burbank warehouse, honest guidance and professional flooring installation.",
   alternates: { canonical: "https://www.usflooring.la/why-us" },
-  openGraph: { title: "Why Choose US Flooring? | Flooring Supply & Installation in Burbank", description: "Discover why Los Angeles customers choose US Flooring for trusted flooring brands, local Burbank inventory, honest guidance and professional flooring and molding installation.", url: "https://www.usflooring.la/why-us" },
+  openGraph: { title: "Why Choose US Flooring? | Flooring Supply & Installation in Burbank", description: "Why Los Angeles customers choose US Flooring: trusted brands, a local Burbank warehouse, honest guidance and professional flooring installation.", url: "https://www.usflooring.la/why-us" },
 };
 
 // ─── Data ────────────────────────────────────────────────────────────────────
