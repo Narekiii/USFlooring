@@ -147,3 +147,20 @@
 
 # Stored as a regular git blob: this session's network egress cannot reach the GitHub LFS (S3) backend to upload new LFS objects.
 public/vick-showroom.jpg -filter -diff -merge -text
+
+# The following were committed as plain (non-LFS) blobs before LFS tracking
+# was introduced for these extensions; keep them tracked as regular blobs
+# so `git status` doesn't flag them as modified against the newer LFS rules.
+.figma/make/favicon.png -filter -diff -merge -text
+app/apple-icon.png -filter -diff -merge -text
+app/favicon.ico -filter -diff -merge -text
+app/icon.png -filter -diff -merge -text
+public/ChatGPT_Image_Sep_3__2026__04_50_48_PM.png -filter -diff -merge -text
+public/og-image.jpg -filter -diff -merge -text
+public/us-flooring-header-logo-400x160.png -filter -diff -merge -text
+src/imports/ChatGPT_Image_Sep_3__2026__04_43_43_PM.png -filter -diff -merge -text
+src/imports/ChatGPT_Image_Sep_3__2026__04_50_48_PM.png -filter -diff -merge -text
+src/imports/ChatGPT_Image_Sep_3__2026__05_04_15_PM.png -filter -diff -merge -text
+src/imports/ChatGPT_Image_Sep_3__2026__08_31_36_PM.png -filter -diff -merge -text
+src/imports/hero-bg.png -filter -diff -merge -text
+src/imports/us-flooring-header-logo-400x160.png -filter -diff -merge -text
