@@ -178,7 +178,7 @@ export default function WhyUsPage() {
           </div>
           <div className="order-1 lg:order-2 relative">
             <div className="relative aspect-[4/3.1] rounded-2xl overflow-hidden">
-              <Image src="https://images.unsplash.com/photo-1787625349019-2ad6b4cadc87?w=1000&h=780&fit=crop&auto=format" alt="Professionally installed natural-oak flooring with clean white molding and a precise doorway transition, in a warm contemporary interior." fill priority sizes="(max-width: 1024px) 100vw, 542px" className="object-cover" />
+              <Image src="/jobsite-banner.jpg" alt="US Flooring & Molding job-site banner outside a home under construction" fill priority sizes="(max-width: 1024px) 100vw, 542px" className="object-cover" />
             </div>
             <div className="absolute -bottom-6 left-6 right-6 sm:right-auto sm:w-[300px] bg-charcoal rounded-xl p-6 shadow-lg">
               <p className="font-serif text-[19px] font-bold text-ivory leading-snug mb-2">We Install What We Sell.</p>
