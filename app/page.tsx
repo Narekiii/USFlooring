@@ -21,7 +21,7 @@ const serviceCards = [
   ["Luxury Vinyl Flooring", "Waterproof toughness for kitchens, baths, and busy households.", "https://images.unsplash.com/photo-1695191388218-f6259600223f?w=800&h=560&fit=crop&auto=format", "/luxury-vinyl-flooring-burbank"],
   ["Moldings & Trim", "The finishing detail that makes a floor look finished, not just installed.", "https://images.unsplash.com/photo-1655457397686-4dd23e78a918?w=800&h=560&fit=crop&auto=format", "/molding-baseboard-installation-burbank"],
   ["Professional Installation", "Precision crews who respect your home and your timeline.", "https://images.unsplash.com/photo-1622936063167-e32e9f955438?w=800&h=560&fit=crop&auto=format", "/flooring-installation-burbank"],
-  ["Showroom Consultation", "Touch it, see it in real light, ask us anything — no pressure.", "https://images.unsplash.com/photo-1643903032976-8c0d0556a8ea?w=800&h=560&fit=crop&auto=format", "/products"],
+  ["Showroom Consultation", "Touch it, see it in real light, ask us anything — no pressure.", "/showroom-consultation.jpg", "/products"],
 ] as const;
 
 const comparison = [

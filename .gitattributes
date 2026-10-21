@@ -164,3 +164,6 @@ src/imports/ChatGPT_Image_Sep_3__2026__05_04_15_PM.png -filter -diff -merge -tex
 src/imports/ChatGPT_Image_Sep_3__2026__08_31_36_PM.png -filter -diff -merge -text
 src/imports/hero-bg.png -filter -diff -merge -text
 src/imports/us-flooring-header-logo-400x160.png -filter -diff -merge -text
+
+# Same LFS-upload-egress-blocked workaround as vick-showroom.jpg above.
+public/showroom-consultation.jpg -filter -diff -merge -text
