@@ -171,3 +171,4 @@ public/hardwood-flooring-install.jpg -filter -diff -merge -text
 public/professional-installation.jpg -filter -diff -merge -text
 public/laminate-flooring-showroom.jpg -filter -diff -merge -text
 public/moldings-trim-showroom.jpg -filter -diff -merge -text
+public/luxury-vinyl-showroom.jpg -filter -diff -merge -text
