@@ -82,8 +82,11 @@ export default function AboutPage() {
               <p className="font-sans text-base text-ivory/60 leading-relaxed">When he started US Flooring &amp; Molding, he brought all of that with him. And the promise his father made him — do it right or don't do it — became the promise we make to every customer.</p>
             </div>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[3px] bg-ivory/10 lg:mt-16">
-            <Image src="/floor-removal-crew.jpg" alt="Three generations of honest work in flooring" fill sizes="(max-width: 1024px) 100vw, 558px" className="object-cover" />
+          <div className="lg:mt-16">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-[3px] bg-ivory/10">
+              <Image src="/floor-removal-crew.jpg" alt="Three generations of honest work in flooring" fill sizes="(max-width: 1024px) 100vw, 558px" className="object-cover" />
+            </div>
+            <p className="font-sans text-[13px] text-ivory/40 mt-4">Three generations of honest work in flooring.</p>
           </div>
         </div>
       </section>
