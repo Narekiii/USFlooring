@@ -17,7 +17,7 @@ const howCards = [
 
 const serviceCards = [
   ["Hardwood Flooring", "Timeless, durable, and built to outlast trends.", "/hardwood-flooring-install.jpg", "/hardwood-flooring-burbank"],
-  ["Laminate Flooring", "Real style at a real-world price point.", "https://images.unsplash.com/photo-1787625349019-2ad6b4cadc87?w=800&h=560&fit=crop&auto=format", "/laminate-flooring-burbank"],
+  ["Laminate Flooring", "Real style at a real-world price point.", "/laminate-flooring-showroom.jpg", "/laminate-flooring-burbank"],
   ["Luxury Vinyl Flooring", "Waterproof toughness for kitchens, baths, and busy households.", "https://images.unsplash.com/photo-1695191388218-f6259600223f?w=800&h=560&fit=crop&auto=format", "/luxury-vinyl-flooring-burbank"],
   ["Moldings & Trim", "The finishing detail that makes a floor look finished, not just installed.", "https://images.unsplash.com/photo-1655457397686-4dd23e78a918?w=800&h=560&fit=crop&auto=format", "/molding-baseboard-installation-burbank"],
   ["Professional Installation", "Precision crews who respect your home and your timeline.", "/professional-installation.jpg", "/flooring-installation-burbank"],
