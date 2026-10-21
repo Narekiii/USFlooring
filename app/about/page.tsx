@@ -83,10 +83,10 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="lg:mt-16">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-[3px] bg-ivory/10">
-              <Image src="/floor-removal-crew.jpg" alt="Three generations of honest work in flooring" fill sizes="(max-width: 1024px) 100vw, 558px" className="object-cover" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[3px] bg-ivory/10">
+              <Image src="/three-generations-crew.jpg" alt="Three generations of honest work in flooring" fill sizes="(max-width: 1024px) 100vw, 558px" className="object-cover" />
             </div>
-            <p className="font-sans text-[13px] text-ivory/40 mt-4">Three generations of honest work in flooring.</p>
+            <p className="font-sans text-[26px] text-ivory/40 mt-4">Three generations of honest work in flooring.</p>
           </div>
         </div>
       </section>
