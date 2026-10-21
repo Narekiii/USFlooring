@@ -65,8 +65,8 @@ const photos = [
     categories: ["moldings"],
   },
   {
-    src: "https://images.unsplash.com/photo-1622936063167-e32e9f955438?w=800&h=600&fit=crop&auto=format",
-    largeSrc: "https://images.unsplash.com/photo-1622936063167-e32e9f955438?w=1200&h=900&fit=crop&auto=format",
+    src: "/professional-installation.jpg",
+    largeSrc: "/professional-installation.jpg",
     alt: "Professional flooring installation in progress",
     caption: "Our installation crew at work — precision in the details you won't see once the floor is finished.",
     categories: ["installation"],

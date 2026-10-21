@@ -168,3 +168,4 @@ src/imports/us-flooring-header-logo-400x160.png -filter -diff -merge -text
 # Same LFS-upload-egress-blocked workaround as vick-showroom.jpg above.
 public/showroom-consultation.jpg -filter -diff -merge -text
 public/hardwood-flooring-install.jpg -filter -diff -merge -text
+public/professional-installation.jpg -filter -diff -merge -text
