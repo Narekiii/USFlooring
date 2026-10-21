@@ -82,10 +82,8 @@ export default function AboutPage() {
               <p className="font-sans text-base text-ivory/60 leading-relaxed">When he started US Flooring &amp; Molding, he brought all of that with him. And the promise his father made him — do it right or don't do it — became the promise we make to every customer.</p>
             </div>
           </div>
-          <div className="bg-ivory/10 border border-ivory/20 rounded-[3px] p-8 lg:mt-16">
-            <div className="w-8 h-[3px] bg-gold mb-6" />
-            <blockquote className="font-serif text-[22px] text-ivory leading-snug mb-6">&quot;Do it like it&apos;s going in your own house.&quot;</blockquote>
-            <p className="font-sans text-[13px] text-ivory/40">The standard passed down from Vick&apos;s father. Still the standard we hold today.</p>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[3px] bg-ivory/10 lg:mt-16">
+            <Image src="/floor-removal-crew.jpg" alt="Three generations of honest work in flooring" fill sizes="(max-width: 1024px) 100vw, 558px" className="object-cover" />
           </div>
         </div>
       </section>
